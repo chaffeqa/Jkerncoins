@@ -5,16 +5,16 @@ class Category < ActiveRecord::Base
   ###########
   has_many :items, :class_name => 'Item', :finder_sql =>
     'SELECT item.* FROM items AS item
-    JOIN nodes AS item_node ON item_node.page_id = item.id AND item_node.page_type = "Item"
+    JOIN nodes AS item_node ON item_node.page_id = item.id AND item_node.page_type = \'Item\'
     JOIN nodes AS cat_node ON item_node.parent_id = cat_node.id
-    WHERE cat_node.page_id = #{id} AND cat_node.page_type = "Category"'
+    WHERE cat_node.page_id = #{id} AND cat_node.page_type = \'Category\''
 
 
   has_many :displayed_items, :class_name => 'Item', :finder_sql =>
     'SELECT item.* FROM items AS item
-    JOIN nodes AS item_node ON item_node.page_id = item.id AND item_node.page_type = "Item"
+    JOIN nodes AS item_node ON item_node.page_id = item.id AND item_node.page_type = \'Item\'
     JOIN nodes AS cat_node ON item_node.parent_id = cat_node.id
-    WHERE cat_node.page_id = #{id} AND cat_node.page_type = "Category"
+    WHERE cat_node.page_id = #{id} AND cat_node.page_type = \'Category\'
     AND item.display = 1'
 
 
