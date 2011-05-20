@@ -54,7 +54,7 @@ class Item < ActiveRecord::Base
   ###########
   scope :get_for_sale, where(:for_sale => true)
   scope :displayed, where(:display => true)
-  scope :scope_display, lambda {|display| where(:display => display)}
+  scope :scope_display, lambda {|display| where(:display => eval(display)) if ['true','false'].include?(display)}
   scope :scope_for_sale, lambda {|for_sale| where(:for_sale => for_sale)}
   scope :scope_name, lambda {|name| where('UPPER(name) LIKE UPPER(?)', '%'+name+'%')}
   scope :scope_details, lambda {|name| where('UPPER(details) LIKE UPPER(?)', "%"+name+"%")}
