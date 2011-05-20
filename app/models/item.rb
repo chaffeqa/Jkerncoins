@@ -60,7 +60,7 @@ class Item < ActiveRecord::Base
   scope :scope_details, lambda {|name| where('UPPER(details) LIKE UPPER(?)', "%"+name+"%")}
   scope :scope_meta, lambda {|meta| where('UPPER(meta) LIKE UPPER(?)', "%"+meta+"%")}
   scope :scope_item_id, lambda {|item_id| where('UPPER(item_id) LIKE UPPER(?)', "%"+item_id+"%")}
-  scope :scope_category, lambda {|title| includes(:nodes => {:parent => :category}) & where('UPPER(categories.title) LIKE UPPER(?)', "%"+title+"%")}
+  scope :scope_category, lambda {|title| includes(:nodes => {:parent => :category}).where('UPPER(categories.title) LIKE UPPER(?)', "%"+title+"%")}
   scope :scope_text, lambda {|text| where('UPPER(name) LIKE UPPER(?) or UPPER(meta) LIKE UPPER(?) or UPPER(details) LIKE UPPER(?)', "%"+text+"%", "%"+text+"%", "%"+text+"%")}
   scope :scope_min_price, lambda {|price| where('cost >= ?', price)}
   scope :scope_max_price, lambda {|price| where('cost <= ?', price)}
