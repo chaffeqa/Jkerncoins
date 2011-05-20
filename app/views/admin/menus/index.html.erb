@@ -1,0 +1,45 @@
+<%= content_for :head do %>
+  <%= stylesheet_link_tag '/javascripts/themes/classic/style' %>
+  <%= javascript_include_tag 'jquery.jstree', 'jquery.cookie', 'jquery.hotkeys' %>
+<% end %>
+
+<h1 class="title">Manage Site Heirarchy</h1>
+<p>Here you can easily organize all the pages of your website in one place. To change the order of a page, select the page then click and drag it to another location. It's that easy. If you drag the page onto another page, the dragged page will now fall under the other page in the hierarchy. After you're satisfied with the heirarchy, click "update." Your page order will not be saved until you click "update."</p>
+<div id="sortable-menu">
+  <ul></ul>
+</div>
+<br />
+<%= link_to 'Update', '#', :id => 'save-changes', :class => "btn medium" %>
+<%= link_to 'Reset', admin_menus_path(), :class => "btn medium" %>
+<%= link_to 'Cancel', :back %>
+
+<script>
+  $(function () {
+    $("#sortable-menu").jstree({
+      "core" : { 
+        "initially_open" : [ "<%= 'node_' + @home_node.id.to_s %>" ],
+        "animation" : 200
+      },
+      "html_data" : {
+        "data" : "<%=raw display_node_list(@home_node) %>"
+      },
+      "themes" : {
+        "theme" : "default",
+        "dots" : true,
+        "icons" : true
+      },
+      "plugins" : [ "themes", "html_data", "ui", "dnd", "json_data" ]
+    });
+  });
+
+  $('#save-changes').click(function(){
+    $.ajax({
+      url: 'menus/sort',
+      type: 'POST',
+      data:  $.toJSON($('#sortable-menu').jstree("get_json", -1)),
+      contentType: 'application/json; charset=utf-8'
+    });
+  
+  })
+</script>
+

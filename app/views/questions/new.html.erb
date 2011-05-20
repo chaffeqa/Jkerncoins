@@ -1,0 +1,89 @@
+<%= content_for :head do %>
+  <%= javascript_include_tag 'admin' %>
+<% end %>
+
+<%= content_for :subColumn do %>
+<h2>Contact Us</h2>
+<% end %>
+
+
+<div id="adminPage">
+<h1>Send us a Message</h1>
+<p>To contact us please email us at (Email: <a href="mailto:jon@jkerncoins.com">Jonathan Kern</a>, Email: <a href="mailto:dino@jkerncoins.com">Dino Payne</a>), OR use the contact form below.
+</p>
+<%= form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+        <% @question.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+  <div class="field">
+    <%= f.label :first_name, "Name", :class => "req" %>
+    <%= f.text_field :first_name, :title => "First", :style => "width: 80px;" %>
+    <%= f.text_field :last_name, :title => "Last", :style => "width: 80px;" %>
+  </div>
+  <div class="field">
+    <%= f.label :company, "Company Name" %>
+    <%= f.text_field :company %>
+  </div>
+  <hr />
+  <div class="field">
+    <%= f.label :street_address_1, "Address" %>
+    <%= f.text_field :street_address_1, :title => "Address 1" %>
+  </div>
+  <div class="field">
+    <%= f.label :street_address_2, raw('&nbsp') %>
+    <%= f.text_field :street_address_2, :title => "Address 2" %>
+  </div>
+  <div class="field">
+    <%= f.label :city, raw('&nbsp') %>
+    <%= f.text_field :city, :title => "City" %>
+    <%= f.select :state, Carmen::state_codes, {:prompt => "State"}, {:style => "width: 65px;"} %>
+    <%= f.text_field :zip_code, :title => "Zip", :style => "width: 50px;" %>
+  </div>
+  <div class="field">
+    <%= f.label :country, raw('&nbsp') %>
+    <%= f.select :country, Carmen::country_names, {:prompt => "-- Country --"} %>
+  </div>
+  <hr />
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :email, :class => "req" %>
+    <%= f.text_field :email, :title => "Title" %>
+  </div>
+  <div class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+  <hr />
+  <div class="field">
+    <%= f.label :subject, :class => "req" %>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :body, :class => "req" %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <label>&nbsp</label>
+    <%= f.submit :value => "Send Message", :onclick => "stripTitles()" %>
+  </div>
+  </fieldset>
+<% end %>
+</div>

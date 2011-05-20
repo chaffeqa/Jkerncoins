@@ -1,0 +1,78 @@
+<%= form_for([:admin, @item], :html => { :multipart => true }) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% @item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <div class="field"><span class="hint">Add This product to multiple Inventory Categories.</span>
+      <label>Categorize</label><br />
+    </div>
+    <% f.fields_for :nodes do |nodes_form| %>
+      <%= render :partial => 'node', :locals => { :f => nodes_form } %>
+    <% end %>
+    <%= new_child_fields_template(f, :nodes)%>
+    <div class="field"><label></label><%= add_child_link "Add Category", :nodes %></div>
+
+    <hr />
+
+    <div class="field"><span class="hint">Be sure to enter a unique item ID.</span>
+      <%= f.label :name, "Item Details", :class => "req" %>
+      <%= f.text_field :name, :title => "Item Name" %>
+      <%= f.text_field :item_id, :title => "Item ID", :style => "width: 100px;" %>
+    </div>
+    <div class="field">
+      <%= f.label :details %>
+      <%= f.text_area :details %>
+    </div>
+    <div class="field"><span class="hint">Enter searchable keywords for this item separated by a space.</span>
+      <%= f.label :meta %>
+      <%= f.text_area :meta %>
+    </div>
+    <hr />
+
+    <div class="field">
+      <%= f.label :cost, "Price" %>
+      <% val = (@item.cost > 0) ? @item.cost : "0.00"  %>
+      $ <%= f.text_field :cost, :style => "width: 70px;", :title => val, :value => val %>
+    </div>
+    <hr />
+
+    <div class="field">
+      <%= f.label :for_sale, "Item Options" %>
+      <%= f.check_box :for_sale %> List item for sale?
+    </div>
+    <div class="field">
+      <%= f.label :display, raw('&nbsp') %>
+      <%= f.check_box :display %> Display publicly?
+    </div>
+    <hr />
+
+    <div class="field"><span class="hint">Manage images for this product.</span>
+      <label>Images</label>
+    </div>
+    <% f.fields_for :product_images do |img_form| %>
+      <%= render :partial => 'product_image', :locals => { :f => img_form } %>
+    <% end %>
+    <%= new_child_fields_template(f, :product_images)%>
+    <div class="field"><label></label><%= add_child_link "Add Product Image", :product_images %></div>
+    <hr />
+
+    <div class="field">
+      <%= f.label :submit, raw("&nbsp;") %>
+      <% if f.object.new_record? %>
+        <%= f.submit "Create Item", :disable_with => "Please Wait...", :class => "btn medium" %>
+      <% else %>
+        <%= f.submit "Update", :disable_with => "Please Wait...", :class => "btn medium" %>
+      <% end %>
+      <%= link_to 'Cancel', admin_items_path(@full_params) %>
+    </div>
+  </fieldset>
+<% end %>

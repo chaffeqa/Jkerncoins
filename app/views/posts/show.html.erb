@@ -1,0 +1,25 @@
+<%
+@post = @node.page
+@blog = @post.blog
+%>
+
+<% content_for :page_admin_bar do %>
+  <%= link_to 'Blog Settings', edit_admin_blog_post_path(@blog, @post), :class => 'btn large' %>
+<% end %>
+
+
+
+
+<% if admin? %> <div class="admin clearfix"> <% end %>
+  <article class="post">
+    <% if admin? %>
+    <span class="controls">
+      <%= link_to 'Edit Post', edit_admin_blog_post_path(@blog, @post), :class => 'btn small' %>
+      <%= link_to 'X', admin_blog_posts_path(@blog, @post) , :confirm => "Are you sure?", :method => :delete, :class => 'btn control small' %>
+    </span>
+    <% end %>
+    <h1 class="title"> <%= @post.title %> </h1>
+    <p class="created-at"><%= @post.post_date.strftime("%B %d, %Y %l:%m%p") %></p>
+    <p><%=raw @post.body %></p>
+  </article>
+<% if admin? %> </div><% end %>

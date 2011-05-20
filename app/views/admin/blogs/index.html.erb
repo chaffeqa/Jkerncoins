@@ -1,0 +1,22 @@
+<h1>Listing Blogs</h1>
+
+<p><%= link_to 'New Blog', new_admin_blog_path, :class => 'btn large' %></p>
+
+<table>
+  <tr>
+    <th><%= sortable "title", "Title" %></th>
+    <th>Shortcut</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><em><%= blog.node ? link_to(blog.node.shortcut, shortcut_path(blog.node.shortcut)) : 'No Shortcut' %></em></td>
+      <td><%= link_to 'List Posts', shortcut_path(blog.node.shortcut), :class => 'btn small' %></td>
+    </tr>
+  <% end %>
+</table>
+<div class="pagination"><%= will_paginate @blogs %></div>

@@ -1,0 +1,48 @@
+<h1><%= @node.title %></h1>
+<%#=raw @node.page.banner %>
+<ul class="blogList">
+  <% @node.page.posts.each do |post| %>
+    <li>
+
+      <span class="postTitle">
+        <%= link_to post.title, shortcut_path(post.node.shortcut) %>
+      </span>
+      <span class="postDate"><%= post.post_date.strftime("%B %d, %Y %l:%m%p") %> </span>
+      <span class="controls">
+        <% if admin? %>
+          <%= link_to "Edit", edit_admin_blog_post_path(post.blog, post), :class => 'btn small' %>
+          <%= link_to "X", admin_blog_post_path(post.blog, post) , :confirm => "Are you sure?", :method => :delete, :class => 'btn small control' %>
+        <% end %>
+      </span>
+    </li>
+  <% end %>
+  <% if (@node.page.posts.count == 0) %>
+    <p><em>No posts yet.</em></p>
+  <% end %>
+</ul>
+
+
+<!-- Content_for componenst to insert into static_page -->
+<%= content_for :subColumn do %>
+  <h3><%= @node.menu_name %></h3>
+  <div id="categorySub">
+    <%= render_navigation(:level => 2..10) %>
+  </div>
+<% end %>
+
+<%= content_for :breadcrumb do %>
+  <div class="breadcrumb">
+    <%= render_navigation(:renderer => :breadcrumbs, :join_with => " &gt; ") %>
+  </div>
+<% end %>
+
+<% content_for :page_admin_bar do %>
+  <%#= link_to('Blog Settings',  edit_admin_blog_path(@node.page), :class => 'btn large') %>
+  <%= link_to('New Post',  new_admin_blog_post_path(@node.page), :class => 'btn large') %>
+<% end %>
+
+
+<% content_for :page_title do %>
+  <%= @node.title %>
+<% end %>
+<!-- End -->

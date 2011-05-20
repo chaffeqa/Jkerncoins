@@ -1,0 +1,13 @@
+<h1>List of Categories</h1>
+
+<p><%= link_to 'New Category', new_admin_category_path, :class => "btn large" %></p>
+
+<ul class="categoryList">
+  <% if @inventory %>
+    <%= render :partial => 'category', :locals => {:category => @inventory} %>
+  <% else %>
+    <p>No Current Inventory Categories</p>
+  <% end %>
+</ul>
+<br />
+

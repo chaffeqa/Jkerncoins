@@ -1,0 +1,8 @@
+<%= form_tag(admin_items_path(), :method => :get, :class => 'per-page-form') do %>
+  <div class="field">
+    Display how many items per page? &nbsp;
+    <%= select_tag(:per_page, options_for_select(['10','25','50','75','100'],  @full_params[:per_page])) %>
+
+    <%= submit_tag('Update Results', :disable_with => 'Updating results...') %>
+  </div>
+<% end %>

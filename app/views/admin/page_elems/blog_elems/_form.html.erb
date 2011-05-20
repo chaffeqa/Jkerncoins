@@ -1,0 +1,80 @@
+<%= form_for([:admin,@blog_elem])  do |f| %>
+  <% if @blog_elem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize((@blog_elem.errors.count ), "error") %> prohibited this element from being saved:</h2>
+      <ul>
+        <% @blog_elem.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <%= hidden_field_tag :shortcut, @shortcut %>
+    <div class="field">
+
+      <%= f.fields_for :blog do |blog_f| %>
+        <%= blog_f.fields_for :node do |node_f| %>
+          <%= node_f.label :title, 'Blog Title', :class => 'req' %>
+          <%= node_f.text_field :title %>
+          <%= node_f.hidden_field :displayed, :value => true %>
+        <% end %>
+      <% end %>
+
+      <%= f.fields_for :element do |element_f| %>
+        <%= element_f.check_box :display_title %>&nbsp;
+        <%= element_f.label :display_title, "Display Title?" %>
+        <%= element_f.hidden_field :page_area %>
+      <% end %>
+
+    </div>
+  </fieldset>
+  <hr />
+
+  <fieldset>
+    <% unless @available_blogs.empty? %>
+      <div class="field"><span class="hint">Pull posts from another existing blog?</span>
+        <label>Blog Feed</label>
+        <ul style="margin: 0 0 0 130px;">
+          <% @available_blogs.each do |blog| %>
+            <%= content_tag_for :li, blog do %>
+              <%= check_box_tag "blog_elem[blog_ids][]", blog.id, (f.object.new_record? ? false : @blog_elem.blogs.include?(blog)) %>
+              <%= blog.title %>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+      <hr />
+    <% end %>
+
+    <div class="field"><span class="hint">How do you want your blog to look? <a class="expander">Explain this</a></span>
+      <%= f.label :display_type, "Display Options" %>
+      <%= f.select :display_type, options_for_select(BlogElem.display_type_select, (f.object.new_record? ? BlogElem.display_type_select[0] : f.object.display_type)) %>
+      <span class="expanded-hint">
+        <strong>Archive</strong><br />
+        This is a list of all posts organized by month and year. You’ll want to provide an archive somewhere on your website so your readers can find older posts.<br /><br />
+        <strong>List</strong><br />
+        A list of posts in reverse chronological order showing the post title (linked to the full post), the post date and number of comments, if applicable.<br /><br />
+        <strong>List With Body</strong><br />
+        An list of posts in reverse chronological order showing the post title (linked to the full post), the post date, number of comments, if applicable, and entire post body.
+      </span>
+    </div>
+    <hr />
+
+    <div class="field"><span class="hint">How many posts do you want to show? <a class="expander">Explain further</a></span>
+      <%= f.label :count_limit, 'Post Limit' %>
+      <%= f.text_field :count_limit %>
+      <span class="expanded-hint">Choose how many of your recent posts to display in the list. For example you may only want to list 4-5 recent posts on the home page of your website, but then show all posts on another page that functions as an archive.
+      </span>
+    </div>
+    <hr />
+
+    <div class="field"><span class="hint">How many days into the past do you want to show? You can leave this blank to display all posts.</span>
+      <%= f.label :past_limit, 'History' %>
+      <%= f.text_field :past_limit %>
+    </div>
+
+    <%= render :partial => 'admin/submit', :locals => {:f => f, :type => 'element'} %>
+  </fieldset>
+<% end %>

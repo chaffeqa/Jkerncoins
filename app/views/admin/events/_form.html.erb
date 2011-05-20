@@ -1,0 +1,50 @@
+<%= form_for([:admin,@calendar, @event]) do |f| %>
+  <% if @event.errors.any?   %>
+    <div id="error_explanation">
+      <h2><%= pluralize((@event.errors.count), "error") %> prohibited this Event from being saved:</h2>
+      <ul>
+        <% @event.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<fieldset>
+  <%= f.fields_for :node do |node_f| %>
+    <div class="field">
+      <%= node_f.label :parent_id, 'Calendar' %>
+      <%= node_f.select :parent_id, options_from_collection_for_select(Node.where(:page_type => 'Calendar'), :id, :title, @calendar.node.id) %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, :class => "req" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, "Details" %>
+    <%= f.cktext_area :description, :width=>'750px', :heigth=>'300px' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :all_day, raw('&nbsp') %>
+    <%= f.check_box :all_day %> All day event?
+  </div>
+
+  <div class="field">
+    <%= f.label :start_at, "From" %>
+    <span class="datetime"><%= f.datetime_select :start_at %></span>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_at, "To" %>
+    <span class="datetime"><%= f.datetime_select :end_at %></span>
+  </div>
+
+  <%= f.hidden_field :color, :value => @calendar.event_color  %>
+
+  <%= render :partial => 'admin/submit', :locals => {:f => f, :type => 'Event'} %>
+</fieldset>
+<% end %>

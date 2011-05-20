@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render :partial => 'layouts/site_partials/head' %>
+
+    <!-- Extra markup/scripting for admin pages -->
+    <%= javascript_include_tag 'admin.js'  %>
+    <%= stylesheet_link_tag 'admin' %>
+
+    <%= yield :head %>
+  </head>
+
+  <body id="adminPage" class="twoColumn">
+    <% if admin? %><%= render :partial => 'layouts/site_partials/page_admin' %><% end %>
+
+    <%= render :partial => 'layouts/site_partials/header' %>
+
+    <section id="content" class="clearfix">
+      <div id="wrapper">
+	<section id="mainColumn" class="clearfix contents">
+	  <div id="top"></div>
+	  <div id="inner">
+            <%= yield %>
+	  </div>
+	</section>
+
+	<section id="subColumn" class="clearfix contents">
+	  <div id="top"></div>
+	  <div id="inner">
+	    <h3>Admin</h3>
+	    <ul>
+	      <li><%= link_to 'Pages', admin_dynamic_pages_path %></li>
+              <li><%= link_to 'Menus', admin_menus_path %></li>
+	      <li><%= link_to 'Categories', admin_categories_path %></li>
+	      <li><%= link_to 'Items', admin_items_path %></li>
+	      <li><%= link_to 'Client Messages', admin_questions_path %></li>
+	      <li><%= link_to 'Blogs', admin_blogs_path %></li>
+	      <li><%= link_to 'Calendars', admin_calendars_path %></li>
+	    </ul>
+	  </div>
+	</section>
+      </div>
+    </section>
+
+    <%= render :partial => 'layouts/site_partials/footer' %>
+  </body>
+</html>
+

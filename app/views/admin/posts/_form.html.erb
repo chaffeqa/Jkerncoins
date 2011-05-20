@@ -1,0 +1,37 @@
+<%= form_for([:admin, @blog, @post]) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize((@post.errors.count), "error") %> prohibited this Post from being saved:</h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<fieldset>
+  <%= f.fields_for :node do |node_f| %>
+      <%= node_f.hidden_field :parent_id, :value => @blog.node.id %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, "Post Title", :class => "req" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :post_date, "Post Date", :class => "req" %>
+    <span class="datetime"><%= f.datetime_select :post_date, :default => Time.now, :discard_minute => true, :discard_hour => true %></span>
+  </div>
+  
+  <hr />
+
+  <div class="ckeditor">
+    <%= f.label :body, "Body" %>
+    <%= f.cktext_area :body, :width=>'750px', :heigth=>'300px' %>
+  </div>
+
+  <%= render :partial => 'admin/submit', :locals => {:f => f, :type => 'Post'} %>
+</fieldset>
+<% end %>

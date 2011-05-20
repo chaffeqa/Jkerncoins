@@ -1,0 +1,49 @@
+<%= form_for([:admin,@calendar]) do |f| %>
+  <% if @calendar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize((@calendar.errors.count), "error") %> prohibited this calendar from being saved:</h2>
+      <ul>
+        <% @calendar.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.fields_for :node do |node_f| %>
+    <fieldset class="tab">
+      <legend>Page Options</legend>
+      <p>This element can <em>optionally</em> be displayed as a page. The effect will be that this page will appear on your site menus and hold a spot within your <b>site heirarchy</b>.</p>
+      <%= render :partial => 'admin/default_node_form', :locals => {:f => node_f} %>
+    </fieldset>
+    <%=node_f.hidden_field :displayed, :value => true %>
+  <% end %>
+
+  <fieldset>
+    <div class="field">
+      <%= f.label :title, "Calendar Title", :class => "req" %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :banner, "Calendar Banner" %>
+      <%= f.cktext_area :banner, :width=>'750px', :heigth=>'300px' %>
+    </div>
+  </fieldset>
+
+  <fieldset class="tab">
+    <legend>Calendar Colors</legend>
+    <div class="field"><span class="hint">Customize your calendar colors</span>
+      <%= f.label :event_color, "Event" %>
+      <%= f.select :event_color, color_select %>
+    </div>
+
+    <div class="field">
+      <%= f.label :background_color, "Background" %>
+      <%= f.select :background_color, color_select %>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <%= render :partial => 'admin/submit', :locals => {:f => f, :type => 'Calendar'} %>
+  </fieldset>
+<% end %>

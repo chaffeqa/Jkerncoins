@@ -1,0 +1,22 @@
+<% cache('footer_partial') do %>
+<footer class="clearfix">
+  <div id="wrapper">
+    <div id="footerNav"><%= render_navigation(:level => 1, :flat => true) %></div>
+
+    <p id="copyright">
+      &copy; Copyright 2010.<br />
+      Jonathan K. Kern Company.<br />
+      All Rights Reserved.
+    </p>
+
+    <ul class="legalNav">
+      <li><a href="<%= "/legal" %>">Legal</a></li>
+      <li><a href="<%= "/privacy-policy" %>">Privacy Policy</a></li>
+      <li><a href="<%= "/terms-of-use" %>">Terms of Use</a></li>
+    </ul>
+
+    <%= render :partial => 'layouts/site_partials/contact_info' %>
+  </div>
+</footer>
+<% end %>
+

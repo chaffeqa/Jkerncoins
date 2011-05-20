@@ -1,0 +1,22 @@
+<% if admin? %>
+  <span class="controls">
+    <%= link_to image_tag("delete.png", :alt => 'X'), element_path(element), :confirm => "Are you sure you wish to delete this element?", :method => :delete, :class => 'control' %>
+    <%= render :partial => 'elements/element_controls', :locals => {:element => element} %>
+  </span>
+<% end %>
+
+<% if element.display_title %><h1 class="title  <%= element.html_id %> "><%= element.title %></h1><% end %>
+
+<% if admin_signed_in? %>
+  <%= link_to "Logout", destroy_admin_session_path %>
+<% else %>
+  <div id="adminPage">
+  <%= form_tag new_admin_session_path do %>
+    <fieldset>
+      <div class="field"><%= label_tag 'admin[email]', 'Email' %><%= text_field_tag 'admin[email]' %></div>
+      <div class="field"><%= label_tag 'admin[password]', 'Password' %><%= password_field_tag 'admin[password]' %></div>
+      <div class="field"><label>&nbsp;</label><%= submit_tag 'Login', :disable_with => '...Authenticating', :class => "btn medium" %> &nbsp;&nbsp;<%= link_to 'Sign Up', new_admin_registration_path() %></div>
+    </fieldset>
+  <% end %>
+  </div>
+<% end %>

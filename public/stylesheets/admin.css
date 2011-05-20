@@ -1,0 +1,349 @@
+/* PHUSION CMS */
+#adminPage #subColumn ul {margin: 0;}
+#adminPage #subColumn ul li { padding: 0; background: none;}
+#adminPage #subColumn ul li a { font-weight: bold; color: #000; font-size: 1.2em; }
+#adminPage #subColumn ul li a:before {content: "- ";}
+#adminPage #subColumn ul li a.selected { background-color: #ffef85; }
+
+#adminPage #subColumn ul ul li {}
+#adminPage #subColumn ul ul li a {padding-left: .7em; background: url(../template/li-bullet-black.png) .2em .6em no-repeat; 
+				  font-weight: normal; font-size: 1em;}
+#adminPage #subColumn ul ul li a:before {content: "";}
+
+
+
+
+
+/****** Form Elements ******/
+#adminPage form {
+    padding: 10px;
+}
+#adminPage form > fieldset > .field {
+    clear: both;
+    margin:0 0 6px;
+}
+
+/* CKEDITOR HACKS */
+#adminPage form > fieldset > div.ckeditor {
+    max-width: 750px; 
+    min-height: 300px;
+}
+#adminPage form > fieldset > #cke_contents_text_elem_text_editor {
+    min-height: 200px;
+}
+#adminPage form > fieldset > .field > .hint {
+    color:#777777;
+    float:right;
+    width:200px;
+}
+#adminPage form > fieldset > .field > .hint > a { cursor: pointer; }
+#adminPage form > fieldset > .field > span.expanded-hint {
+    color: #777;
+    clear: both;
+    display: block;
+}
+
+#adminPage form > fieldset > .field > .field_with_errors {display: inline;}
+#adminPage form > fieldset > .field > .field_with_errors > select,
+#adminPage form > fieldset > .field > .field_with_errors > textarea,
+#adminPage form > fieldset > .field > .field_with_errors > input { 
+    border: red solid 1px !important; }
+
+#adminPage form > fieldset.tab {
+    border: 1px solid #f0f0f0;
+    margin: 0 -10px;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+#adminPage form > fieldset.tab > legend {
+    background-color: #fff;
+    font-size: 1.2em;
+    padding: 3px;
+}
+#adminPage form > fieldset > .field > label,
+#adminPage form > fieldset > .field > .field_with_errors > label {
+    display:inline-block;
+    font-weight:bold;
+    padding:0 5px 0 0;
+}
+#adminPage form > fieldset > .field > label.req:after,
+#adminPage form > fieldset > .field > .field_with_errors > label.req:after {
+    color:red;
+    content:" *";
+}
+#adminPage form > fieldset > .field > input[type="text"], 
+#adminPage form > fieldset > .field > input[type="password"], 
+#adminPage form > fieldset > .field > input[type="file"], 
+#adminPage form > fieldset > .field > select,
+#adminPage form > fieldset > .field > .field_with_errors > input[type="text"], 
+#adminPage form > fieldset > .field > .field_with_errors > input[type="password"], 
+#adminPage form > fieldset > .field > .field_with_errors > input[type="file"], 
+#adminPage form > fieldset > .field > .field_with_errors > select {
+    background: #fff;
+    border: 1px solid #999;
+    color: #777;
+    font: inherit;
+    margin: 2px 1px;
+    padding: 2px;
+    width: 170px;
+}
+#adminPage form > fieldset > .field > input[type="file"],
+#adminPage form > fieldset > .field > .field_with_errors > input[type="file"] {
+    width: auto;
+} 
+
+#adminPage form > fieldset > .field > .datetime > select,
+#adminPage form > fieldset > .field > .field_with_errors > .datetime > select {
+    background: #fff;
+    border: 1px solid #999;
+    color: #777;
+    font: inherit;
+    margin: 2px 1px;
+    padding: 2px;
+}
+#adminPage form > fieldset > .field > input[disabled="disabled"], 
+#adminPage form > fieldset > .field > select[disabled="disabled"],
+#adminPage form > fieldset > .field > .field_with_errors > input[disabled="disabled"], 
+#adminPage form > fieldset > .field > .field_with_errors > select[disabled="disabled"] {
+    color: #AAA;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+}
+#adminPage form > fieldset > .field > input[type="checkbox"],
+#adminPage form > fieldset > .field > .field_with_errors > input[type="checkbox"] {
+    width:auto;
+    vertical-align: middle;
+    margin: 0 0 2px 10px;
+}
+#adminPage form > fieldset > .field > textarea,
+#adminPage form > fieldset > .field > .field_with_errors > textarea {
+    border:1px solid #AAA;
+    height:60px;
+    vertical-align:top;
+    width:320px;
+}
+#adminPage form > fieldset > .field > input:focus, 
+#adminPage form > fieldset > .field > input.focused, 
+#adminPage form > fieldset > .field > select:focus, 
+#adminPage form > fieldset > .field > select.focused,
+#adminPage form > fieldset > .field > .field_with_errors > input:focus, 
+#adminPage form > fieldset > .field > .field_with_errors > input.focused, 
+#adminPage form > fieldset > .field > .field_with_errors > select:focus, 
+#adminPage form > fieldset > .field > .field_with_errors > select.focused {
+    border-color:#000000;
+    color:#333333;
+}
+/**************************/
+
+#itemAdminTable {border-bottom: 1px solid #bebfb9;}
+#itemAdminTable tr.inputRow td {padding: 0 1em 3em 0;}
+
+#itemAdminTable select,
+#itemAdminTable input[type="text"],
+#itemAdminTable input[type="range"] {
+    background: #fff;
+    border: 1px solid #999;
+    color: #000;
+    font: inherit;
+    margin: 2px 1px;
+    padding: 2px;
+    width: 100%;
+}
+
+#itemAdminTable tr.sorters td { padding: 0; }
+#itemAdminTable tr.sorters td span,
+#itemAdminTable tr.sorters td a { font-weight: bold; background: #E1E2DC; border: 1px solid #bebfb9; padding: 0.5em 0.4em; display: block; }
+#itemAdminTable tr.sorters td a.ASC { background: #bebfb9 url(../template/phusion/arrow-asc.png) 90% .6em no-repeat; }
+#itemAdminTable tr.sorters td a.DESC { background: #bebfb9 url(../template/phusion/arrow-desc.png) 90% .6em no-repeat; }
+#itemAdminTable td.sorted {
+    background: rgba(230, 230, 250, .7);
+    border-left: 1px solid #bebfb9; 
+    border-right: 1px solid #bebfb9; 
+}
+
+ table.adminTable {}
+
+	/* Thead */
+	 table.adminTable thead th { text-align: center; }
+	 table.adminTable thead td {}
+
+	/* Tbody */
+	 table.adminTable tbody td {padding: .5em .4em;}
+	 table.adminTable tbody th {}
+
+	 table.adminTable tbody .alt td {}
+	 table.adminTable tbody .alt th {}
+
+	/* Tfoot */
+	 table.adminTable tfoot th {}
+	 table.adminTable tfoot td {}
+
+#adminPage ul.categoryList { margin: 0 5em 0 0; }
+#adminPage ul.categoryList ul { margin: 0 0 0 1em; }
+#adminPage ul.categoryList li { clear: both; padding: 1px 0 1px .7em; border-top: 1px solid #f0f0f0;}
+#adminPage ul.categoryList li .right { float: right; }
+
+#adminPage td.itemThumb img { vertical-align: middle; }
+
+
+
+
+
+/******** Admin Bar ********/
+#adminBar {
+	height: 30px;
+	padding: 8px 0;
+	background: url(../template/adminBar-bg.png) repeat-x;
+	-moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999;
+	border-bottom: 1px solid #777;
+}
+#adminBar .btn { float: right; margin-right: 5px; }
+
+
+#admin-menu:hover { padding-bottom: 60px; margin-bottom: -60px;}
+#admin-menu a { display: block; padding: 4px 10px; color: #aaa; }
+#admin-menu li li a { border-right: none padding: 4px 8px; }
+
+/* all list items */
+/* width needed or else Opera goes nuts */
+#admin-menu > li > ul { padding-top: 9px; }
+#admin-menu li { height: 100%; }
+#admin-menu li li { width: 160px; }
+#admin-menu > li > ul > li { width: 170px; margin-left: -10px;}
+
+/* second-level lists */
+/* Note: Use left instead of display to hide publicly visible menus because display: none isn't read by screen readers */
+#admin-menu li ul { position: absolute; margin: 0; width: 160px; left: -999em; display: none; line-height: 1.2em; }
+
+/* third-and-above-level lists */
+#admin-menu li li ul { margin: -20px 0 0 80px; }
+
+#admin-menu li:hover ul ul,
+#admin-menu li:hover ul ul ul,
+#admin-menu li:hover ul ul ul ul,
+#admin-menu li:hover ul ul ul ul ul,
+#admin-menu li.iehover ul ul,
+#admin-menu li.iehover ul ul ul,
+#admin-menu li.iehover ul ul ul ul,
+#admin-menu li.iehover ul ul ul ul ul {
+  left: -999em;
+  display: none;
+}
+
+/* lists nested under hovered list items */
+#admin-menu:hover > li> ul,
+#admin-menu li li:hover ul,
+#admin-menu li li li:hover ul,
+#admin-menu li li li li:hover ul,
+#admin-menu li li li li li:hover ul,
+#admin-menu li.iehover ul,
+#admin-menu li li.iehover ul,
+#admin-menu li li li.iehover ul,
+#admin-menu li li li li.iehover ul,
+#admin-menu li li li li li.iehover ul {
+  left: auto;
+  display: block;
+}
+
+/* second-and-more-level hovering */
+#admin-menu li li.expandable { background: url(../template/expandable-arrow.png) no-repeat 145px 7px; }
+#admin-menu li li:hover,
+#admin-menu li li.iehover {
+  background-color: #111;
+}
+#admin-menu li li:hover a,
+#admin-menu li li:hover li:hover a,
+#admin-menu li li:hover li:hover li:hover a {
+  color: #fff;
+  text-decoration: none;
+}
+#admin-menu li li:hover li a,
+#admin-menu li li.iehover li a,
+#admin-menu li li.iehover li.iehover li a {
+  color: #aaa;
+}
+#admin-menu li li.iehover a,
+#admin-menu li li.iehover li.iehover a,
+#admin-menu li li.iehover li.iehover li.iehover a {
+  color: #aaa; width: 90%; /* IE */
+}
+/************************/
+
+
+
+/**** FLASH MESSAGES ****/
+#notice { color: green; background-color: #9F9; padding: 2px 5px; border: green solid 2px;}
+#alert { color: red; background-color: #F99; padding: 2px 5px; border: red solid 2px;}
+
+.field_with_errors input { border: red solid 1px !important; background-color: #FEE; }
+#error_explanation { width: 300px; border: 2px solid red; padding: 7px 7px 0 7px; margin-bottom: 20px; background-color: #eee; }
+#error_explanation h2 {padding: 5px 5px 5px 15px; font-size: 1em; margin: -7px -7px 0 -7px; background-color: #D77; color: #fff }
+#error_explanation ul li {}
+/************************/
+
+
+
+
+/**** Hover Controls ****/
+span.controls {display: block;}
+span.controls {display: none; margin: -5px -5px 5px; padding: 5px; position: relative; background: rgba(30,30,30,.5); 
+	       box-shadow: 0 1px 3px #000; -moz-box-shadow: 0 1px 3px #000; -webkit-box-shadow: 0 1px 3px #000;}
+span.controls:hover {background: rgba(30,30,30,.7);}
+a.adminEdit {display: none;}
+
+/* Admin View */
+div.admin article:hover {margin: -37px -6px 19px; padding: 5px 5px 0; border: 1px solid #999; 
+	box-shadow: 0 1px 3px #999; -moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999; }
+div.admin article:hover span.controls {display: block;}
+div.admin:hover article,
+div.admin:hover span.controls {z-index: 999;}
+div.admin a.adminEdit {display: inline-block; text-indent: -9999px; width: 16px; height: 16px; background: url(../template/phusion/edit.png) no-repeat;}
+
+
+article.admin {display: none;}
+article.admin span.controls {display: block; margin-bottom: 0;}
+
+div.admin article.admin {display: block;}
+div.admin article.admin:hover {margin: -6px -6px -1px;}
+
+/************************/
+
+
+
+
+/*********** Button **********/
+.btn {
+	background: #222 url(../template/phusion/gradient.png) repeat-x;
+	display: inline-block !important;
+	position: relative;
+	padding: 5px 10px 6px;
+	border: none;
+	border-bottom: 1px solid #222;
+	color: #fff;
+	line-height: 1;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 0 -1px 1px #222;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px #999; -webkit-box-shadow: 0 1px 3px #999;
+	cursor: pointer;
+}
+.controls .control {float: right; margin: 0 2px -2px; font-size: 20px; line-height: 1em;}
+a.btn:hover {color: #AAA; text-decoration: none;
+	     -moz-box-shadow: 0 2px 6px #999; -webkit-box-shadow: 0 2px 6px #999;}
+
+/* Sizes ---------- */
+.small.btn {font-size: 11px; padding: 5px 8px 4px;}
+.medium.btn {font-size: 13px;}
+.large.btn {font-size: 14px; padding: 8px 14px 9px;}
+ 
+/* Colors ---------- */
+.blue.btn {background-color: #2daebf;}
+.red.btn {background-color: #e33100;}
+.magenta.btn {background-color: #a9014b;}
+.orange.btn {background-color: #ff5c00;}
+.yellow.btn {background-color: #ffb515; border-bottom: 1px solid #de9e15;
+	     text-shadow: 0 -1px 1px #bb8207;
+}
+a.btn.yellow:hover {color: #fff;}
+/******************************/

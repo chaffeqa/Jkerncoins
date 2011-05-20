@@ -1,0 +1,16 @@
+<h1><%= @message ? @message : 'Site Error' %></h1>
+<% if @shortcut %>
+  <p>Your request for: <strong><%= 'www.jkerncoins/' + @shortcut.to_s  %></strong> does not exist, did you mean:</p>
+  <ul>
+    <% if @similar_nodes.empty? %>
+      <li>No similar site locations</li>
+    <% else %>
+      <% @similar_nodes.each do |node| %>
+        <li><%= link_to node.menu_name, shortcut_path(node.shortcut) %></li>
+      <% end %>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Your request for: <strong><%= request.url  %></strong> does not exist</p>
+<% end %>
+
