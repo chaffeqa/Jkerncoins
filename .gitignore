@@ -1,0 +1,10 @@
+.bundle
+db/*.sqlite3*
+backup
+backup/**
+backup/**/*
+log/*.log
+tmp/**
+tmp/**/*
+config/database.yml
+schema.rb

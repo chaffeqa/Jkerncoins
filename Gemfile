@@ -24,6 +24,8 @@ gem 'mail'#, :git => 'https://github.com/mikel/mail.git'
 
 gem 'aws-s3'
 
+gem 'dalli'
+
 group :development, :test do
   gem 'mysql'
   gem 'ruby-debug'
@@ -31,7 +33,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'dalli'
-  gem 'pg'  
+  #gem 'pg'  
 end
 
