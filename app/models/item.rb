@@ -10,9 +10,9 @@ class Item < ActiveRecord::Base
   # Associated Node attributes
   has_many :categories, :finder_sql =>
     'SELECT cats.* FROM categories AS cats
-    JOIN nodes AS parent_n ON parent_n.page_id = cats.id AND parent_n.page_type = "Category"
+    JOIN nodes AS parent_n ON parent_n.page_id = cats.id AND parent_n.page_type = \'Category\'
     JOIN nodes AS item_n ON parent_n.id = item_n.parent_id
-    WHERE item_n.page_id = #{id} AND item_n.page_type = "Item"'
+    WHERE item_n.page_id = #{id} AND item_n.page_type = \'Item\''
   has_many :nodes, :as => :page, :dependent => :destroy, :validate => true
   accepts_nested_attributes_for :nodes, :allow_destroy => true, :reject_if => proc { |attributes| attributes['parent_id'].blank? }
 

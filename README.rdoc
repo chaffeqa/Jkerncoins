@@ -1,0 +1,153 @@
+= Notes
+
+* Never commit to upstream
+
+
+
+
+= Creating A New Site
+
+=== Initialization
+
+* Based off the {github guide}[http://help.github.com/fork-a-repo/].
+
+1. Get the base GoldenCMS code:
+
+	git clone git@github.com:macattack2k/GoldenCMS.git
+	
+2. Configure remotes:
+
+	git remote add upstream git@github.com:macattack2k/GoldenCMS.git
+	
+3. Create the project:
+	
+	git remote add origin git@github.com:<your-name>/<project-name>.git
+	git add .
+	git commit -a -m "Initial Commit"
+	git push origin master
+	
+
+=== Installation
+
+1. Configure the user/password/database parameters to suit your project:
+	
+	emacs config/database.yml
+	
+2. Configure the bucket parameter to point to your project bucket:
+	
+	emacs config/initializers/s3.rb
+
+3. Configure app specific information in th environment config file
+	
+	emacs config/environment.rb
+
+4. Create the database: 
+	
+	rake db:create
+	rake db:migrate
+
+5. That's it:
+
+	rails s
+
+6. Customize templates in app/views/layouts/
+
+
+=== Deploying to Heroku
+
+1. Create a Heroku Application.  This command will create a heroku app with default url: 'http://your-app-name.heroku.com':
+
+	heroku create <your-app-name>
+	
+2. Configure the environment in heroku:
+
+	heroku config:add BUNDLE_WITHOUT="development:test"
+	heroku config:add S3_KEY=<your-s3-key> S3_SECRET=<your-s3-secret-key>
+	
+3. Add addons:
+
+	heroku addons:add memcache:5mb
+	heroku addons:add newrelic:standard
+	heroku addons:add pgbackups:basic
+	heroku addons:add releases:basic
+	
+4. Create Database:
+	
+	heroku rake db:migrate
+	
+5. Open browser to deploy:
+
+	heroku open
+	
+
+=== Updating the GoldenCMS base code
+
+TODO 
+* Note that we dont want to update model changes... this could be tricky
+
+
+
+
+
+
+
+
+
+= Resources
+
+=== Recommended Platform/Stack
+
+* Heroku Deploy
+* Framework: Rails 3.0.7
+* DB: Posgrsql
+
+
+=== Updating Jquery and Rails.js
+
+NOTE: NOT USED!!!
+<tt>'rails generate jquery:install #--ui to enable jQuery UI --version to install specific version'</tt>
+
+
+
+=== Git Help
+
+{Pro Git}[http://progit.org/book/]
+
+
+=== Basic Rails
+
+{Rails Guides}[http://guides.rails.info/index.html]
+
+
+
+
+
+
+= GoldenCMS Info
+
+=== Debugging
+
+Throughout important code there are 'logger.debug ___' calls which log useful information to the log file, but only at log level: debug.
+To run the application in debug log level, simply call 'rails s --debug' and all such information will be printed to the log.
+
+Debug logging format: See Error Logging
+
+
+
+=== Error Logging
+
+{How Heroku Deals with Errors}[http://blog.heroku.com/archives/2010/12/21/a_new_approach_to_errors/]
+
+==== Format
+* '************* CACHE **************'
+* '************* DB **************'
+* '************* FILTER **************'
+* '************* PARAMS **************'
+* '************* CACHE **************'
+* '************* CODE **************'
+
+
+
+=== Caching
+
+TODO
