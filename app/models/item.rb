@@ -56,12 +56,12 @@ class Item < ActiveRecord::Base
   scope :displayed, where(:display => true)
   scope :scope_display, lambda {|display| where(:display => display)}
   scope :scope_for_sale, lambda {|for_sale| where(:for_sale => for_sale)}
-  scope :scope_name, lambda {|name| where('name LIKE ?', '%'+name+'%')}
-  scope :scope_details, lambda {|name| where('details LIKE ?', "%"+name+"%")}
-  scope :scope_meta, lambda {|meta| where('meta LIKE ?', "%"+meta+"%")}
-  scope :scope_item_id, lambda {|item_id| where('item_id LIKE ?', "%"+item_id+"%")}
-  scope :scope_category, lambda {|title| includes(:nodes => {:parent => :category}) & where('categories.title LIKE ?', "%"+title+"%")}
-  scope :scope_text, lambda {|text| where('name LIKE ? or meta LIKE ? or details LIKE ?', "%"+text+"%", "%"+text+"%", "%"+text+"%")}
+  scope :scope_name, lambda {|name| where('UPPER(name) LIKE UPPER(?)', '%'+name+'%')}
+  scope :scope_details, lambda {|name| where('UPPER(details) LIKE UPPER(?)', "%"+name+"%")}
+  scope :scope_meta, lambda {|meta| where('UPPER(meta) LIKE UPPER(?)', "%"+meta+"%")}
+  scope :scope_item_id, lambda {|item_id| where('UPPER(item_id) LIKE UPPER(?)', "%"+item_id+"%")}
+  scope :scope_category, lambda {|title| includes(:nodes => {:parent => :category}) & where('UPPER(categories.title) LIKE UPPER(?)', "%"+title+"%")}
+  scope :scope_text, lambda {|text| where('UPPER(name) LIKE UPPER(?) or UPPER(meta) LIKE UPPER(?) or UPPER(details) LIKE UPPER(?)', "%"+text+"%", "%"+text+"%", "%"+text+"%")}
   scope :scope_min_price, lambda {|price| where('cost >= ?', price)}
   scope :scope_max_price, lambda {|price| where('cost <= ?', price)}
   scope :in_category_array, lambda {|category_array| includes(:nodes).where('nodes.parent_id IN (?)', category_array )}
