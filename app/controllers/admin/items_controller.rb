@@ -88,18 +88,18 @@ class Admin::ItemsController < ApplicationController
 
   # Creates/Updates the cookies values based on past and new filter parameters
   def create_params_cookies
-    cookies[:name]={ :expires => 30.minutes.from_now, :value => params[:name] } unless params[:name].blank?
-    cookies[:item_id]={ :expires => 30.minutes.from_now, :value => params[:item_id] } unless params[:item_id].blank?
-    cookies[:displayed]={ :expires => 30.minutes.from_now, :value => params[:displayed] } unless params[:displayed].blank?
-    cookies[:for_sale]={ :expires => 30.minutes.from_now, :value => params[:for_sale] } unless params[:for_sale].blank?
-    cookies[:min_price]={ :expires => 30.minutes.from_now, :value => params[:min_price] } unless params[:min_price].blank?
-    cookies[:max_price]={ :expires => 30.minutes.from_now, :value => params[:max_price] } unless params[:max_price].blank?
-    cookies[:category]={ :expires => 30.minutes.from_now, :value => params[:category] } unless params[:category].blank?
-    cookies[:sort]={ :expires => 30.minutes.from_now, :value => params[:sort] } unless params[:sort].blank?
-    cookies[:page]={ :expires => 30.minutes.from_now, :value => params[:page] } unless params[:page].blank?
-    cookies[:direction]={ :expires => 30.minutes.from_now, :value => params[:direction] } unless params[:direction].blank?
-    cookies[:per_page]={ :expires => 30.minutes.from_now, :value => params[:per_page] } unless params[:per_page].blank?
-    cookies[:per_page]={ :expires => 30.minutes.from_now, :value => 10 } if cookies[:per_page].blank?
+    cookies[:name]={ :expires => 5.minutes.from_now, :value => params[:name] } unless params[:name].nil?
+    cookies[:item_id]={ :expires => 5.minutes.from_now, :value => params[:item_id] } unless params[:item_id].nil?
+    cookies[:displayed]={ :expires => 5.minutes.from_now, :value => params[:displayed] } unless params[:displayed].nil?
+    cookies[:for_sale]={ :expires => 5.minutes.from_now, :value => params[:for_sale] } unless params[:for_sale].nil?
+    cookies[:min_price]={ :expires => 5.minutes.from_now, :value => params[:min_price] } unless params[:min_price].nil?
+    cookies[:max_price]={ :expires => 5.minutes.from_now, :value => params[:max_price] } unless params[:max_price].nil?
+    cookies[:category]={ :expires => 5.minutes.from_now, :value => params[:category] } unless params[:category].nil?
+    cookies[:sort]={ :expires => 5.minutes.from_now, :value => params[:sort] } unless params[:sort].nil?
+    cookies[:page]={ :expires => 5.minutes.from_now, :value => params[:page] } unless params[:page].nil?
+    cookies[:direction]={ :expires => 5.minutes.from_now, :value => params[:direction] } unless params[:direction].nil?
+    cookies[:per_page]={ :expires => 5.minutes.from_now, :value => params[:per_page] } unless params[:per_page].nil?
+    cookies[:per_page]={ :expires => 5.minutes.from_now, :value => 10 } if cookies[:per_page].blank?
   end
 
   def sort_column

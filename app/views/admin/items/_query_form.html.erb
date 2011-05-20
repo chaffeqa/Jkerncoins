@@ -1,5 +1,7 @@
 <%= form_tag(admin_items_path, :method => :get) do %>
   <tr class="inputRow">
+  
+    <%= hidden_field_tag :page, '1' %>
 
     <!--td></td-->
     <td><%= text_field_tag :item_id,   @full_params[:item_id].blank? ? '' :  @full_params[:item_id] %></td>
