@@ -38,7 +38,7 @@ class Node < ActiveRecord::Base
     end
     if parent
       logger.debug "DB ********** Touching Node #{parent.title} ********** "
-      self.parent.touch
+      self.parent.update_cache_chain
     end
     self.link_elems.each {|elem| elem.try(:update_cache_chain) }
   end
