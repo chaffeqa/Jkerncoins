@@ -34,5 +34,26 @@ namespace :backup do
         system "#{cmd}"
      end
   end
-end
 
+  # For taking db backup -start
+  # Run with: rake backup:db:heroku_pg
+  # All the backups will be stored in a folder named “backup” which will be available at the root path of the app.
+  desc "backup heroku production db"
+   namespace :db do
+     desc "rake backup:db:heroku"
+     task :heroku => :environment do
+       # First, capture the database and expire the oldest backup (can only store x2 backups)
+        system('heroku pgbackups:capture --expire')
+        # Next, create the credentials for the file names to store the backups on this file system
+        backup_path = File.join(Rails.root, "backup", "db", "#{Date.today.year}-#{Date.today.month}")
+        FileUtils.mkdir_p(backup_path) unless File.exist?(backup_path)
+        tmp_filename = File.join(Rails.root, "backup", "db", "heroku_tmp.dump")
+        filename = File.join(backup_path, "heroku_db_#{Time.now.strftime('%Y%m%d%H%M%S')}.tar.gz")
+        # Run a cURL command that dumps the NEWEST backup into this filesystem
+        cmd = <<-CMD
+          curl -o #{tmp_filename} `heroku pgbackups:url`; tar -czvf #{filename} backup/db/heroku_tmp.dump
+        CMD
+        system "#{cmd}"
+     end
+  end
+end
