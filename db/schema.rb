@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110210155237) do
+ActiveRecord::Schema.define(:version => 20110518180550) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.integer "blog_id"
     t.integer "blog_elem_id"
   end
+
+  add_index "blog_elem_links", ["blog_elem_id"], :name => "index_blog_elem_links_on_blog_elem_id"
+  add_index "blog_elem_links", ["blog_id", "blog_elem_id"], :name => "index_blog_elem_links_on_blog_id_and_blog_elem_id"
+  add_index "blog_elem_links", ["blog_id"], :name => "index_blog_elem_links_on_blog_id"
 
   create_table "blog_elems", :force => true do |t|
     t.integer  "count_limit"
@@ -52,6 +56,8 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "calendar_elems", ["calendar_id"], :name => "index_calendar_elems_on_calendar_id"
 
   create_table "calendars", :force => true do |t|
     t.string   "title"
@@ -111,6 +117,10 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "updated_at"
   end
 
+  add_index "elements", ["dynamic_page_id", "page_area", "position"], :name => "index_elements_on_dynamic_page_id_and_page_area_and_position"
+  add_index "elements", ["dynamic_page_id"], :name => "index_elements_on_dynamic_page_id"
+  add_index "elements", ["elem_id", "elem_type"], :name => "index_elements_on_elem_id_and_elem_type"
+
   create_table "events", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -123,12 +133,18 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "updated_at"
   end
 
+  add_index "events", ["calendar_id", "start_at", "end_at"], :name => "index_events_on_calendar_id_and_start_at_and_end_at"
+  add_index "events", ["calendar_id"], :name => "index_events_on_calendar_id"
+  add_index "events", ["start_at", "end_at"], :name => "index_events_on_start_at_and_end_at"
+
   create_table "item_elems", :force => true do |t|
     t.integer  "item_id"
     t.string   "display_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "item_elems", ["item_id"], :name => "index_item_elems_on_item_id"
 
   create_table "item_list_elems", :force => true do |t|
     t.integer  "category_id"
@@ -139,6 +155,8 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "item_list_elems", ["category_id"], :name => "index_item_list_elems_on_category_id"
 
   create_table "items", :force => true do |t|
     t.string   "name"
@@ -170,6 +188,9 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.integer  "link_list_elem_id"
   end
 
+  add_index "link_elems", ["image_id"], :name => "index_link_elems_on_image_id"
+  add_index "link_elems", ["node_id"], :name => "index_link_elems_on_node_id"
+
   create_table "link_list_elems", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -190,6 +211,11 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "updated_at"
   end
 
+  add_index "nodes", ["page_id", "page_type"], :name => "index_nodes_on_page_id_and_page_type"
+  add_index "nodes", ["parent_id", "position", "displayed"], :name => "index_nodes_on_parent_id_and_position_and_displayed"
+  add_index "nodes", ["parent_id"], :name => "index_nodes_on_parent_id"
+  add_index "nodes", ["shortcut"], :name => "index_nodes_on_shortcut"
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -198,6 +224,9 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "updated_at"
     t.datetime "post_date"
   end
+
+  add_index "posts", ["blog_id", "post_date"], :name => "index_posts_on_blog_id_and_post_date"
+  add_index "posts", ["blog_id"], :name => "index_posts_on_blog_id"
 
   create_table "product_images", :force => true do |t|
     t.string   "image_file_name"
@@ -209,6 +238,9 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "product_images", ["item_id", "primary_image"], :name => "index_product_images_on_item_id_and_primary_image"
+  add_index "product_images", ["item_id"], :name => "index_product_images_on_item_id"
 
   create_table "questions", :force => true do |t|
     t.string   "title"
@@ -231,6 +263,8 @@ ActiveRecord::Schema.define(:version => 20110210155237) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
 
   create_table "text_elems", :force => true do |t|
     t.text     "text"

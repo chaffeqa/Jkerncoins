@@ -126,7 +126,7 @@ CREATE TABLE `blogs` (
 
 LOCK TABLES `blogs` WRITE;
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
-INSERT INTO `blogs` VALUES (6,'Coinworld Articles',NULL,'2010-12-14 17:58:04','2011-05-19 14:13:45',8);
+INSERT INTO `blogs` VALUES (6,'Coinworld Articles',NULL,'2010-12-14 17:58:04','2011-05-28 04:51:23',8);
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -216,37 +216,37 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Inventory','',NULL,NULL,NULL,NULL,'2010-10-30 03:30:30','2011-05-19 21:44:46',371);
-INSERT INTO `categories` VALUES (2,'Special Offers','','SPECIALS-2.jpg','image/jpeg',275729,'2011-01-27 14:58:35','2010-10-30 03:30:30','2011-03-16 15:46:53',1);
-INSERT INTO `categories` VALUES (3,'Ancient Coinage','Alexander the Great gold stater, certified gem Uncirculated! We sell coins from the Biblical period, as well as ancient Roman and Greek coins.','DARIC CH AU OBV sm size.jpg','image/jpeg',71277,'2010-12-23 21:32:28','2010-10-30 03:30:30','2011-05-17 21:47:57',120);
+INSERT INTO `categories` VALUES (1,'Inventory','',NULL,NULL,NULL,NULL,'2010-10-30 03:30:30','2011-05-26 19:58:05',368);
+INSERT INTO `categories` VALUES (2,'Special Offers','','SPECIALS-2.jpg','image/jpeg',275729,'2011-01-27 14:58:35','2010-10-30 03:30:30','2011-05-19 17:52:01',1);
+INSERT INTO `categories` VALUES (3,'Ancient Coinage','Alexander the Great gold stater, certified gem Uncirculated! We sell coins from the Biblical period, as well as ancient Roman and Greek coins.','DARIC CH AU OBV sm size.jpg','image/jpeg',71277,'2010-12-23 21:32:28','2010-10-30 03:30:30','2011-05-26 19:58:03',116);
 INSERT INTO `categories` VALUES (4,'Error Coins','','1995 1C DDO P-67 OBV.jpg','image/jpeg',147036,'2011-01-24 22:11:08','2010-10-30 03:30:30','2011-01-25 17:37:29',1);
-INSERT INTO `categories` VALUES (5,'Foreign Coins','Generally these coins will be dated in the 1500s to the current date.','SALZBURG OBV.jpg','image/jpeg',92262,'2011-05-13 19:09:04','2010-10-30 03:30:30','2011-05-13 19:09:05',153);
+INSERT INTO `categories` VALUES (5,'Foreign Coins','Generally these coins will be dated in the 1500s to the current date.','SALZBURG OBV.jpg','image/jpeg',92262,'2011-05-13 19:09:04','2010-10-30 03:30:30','2011-05-26 14:51:22',156);
 INSERT INTO `categories` VALUES (6,'Bullion Related Items','We usually have US gold American eagles at $80 over spot or Canadian maple leafs or Philharmonics at $60. over spot and Krugerrands at $35 over spot. Call to confirm 859-269-1614. US or foreign coins, bars, ingots, chains, scrap, miscellaneous gold, silver, sterling, platinum, etc. bullion related bought and sold.','1931top.jpg','image/jpeg',93130,'2010-12-03 16:54:59','2010-10-30 03:30:30','2011-01-27 20:33:59',0);
 INSERT INTO `categories` VALUES (7,'Coin Jewelry','Hundreds of other possibilities in other ancient, foreign, and US categories.','chinaobv.jpg','image/jpeg',222164,'2010-12-03 16:55:31','2010-10-30 03:30:30','2011-01-05 18:23:21',5);
-INSERT INTO `categories` VALUES (8,'Medieval Coinage','','con8obv.jpg','image/jpeg',9157,'2010-12-03 16:56:11','2010-10-30 03:30:30','2011-03-23 20:43:51',8);
+INSERT INTO `categories` VALUES (8,'Medieval Coinage','','con8obv.jpg','image/jpeg',9157,'2010-12-03 16:56:11','2010-10-30 03:30:30','2011-05-26 13:50:59',7);
 INSERT INTO `categories` VALUES (9,'Shipwreck & Artifacts','','Luiginosshipwrecklot.jpg','image/jpeg',69393,'2010-12-03 16:49:59','2010-10-30 03:30:30','2011-01-15 15:43:47',2);
-INSERT INTO `categories` VALUES (11,'U.S. Coinage','','1795 50C N-62 OBV.jpg','image/jpeg',79318,'2010-12-23 21:28:50','2010-10-30 03:30:30','2011-05-13 18:08:00',74);
+INSERT INTO `categories` VALUES (11,'U.S. Coinage','','1795 50C N-62 OBV.jpg','image/jpeg',79318,'2010-12-23 21:28:50','2010-10-30 03:30:30','2011-05-25 15:45:50',74);
 INSERT INTO `categories` VALUES (12,'U.S. Proof and Mint Sets','','51_pr_set_f.jpg','image/jpeg',95257,'2010-12-02 19:03:59','2010-10-30 03:30:30','2011-01-05 18:23:22',1);
 INSERT INTO `categories` VALUES (13,'U.S. Territorial Gold','','1853 $20 REV.jpg','image/jpeg',51414,'2011-01-20 15:29:26','2010-10-30 03:30:30','2011-01-20 15:29:26',1);
 INSERT INTO `categories` VALUES (14,'U.S. Tokens','','rolledobv.jpg','image/jpeg',12420,'2010-12-02 18:41:15','2010-10-30 03:30:30','2011-03-16 16:03:25',2);
 INSERT INTO `categories` VALUES (15,'U.S. Treasures','','1715barobv.jpg','image/jpeg',3265,'2010-12-02 18:22:15','2010-10-30 03:30:30','2011-01-05 18:23:22',1);
-INSERT INTO `categories` VALUES (16,'U.S. Medals and Awards','This category will contain one of a kind treasures such as the huge silver bowl presented by Cambodia to Henry Kissinger in 1970.','kissinger.jpg','image/jpeg',344303,'2010-12-02 18:19:26','2010-10-30 03:30:30','2011-03-16 20:34:47',2);
+INSERT INTO `categories` VALUES (16,'U.S. Medals and Awards','This category will contain one of a kind treasures such as the huge silver bowl presented by Cambodia to Henry Kissinger in 1970.','kissinger.jpg','image/jpeg',344303,'2010-12-02 18:19:26','2010-10-30 03:30:30','2011-05-18 15:56:02',1);
 INSERT INTO `categories` VALUES (17,'Biblical','','ab0001obv.jpg','image/jpeg',89879,'2010-12-03 14:29:52','2010-10-30 03:30:30','2011-05-04 21:36:37',19);
 INSERT INTO `categories` VALUES (18,'Byzantine','','MAURICE_TIBERIUS_OBV.jpg','image/jpeg',129299,'2010-12-03 14:30:19','2010-10-30 03:30:30','2011-01-05 18:23:18',3);
-INSERT INTO `categories` VALUES (19,'Greek','Amazing Numismatic Artwork','Syrgoldobv300.jpg','image/jpeg',50365,'2010-12-03 14:30:40','2010-10-30 03:30:30','2011-05-12 14:46:19',33);
+INSERT INTO `categories` VALUES (19,'Greek','Amazing Numismatic Artwork','Syrgoldobv300.jpg','image/jpeg',50365,'2010-12-03 14:30:40','2010-10-30 03:30:30','2011-05-23 20:26:04',32);
 INSERT INTO `categories` VALUES (20,'Jewish Coinage','Generally these coins will be dated in the 1500s to the current date.','shekelobv.jpg','image/jpeg',41053,'2010-12-03 14:31:44','2010-10-30 03:30:30','2011-01-05 18:23:18',1);
 INSERT INTO `categories` VALUES (21,'Parthia','','parthamaspatesobv.jpg','image/jpeg',66196,'2010-12-03 14:32:03','2010-10-30 03:30:30','2011-03-17 18:45:26',0);
-INSERT INTO `categories` VALUES (22,'Roman Imperatoral','From the deterioration of the Republic to the battle of Actium.','caesar11700obv.jpg','image/jpeg',33550,'2010-12-03 14:32:25','2010-10-30 03:30:30','2011-03-29 15:57:18',9);
-INSERT INTO `categories` VALUES (23,'Roman Imperial','Commonly encoutered titles include Caesar, originated with Julius Caesar, and Augustus, originated with Octavian, also known as Augustus. In later years the title Augustus meant the supreme ruler of the Roman Empire, and the title Caesar meant heir to the throne. ','DivoAugSobv.jpg','image/jpeg',118850,'2010-12-03 14:32:43','2010-10-30 03:30:30','2011-05-17 21:47:57',46);
+INSERT INTO `categories` VALUES (22,'Roman Imperatoral','From the deterioration of the Republic to the battle of Actium.','caesar11700obv.jpg','image/jpeg',33550,'2010-12-03 14:32:25','2010-10-30 03:30:30','2011-05-26 19:20:54',8);
+INSERT INTO `categories` VALUES (23,'Roman Imperial','Commonly encoutered titles include Caesar, originated with Julius Caesar, and Augustus, originated with Octavian, also known as Augustus. In later years the title Augustus meant the supreme ruler of the Roman Empire, and the title Caesar meant heir to the throne. ','DivoAugSobv.jpg','image/jpeg',118850,'2010-12-03 14:32:43','2010-10-30 03:30:30','2011-05-26 19:58:02',44);
 INSERT INTO `categories` VALUES (24,'Roman Republic','Rome and its territories from about 280 to 41 BC','wolfrev.jpg','image/jpeg',35971,'2010-12-03 14:33:03','2010-10-30 03:30:30','2011-03-31 14:45:36',9);
 INSERT INTO `categories` VALUES (25,'Afghanistan','Afghanistan','abbasirev.jpg','image/jpeg',38205,'2010-12-03 14:36:15','2010-10-30 03:30:30','2011-03-17 18:52:03',4);
 INSERT INTO `categories` VALUES (26,'Argentina','',NULL,NULL,NULL,NULL,'2010-10-30 03:30:30','2010-10-30 03:30:30',0);
 INSERT INTO `categories` VALUES (27,'Australia','','1866sovobv.jpg','image/jpeg',46300,'2010-12-03 14:38:56','2010-10-30 03:30:30','2011-04-25 14:52:58',1);
-INSERT INTO `categories` VALUES (28,'Austro-Hungarian Lands and Cities','also known as Holy Roman Empire. City coinages include secular and ecclesiastical issues. See also Austria, Hungary, Czechoslovakia, Bulgaria, Serbia and others for more recent coinages.','Maximilian_1502_obv.jpg','image/jpeg',184820,'2010-12-03 14:41:20','2010-10-30 03:30:30','2011-04-17 00:23:43',2);
+INSERT INTO `categories` VALUES (28,'Austro-Hungarian Lands and Cities','also known as Holy Roman Empire. City coinages include secular and ecclesiastical issues. See also Austria, Hungary, Czechoslovakia, Bulgaria, Serbia and others for more recent coinages.','Maximilian_1502_obv.jpg','image/jpeg',184820,'2010-12-03 14:41:20','2010-10-30 03:30:30','2011-05-23 20:26:04',3);
 INSERT INTO `categories` VALUES (29,'Belgium','','25frobv.jpg','image/jpeg',42895,'2010-12-03 14:45:28','2010-10-30 03:30:30','2011-01-04 00:27:12',1);
 INSERT INTO `categories` VALUES (30,'Brazil','','1821Robv.jpg','image/jpeg',58668,'2010-12-03 14:48:41','2010-10-30 03:30:30','2011-01-05 18:23:19',2);
 INSERT INTO `categories` VALUES (31,'Canada','','1936_canada_$_Avf_obv.jpg','image/jpeg',75368,'2010-12-03 14:55:44','2010-10-30 03:30:30','2011-03-17 16:18:40',2);
-INSERT INTO `categories` VALUES (32,'China-Empire','','1332obv.jpg','image/jpeg',86070,'2010-12-03 14:56:08','2010-10-30 03:30:30','2010-12-03 14:56:08',0);
+INSERT INTO `categories` VALUES (32,'China-Empire','','WANG MANG OBV.jpg','image/jpeg',29674,'2011-05-25 20:26:50','2010-10-30 03:30:30','2011-05-26 14:38:11',1);
 INSERT INTO `categories` VALUES (33,'Colombia','Colombia has long history of largely gold and emerald production from ancient to modern times.','maravillasobv.jpg','image/jpeg',41469,'2010-12-03 14:56:25','2010-10-30 03:30:30','2010-12-03 14:56:26',0);
 INSERT INTO `categories` VALUES (34,'Cuba','',NULL,NULL,NULL,NULL,'2010-10-30 03:30:30','2010-10-30 03:30:30',0);
 INSERT INTO `categories` VALUES (35,'Denmark','House of Oldenburg plaque','denmk.jpg','image/jpeg',15149,'2010-12-06 13:46:44','2010-10-30 03:30:30','2011-03-17 17:23:27',2);
@@ -268,7 +268,7 @@ INSERT INTO `categories` VALUES (50,'Iran-Persia','Many dynasties and kingdoms, 
 INSERT INTO `categories` VALUES (51,'Ireland','','ireland_norse.jpg','image/jpeg',68547,'2010-12-06 16:18:37','2010-10-30 03:30:30','2011-01-05 18:23:20',3);
 INSERT INTO `categories` VALUES (52,'Israel','',NULL,NULL,NULL,NULL,'2010-10-30 03:30:30','2010-10-30 03:30:30',0);
 INSERT INTO `categories` VALUES (53,'Italy','','1931IXrev.jpg','image/jpeg',38744,'2010-12-06 16:31:19','2010-10-30 03:30:30','2011-01-05 18:23:20',11);
-INSERT INTO `categories` VALUES (54,'Japan','','JAPAN 1872 5Y OBV.jpg','image/jpeg',126188,'2011-05-13 19:05:52','2010-10-30 03:30:30','2011-05-13 19:05:52',9);
+INSERT INTO `categories` VALUES (54,'Japan','','JAPAN 1872 5Y OBV.jpg','image/jpeg',126188,'2011-05-13 19:05:52','2010-10-30 03:30:30','2011-05-26 14:51:21',10);
 INSERT INTO `categories` VALUES (55,'Liberia','','1862_liberia.jpg','image/jpeg',45781,'2010-12-06 16:59:32','2010-10-30 03:30:30','2011-01-05 18:23:20',1);
 INSERT INTO `categories` VALUES (56,'Malaya','',NULL,NULL,NULL,NULL,'2010-10-30 03:30:30','2010-10-30 03:30:30',0);
 INSERT INTO `categories` VALUES (57,'Mexico','Incredible strike with full scales on the snake!','1838rev.jpg','image/jpeg',60306,'2010-12-06 16:59:57','2010-10-30 03:30:30','2011-03-07 20:41:24',7);
@@ -288,7 +288,7 @@ INSERT INTO `categories` VALUES (70,'Spain, the Homeland','Middle Ages to now. S
 INSERT INTO `categories` VALUES (71,'Straits Settlements','',NULL,NULL,NULL,NULL,'2010-10-30 03:30:31','2011-01-05 18:23:20',1);
 INSERT INTO `categories` VALUES (72,'Sweden','','2-3obv.jpg','image/jpeg',52043,'2010-12-06 17:35:47','2010-10-30 03:30:31','2011-01-20 15:43:37',10);
 INSERT INTO `categories` VALUES (73,'Switzerland','','churobv.jpg','image/jpeg',58169,'2010-12-06 18:17:56','2010-10-30 03:30:31','2011-01-05 18:23:20',10);
-INSERT INTO `categories` VALUES (74,'Medieval England','','gr_brit_penny_Nau58_obv.jpg','image/jpeg',66472,'2010-12-03 22:49:53','2010-10-30 03:30:31','2011-03-17 18:27:29',2);
+INSERT INTO `categories` VALUES (74,'Medieval England','','gr_brit_penny_Nau58_obv.jpg','image/jpeg',66472,'2010-12-03 22:49:53','2010-10-30 03:30:31','2011-05-26 13:50:58',1);
 INSERT INTO `categories` VALUES (75,'Medieval Ireland','','HibNorseobv.jpg','image/jpeg',41360,'2010-12-03 22:50:20','2010-10-30 03:30:31','2011-01-05 18:23:21',1);
 INSERT INTO `categories` VALUES (76,'Medieval Scotland',NULL,NULL,NULL,NULL,NULL,'2010-10-30 03:30:31','2010-10-30 03:30:31',0);
 INSERT INTO `categories` VALUES (77,'Medieval Anglo-Gallic',NULL,NULL,NULL,NULL,NULL,'2010-10-30 03:30:31','2010-10-30 03:30:31',0);
@@ -344,8 +344,8 @@ INSERT INTO `categories` VALUES (127,'Half Dimes','','1862 H10C NGC OBV.jpg','im
 INSERT INTO `categories` VALUES (128,'Nickels','','1942_5C_OBV.jpg','image/jpeg',110020,'2011-01-04 16:57:30','2011-01-04 16:57:30','2011-05-10 16:10:43',2);
 INSERT INTO `categories` VALUES (129,'Dimes','','1829_10C_OBV.jpg','image/jpeg',112603,'2011-01-04 16:58:16','2011-01-04 16:58:17','2011-04-17 00:29:20',3);
 INSERT INTO `categories` VALUES (130,'Quarters','','35_25c_p65.jpg','image/jpeg',65179,'2011-01-04 16:59:50','2011-01-04 16:59:52','2011-04-09 15:30:39',9);
-INSERT INTO `categories` VALUES (131,'Half Dollars','','39_50C_PR65_OBV.jpg','image/jpeg',127299,'2011-01-04 17:02:20','2011-01-04 17:02:21','2011-05-02 18:49:14',3);
-INSERT INTO `categories` VALUES (132,'Silver Dollars','','1799 $ NGC B-6 OBV.jpg','image/jpeg',44236,'2011-01-20 15:24:57','2011-01-04 17:05:43','2011-05-13 18:08:00',23);
+INSERT INTO `categories` VALUES (131,'Half Dollars','','39_50C_PR65_OBV.jpg','image/jpeg',127299,'2011-01-04 17:02:20','2011-01-04 17:02:21','2011-05-23 20:26:08',2);
+INSERT INTO `categories` VALUES (132,'Silver Dollars','','1864 $ PCGS OBV.jpg','image/jpeg',215220,'2011-05-25 15:49:24','2011-01-04 17:05:43','2011-05-25 15:49:24',24);
 INSERT INTO `categories` VALUES (133,'Gold Dollars','','1854g$.jpg','image/jpeg',61552,'2011-01-04 17:09:06','2011-01-04 17:09:07','2011-01-05 18:23:22',1);
 INSERT INTO `categories` VALUES (134,'Gold Three Dollars','','1878 3$ NGC UNC OBV.jpg','image/jpeg',113991,'2011-05-11 15:13:08','2011-01-04 17:09:45','2011-05-11 15:21:19',1);
 INSERT INTO `categories` VALUES (135,'Quarter Eagles','','1839-C REV.jpg','image/jpeg',54892,'2011-01-20 15:26:13','2011-01-04 17:10:07','2011-01-20 15:26:13',0);
@@ -396,7 +396,7 @@ CREATE TABLE `ckeditor_assets` (
   KEY `idx_assetable_type` (`assetable_type`,`type`,`assetable_id`),
   KEY `fk_assetable` (`assetable_type`,`assetable_id`),
   KEY `fk_user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -460,7 +460,25 @@ INSERT INTO `ckeditor_assets` VALUES (52,'COIN WORLD MAY 2011 PG4.pdf','applicat
 INSERT INTO `ckeditor_assets` VALUES (53,'COIN WORLD MAY 2011 PG5.pdf','application/pdf',2785570,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-04-21 19:55:37','2011-04-21 19:55:37');
 INSERT INTO `ckeditor_assets` VALUES (54,'COIN WORLD MAY 2011 PG6.pdf','application/pdf',2398895,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-04-21 19:56:32','2011-04-21 19:56:32');
 INSERT INTO `ckeditor_assets` VALUES (55,'COIN WORLD MARCH 2011 pg1-5.pdf','application/pdf',4545868,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-04-22 18:22:24','2011-04-22 18:22:24');
-INSERT INTO `ckeditor_assets` VALUES (56,'content_1_pic1.jpg','image/jpeg',24637,NULL,NULL,'Ckeditor::Picture',NULL,0,NULL,'2011-05-19 21:25:33','2011-05-19 21:25:33');
+INSERT INTO `ckeditor_assets` VALUES (56,'COIN WORLD APRIL 2011 PG1.pdf','application/pdf',1526745,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 19:54:31','2011-05-19 19:54:31');
+INSERT INTO `ckeditor_assets` VALUES (57,'COIN WORLD APRIL 2011 PG1.pdf','application/pdf',1526745,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 19:56:24','2011-05-19 19:56:24');
+INSERT INTO `ckeditor_assets` VALUES (58,'COIN WORLD APRIL 2011 PG2.pdf','application/pdf',1645207,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 19:57:35','2011-05-19 19:57:35');
+INSERT INTO `ckeditor_assets` VALUES (59,'COIN WORLD APRIL 2011 PG3.pdf','application/pdf',1862089,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 19:58:26','2011-05-19 19:58:26');
+INSERT INTO `ckeditor_assets` VALUES (60,'COIN WORLD APRIL 2011 PG4.pdf','application/pdf',1819536,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 19:59:10','2011-05-19 19:59:10');
+INSERT INTO `ckeditor_assets` VALUES (61,'COIN WORLD APRIL 2011 PG5.pdf','application/pdf',1545524,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 19:59:52','2011-05-19 19:59:52');
+INSERT INTO `ckeditor_assets` VALUES (62,'COIN WORLD APRIL 2011 PG6.pdf','application/pdf',2085799,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 20:00:32','2011-05-19 20:00:32');
+INSERT INTO `ckeditor_assets` VALUES (63,'COIN WORLD JUNE 2011 PG1.pdf','application/pdf',2140292,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 20:13:13','2011-05-19 20:13:13');
+INSERT INTO `ckeditor_assets` VALUES (64,'COIN WORLD JUNE 2011 PG2.pdf','application/pdf',2035164,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 20:14:13','2011-05-19 20:14:13');
+INSERT INTO `ckeditor_assets` VALUES (65,'COIN WORLD JUNE 2011 PG3.pdf','application/pdf',2733434,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 20:15:58','2011-05-19 20:15:58');
+INSERT INTO `ckeditor_assets` VALUES (66,'COIN WORLD JUNE 2011 PG4.pdf','application/pdf',2231417,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 20:17:01','2011-05-19 20:17:01');
+INSERT INTO `ckeditor_assets` VALUES (67,'COIN WORLD JUNE 2011 PG5.pdf','application/pdf',2052546,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 20:17:58','2011-05-19 20:17:58');
+INSERT INTO `ckeditor_assets` VALUES (68,'COIN WORLD JUNE 2011 PG6.pdf','application/pdf',1813929,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-19 20:35:05','2011-05-19 20:35:05');
+INSERT INTO `ckeditor_assets` VALUES (69,'COIN WORLD APRIL 2011 PG1.pdf','application/pdf',1526745,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-28 04:34:41','2011-05-28 04:34:41');
+INSERT INTO `ckeditor_assets` VALUES (70,'COIN WORLD APRIL 2011 PG2.pdf','application/pdf',1645207,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-28 04:35:19','2011-05-28 04:35:19');
+INSERT INTO `ckeditor_assets` VALUES (71,'COIN WORLD APRIL 2011 PG4.pdf','application/pdf',1819536,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-28 04:39:11','2011-05-28 04:39:11');
+INSERT INTO `ckeditor_assets` VALUES (72,'COIN WORLD APRIL 2011 PG5.pdf','application/pdf',1545524,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-28 04:40:15','2011-05-28 04:40:15');
+INSERT INTO `ckeditor_assets` VALUES (73,'COIN WORLD APRIL 2011 PG6.pdf','application/pdf',2085799,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-28 04:46:17','2011-05-28 04:46:17');
+INSERT INTO `ckeditor_assets` VALUES (74,'COIN WORLD APRIL 2011 PG3.pdf','application/pdf',1862089,NULL,NULL,'Ckeditor::AttachmentFile',NULL,0,NULL,'2011-05-28 04:49:39','2011-05-28 04:49:39');
 /*!40000 ALTER TABLE `ckeditor_assets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -486,8 +504,8 @@ CREATE TABLE `dynamic_pages` (
 
 LOCK TABLES `dynamic_pages` WRITE;
 /*!40000 ALTER TABLE `dynamic_pages` DISABLE KEYS */;
-INSERT INTO `dynamic_pages` VALUES (1,'Home','2010-10-30 03:30:29','2011-05-19 22:17:57');
-INSERT INTO `dynamic_pages` VALUES (3,'Inside','2010-10-30 03:30:30','2011-05-19 22:12:52');
+INSERT INTO `dynamic_pages` VALUES (1,'Home','2010-10-30 03:30:29','2011-05-28 03:58:12');
+INSERT INTO `dynamic_pages` VALUES (3,'Inside','2010-10-30 03:30:30','2011-05-28 03:44:47');
 INSERT INTO `dynamic_pages` VALUES (4,'Inside','2010-10-30 03:30:30','2010-10-30 03:30:30');
 INSERT INTO `dynamic_pages` VALUES (5,'Inside','2010-12-09 18:06:39','2010-12-09 18:06:39');
 INSERT INTO `dynamic_pages` VALUES (6,'Inside','2010-12-20 14:25:29','2010-12-20 14:25:29');
@@ -520,7 +538,7 @@ CREATE TABLE `elements` (
   KEY `index_elements_on_dynamic_page_id` (`dynamic_page_id`),
   KEY `index_elements_on_dynamic_page_id_and_page_area_and_position` (`dynamic_page_id`,`page_area`,`position`),
   KEY `index_elements_on_elem_id_and_elem_type` (`elem_id`,`elem_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -529,18 +547,18 @@ CREATE TABLE `elements` (
 
 LOCK TABLES `elements` WRITE;
 /*!40000 ALTER TABLE `elements` DISABLE KEYS */;
-INSERT INTO `elements` VALUES (4,1,1,4,'TextElem',5,'Welcome',1,NULL,'2010-10-30 03:30:30','2011-05-19 14:17:51');
+INSERT INTO `elements` VALUES (4,1,1,4,'TextElem',5,'Welcome',1,NULL,'2010-10-30 03:30:30','2011-05-28 03:41:43');
 INSERT INTO `elements` VALUES (5,4,1,5,'TextElem',1,'About Kern Coin',1,'about-kern-coin','2010-10-30 03:30:30','2010-10-30 03:30:30');
 INSERT INTO `elements` VALUES (8,5,1,7,'TextElem',1,'Auctions Coming Soon!',1,'auctions-coming-soon','2010-10-30 04:04:10','2010-10-30 04:24:17');
 INSERT INTO `elements` VALUES (16,1,1,11,'TextElem',2,'Buy',1,'buy','2010-11-26 21:03:58','2010-12-15 21:07:35');
-INSERT INTO `elements` VALUES (19,3,1,14,'TextElem',1,'Coinworld Article Archives',1,'coinworld-article-archives','2010-12-07 00:00:39','2011-05-19 22:12:52');
+INSERT INTO `elements` VALUES (19,3,1,14,'TextElem',1,'Coinworld Article Archives',1,'coinworld-article-archives','2010-12-07 00:00:39','2011-05-28 03:44:47');
 INSERT INTO `elements` VALUES (32,3,1,8,'BlogElem',1,'Coinworld Articles',1,'coinworld-articles','2010-12-14 17:58:04','2010-12-14 17:58:04');
-INSERT INTO `elements` VALUES (33,1,1,16,'TextElem',3,'Special Offers',0,'special-offers','2010-12-15 20:57:48','2011-05-19 14:17:06');
+INSERT INTO `elements` VALUES (33,1,1,16,'TextElem',3,'Special Offers',0,'special-offers','2010-12-15 20:57:48','2011-05-28 03:40:52');
+INSERT INTO `elements` VALUES (35,1,1,18,'TextElem',4,'Sidebar',0,NULL,'2010-12-15 22:08:18','2011-05-28 03:57:27');
 INSERT INTO `elements` VALUES (36,6,1,19,'TextElem',1,'A Bachelor of Arts in Numismatics?',1,'a-bachelor-of-arts-in-numismatics','2010-12-20 14:27:06','2010-12-20 14:27:06');
-INSERT INTO `elements` VALUES (40,1,1,22,'TextElem',6,'New Coin World Ad',1,'new-coin-world-ad','2011-02-10 17:42:31','2011-05-19 21:10:37');
+INSERT INTO `elements` VALUES (40,1,1,22,'TextElem',6,'New Coin World Ad',1,'new-coin-world-ad','2011-02-10 17:42:31','2011-05-28 03:58:12');
 INSERT INTO `elements` VALUES (42,1,1,24,'TextElem',3,'',1,'element-42','2011-02-23 19:32:33','2011-02-23 19:32:33');
 INSERT INTO `elements` VALUES (44,7,1,26,'TextElem',1,'Legal',1,'legal','2011-03-19 17:26:28','2011-03-19 17:26:28');
-INSERT INTO `elements` VALUES (46,1,1,31,'TextElem',4,'Coin Image',0,'coin-image','2011-05-19 21:31:15','2011-05-19 21:31:43');
 /*!40000 ALTER TABLE `elements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -654,7 +672,7 @@ CREATE TABLE `items` (
   `updated_at` datetime DEFAULT NULL,
   `meta` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1601 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1605 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1600,7 +1618,7 @@ INSERT INTO `items` VALUES (946,'1901-s  barber quarter  key date!!','3847.00','
 INSERT INTO `items` VALUES (947,'1878-s morgam silver dollar','69.00','','NGC (MS-63)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (948,'1880-o morgan dollar  (vam-7, o/o)','87.00','','ANACS (MS-61)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (949,'1042-66 Silver Penny \"Edward the Confessor\"','1477.00','\"Edward the Confessor\" Lewes. About 19.5 mm diameter. Obverse: helmeted bust of Edward the Confessor, who was very pious, and was cannonized after his death. Hammer cross type.','NGC (AU-58)',0,0,'2010-11-01 20:27:19','2011-03-17 18:25:12','');
-INSERT INTO `items` VALUES (950,'810-814 Silver Sceat Vilheah-Eanred','297.00','Deep rich charcoal grey surfaces. (s-860)','NGC (AU-50)',1,1,'2010-11-01 20:27:19','2011-03-17 18:27:29','');
+INSERT INTO `items` VALUES (950,'810-814 Silver Sceat Vilheah-Eanred','297.00','Deep rich charcoal grey surfaces. (s-860)','NGC (AU-50)',0,0,'2010-11-01 20:27:19','2011-05-26 13:50:58','');
 INSERT INTO `items` VALUES (951,'C.710-760 Silver Sceat  (Kent, s-797)','2177.00','Obv: Bust facing right with cross. Rev: Wolf-headed serpent.','NGC (AU-55)',0,0,'2010-11-01 20:27:19','2011-03-17 18:26:25','');
 INSERT INTO `items` VALUES (952,'C.710-760 Silver Sceat \"Secondary Sceattas\"','1877.00','Type 48 INE.\r\nObv. Whorl of 3 wolf heads. Rev: Round shield with bosses.','NGC (AU-58)',0,0,'2010-11-01 20:27:19','2011-03-17 18:26:43','');
 INSERT INTO `items` VALUES (953,'Ah444 gold dinar \"fatimids nicol-684\"','1250.00','Even gold color.','NGC (MS-63)',1,1,'2010-11-01 20:27:19','2011-03-17 17:24:44','');
@@ -1949,7 +1967,7 @@ INSERT INTO `items` VALUES (1302,'1941-s  mercury dime','57.00','','NGC (MS-65) 
 INSERT INTO `items` VALUES (1303,'1980-s  susan b. anthony dollar','17.00','','PCGS (PR-69) DEEP CAMEO',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (1304,'Gnaeus pompey, 67-36 b.c. silver denarius','2700.00','','ANACS (VF-30)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (1305,'Julius caesar, 47-46 b.c., silver denarius, aeneas','1977.00','','ANACS (AU-50)',1,1,'2010-11-01 20:27:19','2010-12-03 13:35:20',NULL);
-INSERT INTO `items` VALUES (1306,'Julius caesar, 42 b.c., silver denarius, l. mussidius','3500.00','','ANACS (EF-40)',1,1,'2010-11-01 20:27:19','2011-03-25 20:23:49','');
+INSERT INTO `items` VALUES (1306,'Julius caesar, 42 b.c., silver denarius, l. mussidius','3500.00','','ANACS (EF-40)',0,0,'2010-11-01 20:27:19','2011-05-26 19:20:53','');
 INSERT INTO `items` VALUES (1307,'Mark antony & octavian 41 b.c., silver denarius','1977.00','','ANACS (VF-30)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (1308,'Lepidus & octavian, 42 b.c., silver denarius','1877.00','','ANACS (VF-20)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (1309,'Ahenobarbus 41-40 b.c., silver denarius','977.00','','ANACS (VF-25)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
@@ -2035,8 +2053,8 @@ INSERT INTO `items` VALUES (1390,'Bosporus-sauromates ii-commodus stater','2700.
 INSERT INTO `items` VALUES (1391,'Bosphorus, rheskuporis ii/severus alexander, el stater','977.00','','ANACS (VF-35)',1,1,'2010-11-01 20:27:19','2010-12-03 13:48:41',NULL);
 INSERT INTO `items` VALUES (1392,'Gordian i, silver denarius (238ad)','1277.00','','ANACS (FINE-15)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (1393,'Gordian ii, silver denarius (ad238)','3477.00','','ANACS (VF-35)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
-INSERT INTO `items` VALUES (1394,'Carausius, pax, ae antoninianus (286-293ad)','777.00','','ANACS (AU-50)',1,1,'2010-11-01 20:27:19','2010-12-03 13:51:56',NULL);
-INSERT INTO `items` VALUES (1395,'Carausius, ae antoninianus (286-293ad)','400.00','','ANACS (EF45)',1,1,'2010-11-01 20:27:19','2010-12-03 13:50:58',NULL);
+INSERT INTO `items` VALUES (1394,'Carausius, pax, ae antoninianus (286-293ad)','777.00','','ANACS (AU-50)',0,0,'2010-11-01 20:27:19','2011-05-26 19:58:02','');
+INSERT INTO `items` VALUES (1395,'Carausius, ae antoninianus (286-293ad)','400.00','','ANACS (EF45)',0,0,'2010-11-01 20:27:19','2011-05-26 19:57:39','');
 INSERT INTO `items` VALUES (1396,'Constans gold solidus (340-350ad)','4977.00','','ANACS (AU-50)',0,0,'2010-11-01 20:27:19','2011-02-17 19:27:52','');
 INSERT INTO `items` VALUES (1397,'Honorius gold solidus (404-408ad)','1277.00','','ANACS (AU-55)',1,1,'2010-11-01 20:27:19','2010-12-03 13:57:54',NULL);
 INSERT INTO `items` VALUES (1398,'Marcian gold solidus (450-457ad)','2477.00','','NGC (CHOICE UNC.)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
@@ -2061,7 +2079,7 @@ INSERT INTO `items` VALUES (1416,'Leo i, 457-474 ad, gold tremissis','477.00',''
 INSERT INTO `items` VALUES (1417,'Zeno (474-491ad) gold tremissis','477.00','','NGC (VF/wrinkled)',1,1,'2010-11-01 20:27:19','2010-12-03 14:15:58',NULL);
 INSERT INTO `items` VALUES (1418,'Balbinus silver denarius (april-june 238ad)','877.00','','ANACS (EF-45)',1,1,'2010-11-01 20:27:19','2010-12-03 13:47:55',NULL);
 INSERT INTO `items` VALUES (1419,'Pupienus (june 238ad) silver antoninianus','877.00','','ANACS (VF-35)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
-INSERT INTO `items` VALUES (1420,'Persia-sardeis in lydia (5th cent. bc) gold daric','3477.00','','NGC (CHOICE ABT. UNC.)',1,1,'2010-11-01 20:27:19','2010-12-03 13:09:36',NULL);
+INSERT INTO `items` VALUES (1420,'Persia-sardeis in lydia (5th cent. bc) gold daric','3477.00','','NGC (CHOICE ABT. UNC.)',0,0,'2010-11-01 20:27:19','2011-05-23 18:47:37','');
 INSERT INTO `items` VALUES (1421,'Philip ii gold stater (359-336bc) lifetime','3377.00','','NGC (XF)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
 INSERT INTO `items` VALUES (1422,'Aemilian (253ad) ar antoninianus','477.00','','ANACS (EF-40)',1,1,'2010-11-01 20:27:19','2010-12-03 13:45:33',NULL);
 INSERT INTO `items` VALUES (1423,'Helena (307-337ad) reduced follis','677.00','','NGC (UNC.)',1,0,'2010-11-01 20:27:19','2010-11-01 20:27:19',NULL);
@@ -2120,7 +2138,6 @@ INSERT INTO `items` VALUES (1494,'1807-Mo TH Silver 1/2 REAL  Mexico','47.00','E
 INSERT INTO `items` VALUES (1497,'2004 LEWIS & CLARK Bank Set','3.75','CENT, PEACE & KEELBOAT NICKEL, DIME, HALF DOLLAR, SACAGAWEA DOLLAR. The half and dollar bid higher than double by themselves.','UNCIRCULATED',1,1,'2011-03-16 15:46:35','2011-03-16 15:46:35','');
 INSERT INTO `items` VALUES (1498,'c.1807 GEORGE WASHINGTON Medal by Sansom','1477.00','Made of Bronze. One of the prettiest medals of this era. B-71A AE. 40mm','NGC (MS-62) BROWN',1,1,'2011-03-16 15:58:53','2011-03-16 15:58:53','');
 INSERT INTO `items` VALUES (1499,'c.1825-1860 WASHINGTON SUCCESS Silvered Token','6700.00','Undated. Large plain edge with perfect full silvering. Very original surfaces. 24.5mm','NGC (MS-61)',1,1,'2011-03-16 16:03:18','2011-03-16 16:06:21','');
-INSERT INTO `items` VALUES (1500,'c.1807 GEORGE WASHINGTON Medal by Sansom','1477.00','Made of Bronze. One of the prettiest medals of this era. B-71A AE. 40mm','NGC (MS-62) BROWN',1,1,'2011-03-16 20:34:16','2011-03-16 20:34:16','');
 INSERT INTO `items` VALUES (1502,'1832-PTS JL Silver 8-SOLES','97.00','Pleasing rich original surfaces. Reeded edge. ','NGC (VF-35)',1,1,'2011-03-17 16:10:01','2011-03-17 16:10:01','');
 INSERT INTO `items` VALUES (1503,'1921 Silver Quarter 25c','297.00','Bright untoned surfaces.','NGC (XF-45)',1,1,'2011-03-17 16:16:49','2011-03-17 16:16:49','');
 INSERT INTO `items` VALUES (1504,'1929 Silver DIME 10c','97.00','Lusterous white surfaces.','NGC (MS-63)',1,1,'2011-03-17 16:18:40','2011-03-17 16:18:40','');
@@ -2155,7 +2172,6 @@ INSERT INTO `items` VALUES (1540,'1958-P WASHINGTON Quarter','147.00','Wisps of 
 INSERT INTO `items` VALUES (1541,'1958-P WASHINGTON Quarter','57.00','Rich color.','NGC (MS-66)',1,1,'2011-04-09 15:25:00','2011-04-09 15:25:00','');
 INSERT INTO `items` VALUES (1542,'1958-D WASHINGTON Quarter','47.00','Rustic accents.','NGC (MS-66)',1,1,'2011-04-09 15:27:59','2011-04-09 15:27:59','');
 INSERT INTO `items` VALUES (1543,'1958-D WASHINGTON Quarter','47.00','Gorgeous color.','NGC (MS-66)',1,1,'2011-04-09 15:30:39','2011-04-09 15:30:39','');
-INSERT INTO `items` VALUES (1544,'1832 CAPPED BUST Half Dollar','137.00','No distractions. OVERTON-118','NGC (VF-35)',1,1,'2011-04-09 16:34:13','2011-04-09 16:34:13','');
 INSERT INTO `items` VALUES (1546,'1799 DRAPED BUST Silver Dollar','1977.00','VF details improperly cleaned (very faint). B-9, BB-166','NGC (VF/details)',0,0,'2011-04-09 16:40:22','2011-05-13 18:08:00','');
 INSERT INTO `items` VALUES (1547,'1836 GROBECHT Dollar, Original Strike','21700.00','Original striking of Feb.-March 1837, medal turn. Light toning with blueish color along the rim.','PCGS (PROOF 55)',1,1,'2011-04-09 16:44:17','2011-04-09 16:44:17','');
 INSERT INTO `items` VALUES (1548,'1872-P SEATED LIBERTY Dollar','2477.00','VERY faintly cleaned. PQ!! eye appeal.','ANACS (MS-60/clnd)',1,1,'2011-04-09 16:46:15','2011-04-09 16:46:15','');
@@ -2207,6 +2223,10 @@ INSERT INTO `items` VALUES (1597,'1765 Silver 1/4 THALER','347.00','Original sur
 INSERT INTO `items` VALUES (1598,'1675 SM Silver 2/3 THALER','1277.00','Obv: Very baroque bust of Fridrich Casimir. rev: Coat of arms.','NGC (MS-63)',1,1,'2011-05-13 18:14:50','2011-05-13 18:14:50','');
 INSERT INTO `items` VALUES (1599,'1669 Silver 4-MARIENGROSCHEN','127.00','Faint rosey/red and blue hues.','NGC (XF-40)',1,1,'2011-05-13 18:29:33','2011-05-13 18:29:33','');
 INSERT INTO `items` VALUES (1600,'1834 Silver 6-KREUZER','127.00','Golden/red color.','NGC (MS-64)',1,1,'2011-05-13 18:57:49','2011-05-13 18:57:49','');
+INSERT INTO `items` VALUES (1601,'1704 Silver Taler \"LEOPOLD the HOGMOUTH\"','1775.00','Very nice eye appeal. PQ! surfaces. Dav-1003','NGC (MS-62)',1,1,'2011-05-20 14:58:08','2011-05-28 04:15:59','');
+INSERT INTO `items` VALUES (1602,'1864 LIBERTY SEATED Dollar','57000.00','CIVIL WAR ERA. Flashy white surfaces. Don\'t be confused, these are die polish lines NOT hairlines. A great coin for the serious collector. Pop.8, 1-MS66','PCGS (MS-65)',1,1,'2011-05-25 15:45:49','2011-05-28 04:20:41','');
+INSERT INTO `items` VALUES (1603,'(14-20AD) Bronze 25-Huo Bu \"PANTS MONEY\"','127.00','Wang Mang. Superb patina, light dirt. (photo is example only)','XF',1,1,'2011-05-26 14:38:11','2011-05-28 04:22:34','');
+INSERT INTO `items` VALUES (1604,'1868-69 Gold 2-BU \"MEIJI ERA\"','117.00','Mutsuhito. 3.0gms, .223 Fine. (photo is example only)','raw',1,1,'2011-05-26 14:51:21','2011-05-28 04:24:01','');
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2299,7 +2319,7 @@ CREATE TABLE `nodes` (
   KEY `index_nodes_on_parent_id_and_position_and_displayed` (`parent_id`,`position`,`displayed`),
   KEY `index_nodes_on_shortcut` (`shortcut`),
   KEY `index_nodes_on_page_id_and_page_type` (`page_id`,`page_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=815 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=820 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2308,24 +2328,24 @@ CREATE TABLE `nodes` (
 
 LOCK TABLES `nodes` WRITE;
 /*!40000 ALTER TABLE `nodes` DISABLE KEYS */;
-INSERT INTO `nodes` VALUES (1,'Home','Home','Home',NULL,1,1,'DynamicPage',NULL,NULL,0,'2010-10-30 03:30:29','2011-05-19 22:17:57');
-INSERT INTO `nodes` VALUES (2,'Blogs','Blogs','Blogs',1,0,NULL,NULL,NULL,NULL,NULL,'2010-10-30 03:30:29','2010-10-30 03:30:29');
+INSERT INTO `nodes` VALUES (1,'Home','Home','Home',NULL,1,1,'DynamicPage',NULL,NULL,0,'2010-10-30 03:30:29','2011-05-28 04:51:23');
+INSERT INTO `nodes` VALUES (2,'Blogs','Blogs','Blogs',1,0,NULL,NULL,NULL,NULL,NULL,'2010-10-30 03:30:29','2011-05-28 04:51:23');
 INSERT INTO `nodes` VALUES (3,'Calendars','Calendars','Calendars',1,0,NULL,NULL,NULL,NULL,NULL,'2010-10-30 03:30:29','2010-10-30 03:30:29');
-INSERT INTO `nodes` VALUES (5,'Archives','Archives','Archives',1,1,3,'DynamicPage',NULL,NULL,525,'2010-10-30 03:30:30','2011-05-19 22:12:52');
-INSERT INTO `nodes` VALUES (6,'Contact Us','Contact Us','Contact-Us',1,1,NULL,NULL,'questions','new',531,'2010-10-30 03:30:30','2010-10-30 03:30:30');
-INSERT INTO `nodes` VALUES (7,'About Us','About Us','About-Us',1,1,4,'DynamicPage',NULL,NULL,526,'2010-10-30 03:30:30','2010-10-30 03:30:30');
+INSERT INTO `nodes` VALUES (5,'Archives','Archives','Archives',1,1,3,'DynamicPage',NULL,NULL,524,'2010-10-30 03:30:30','2011-05-28 03:44:47');
+INSERT INTO `nodes` VALUES (6,'Contact Us','Contact Us','Contact-Us',1,1,NULL,NULL,'questions','new',530,'2010-10-30 03:30:30','2010-10-30 03:30:30');
+INSERT INTO `nodes` VALUES (7,'About Us','About Us','About-Us',1,1,4,'DynamicPage',NULL,NULL,525,'2010-10-30 03:30:30','2010-10-30 03:30:30');
 INSERT INTO `nodes` VALUES (9,'Administrative','Administrative','admin',1,0,NULL,NULL,NULL,NULL,NULL,'2010-10-30 03:30:30','2010-10-30 03:30:30');
-INSERT INTO `nodes` VALUES (10,'Inventory','Inventory','inventory',1,1,1,'Category',NULL,NULL,1,'2010-10-30 03:30:30','2011-05-19 21:44:45');
-INSERT INTO `nodes` VALUES (11,'Special Offers','Special Offers','special-offers',10,1,2,'Category',NULL,NULL,2,'2010-10-30 03:30:30','2010-12-15 22:01:45');
+INSERT INTO `nodes` VALUES (10,'Inventory','Inventory','inventory',1,1,1,'Category',NULL,NULL,1,'2010-10-30 03:30:30','2011-05-28 04:24:00');
+INSERT INTO `nodes` VALUES (11,'Special Offers','Special Offers','special-offers',10,1,2,'Category',NULL,NULL,2,'2010-10-30 03:30:30','2011-05-19 17:52:01');
 INSERT INTO `nodes` VALUES (12,'Ancient Coinage','Ancient Coinage','ancient-coinage',10,1,3,'Category',NULL,NULL,4,'2010-10-30 03:30:30','2010-12-15 16:01:57');
-INSERT INTO `nodes` VALUES (13,'Error Coins','Error Coins','error-coins',10,1,4,'Category',NULL,NULL,516,'2010-10-30 03:30:30','2010-12-15 16:01:13');
-INSERT INTO `nodes` VALUES (14,'Foreign Coins','Foreign Coins','foreign-coins',10,1,5,'Category',NULL,NULL,148,'2010-10-30 03:30:30','2010-12-14 19:46:36');
-INSERT INTO `nodes` VALUES (15,'Bullion Related Items','Bullion Related Items','bullion-related-items',10,1,6,'Category',NULL,NULL,524,'2010-10-30 03:30:30','2010-12-14 19:55:19');
-INSERT INTO `nodes` VALUES (16,'Coin Jewelry','Coin Jewelry','coin-jewelry',10,1,7,'Category',NULL,NULL,518,'2010-10-30 03:30:30','2010-12-14 19:48:57');
+INSERT INTO `nodes` VALUES (13,'Error Coins','Error Coins','error-coins',10,1,4,'Category',NULL,NULL,515,'2010-10-30 03:30:30','2010-12-15 16:01:13');
+INSERT INTO `nodes` VALUES (14,'Foreign Coins','Foreign Coins','foreign-coins',10,1,5,'Category',NULL,NULL,148,'2010-10-30 03:30:30','2011-05-28 04:24:00');
+INSERT INTO `nodes` VALUES (15,'Bullion Related Items','Bullion Related Items','bullion-related-items',10,1,6,'Category',NULL,NULL,523,'2010-10-30 03:30:30','2010-12-14 19:55:19');
+INSERT INTO `nodes` VALUES (16,'Coin Jewelry','Coin Jewelry','coin-jewelry',10,1,7,'Category',NULL,NULL,517,'2010-10-30 03:30:30','2010-12-14 19:48:57');
 INSERT INTO `nodes` VALUES (17,'Medieval Coinage','Medieval Coinage','medieval-coinage',10,1,8,'Category',NULL,NULL,135,'2010-10-30 03:30:30','2010-12-15 16:00:44');
-INSERT INTO `nodes` VALUES (18,'Shipwreck & Artifacts','Shipwreck & Artifacts','shipwreck-artifacts',10,1,9,'Category',NULL,NULL,513,'2010-10-30 03:30:30','2011-01-15 15:43:47');
-INSERT INTO `nodes` VALUES (20,'U.S. Coinage','U.S. Coinage','u-s-coinage',10,1,11,'Category',NULL,NULL,402,'2010-10-30 03:30:30','2010-12-02 19:09:08');
-INSERT INTO `nodes` VALUES (21,'U.S. Proof and Mint Sets','U.S. Proof and Mint Sets','u-s-proof-and-mint-sets',10,1,12,'Category',NULL,NULL,511,'2010-10-30 03:30:30','2010-12-02 19:04:01');
+INSERT INTO `nodes` VALUES (18,'Shipwreck & Artifacts','Shipwreck & Artifacts','shipwreck-artifacts',10,1,9,'Category',NULL,NULL,512,'2010-10-30 03:30:30','2011-01-15 15:43:47');
+INSERT INTO `nodes` VALUES (20,'U.S. Coinage','U.S. Coinage','u-s-coinage',10,1,11,'Category',NULL,NULL,402,'2010-10-30 03:30:30','2011-05-28 04:20:41');
+INSERT INTO `nodes` VALUES (21,'U.S. Proof and Mint Sets','U.S. Proof and Mint Sets','u-s-proof-and-mint-sets',10,1,12,'Category',NULL,NULL,510,'2010-10-30 03:30:30','2010-12-02 19:04:01');
 INSERT INTO `nodes` VALUES (22,'U.S. Territorial Gold','U.S. Territorial Gold','u-s-territorial-gold',10,1,13,'Category',NULL,NULL,500,'2010-10-30 03:30:30','2010-12-02 18:43:15');
 INSERT INTO `nodes` VALUES (23,'U.S. Tokens','U.S. Tokens','u-s-tokens',10,1,14,'Category',NULL,NULL,505,'2010-10-30 03:30:30','2010-12-02 18:41:18');
 INSERT INTO `nodes` VALUES (24,'U.S. Treasures','U.S. Treasures','u-s-treasures',10,1,15,'Category',NULL,NULL,503,'2010-10-30 03:30:30','2010-12-02 18:22:20');
@@ -2341,11 +2361,11 @@ INSERT INTO `nodes` VALUES (33,'Roman Republic','Roman Republic','roman-republic
 INSERT INTO `nodes` VALUES (34,'Afghanistan','Afghanistan','afghanistan',14,1,25,'Category',NULL,NULL,149,'2010-10-30 03:30:30','2010-11-09 17:07:51');
 INSERT INTO `nodes` VALUES (35,'Argentina','Argentina','argentina',14,1,26,'Category',NULL,NULL,154,'2010-10-30 03:30:30','2011-01-03 19:38:58');
 INSERT INTO `nodes` VALUES (36,'Australia','Australia','australia',14,1,27,'Category',NULL,NULL,155,'2010-10-30 03:30:30','2010-12-03 14:38:57');
-INSERT INTO `nodes` VALUES (37,'Austro-Hungarian Lands and Cities','Austro-Hungarian Lands and Cities','austro-hungarian-lands-and-cities',14,1,28,'Category',NULL,NULL,157,'2010-10-30 03:30:30','2010-12-03 14:41:20');
+INSERT INTO `nodes` VALUES (37,'Austro-Hungarian Lands and Cities','Austro-Hungarian Lands and Cities','austro-hungarian-lands-and-cities',14,1,28,'Category',NULL,NULL,157,'2010-10-30 03:30:30','2011-05-28 04:15:59');
 INSERT INTO `nodes` VALUES (38,'Belgium','Belgium','belgium',14,1,29,'Category',NULL,NULL,161,'2010-10-30 03:30:30','2010-12-03 14:45:29');
 INSERT INTO `nodes` VALUES (39,'Brazil','Brazil','brazil',14,1,30,'Category',NULL,NULL,165,'2010-10-30 03:30:30','2010-12-03 14:48:42');
 INSERT INTO `nodes` VALUES (40,'Canada','Canada','canada',14,1,31,'Category',NULL,NULL,168,'2010-10-30 03:30:30','2010-12-03 14:55:44');
-INSERT INTO `nodes` VALUES (41,'China-Empire','China-Empire','china-empire',14,1,32,'Category',NULL,NULL,173,'2010-10-30 03:30:30','2010-12-03 14:56:08');
+INSERT INTO `nodes` VALUES (41,'China-Empire','China-Empire','china-empire',14,1,32,'Category',NULL,NULL,173,'2010-10-30 03:30:30','2011-05-28 04:22:34');
 INSERT INTO `nodes` VALUES (42,'Colombia','Colombia','colombia',14,1,33,'Category',NULL,NULL,174,'2010-10-30 03:30:30','2010-12-03 14:56:26');
 INSERT INTO `nodes` VALUES (43,'Cuba','Cuba','cuba',14,1,34,'Category',NULL,NULL,176,'2010-10-30 03:30:30','2011-01-03 19:39:09');
 INSERT INTO `nodes` VALUES (44,'Denmark','Denmark','denmark',14,1,35,'Category',NULL,NULL,177,'2010-10-30 03:30:30','2010-12-06 13:46:45');
@@ -2367,7 +2387,7 @@ INSERT INTO `nodes` VALUES (59,'Iran-Persia','Iran-Persia','iran-persia',14,1,50
 INSERT INTO `nodes` VALUES (60,'Ireland','Ireland','ireland',14,1,51,'Category',NULL,NULL,297,'2010-10-30 03:30:30','2010-12-06 16:18:37');
 INSERT INTO `nodes` VALUES (61,'Israel','Israel','israel',14,1,52,'Category',NULL,NULL,301,'2010-10-30 03:30:30','2011-01-03 19:39:40');
 INSERT INTO `nodes` VALUES (62,'Italy','Italy','italy',14,1,53,'Category',NULL,NULL,302,'2010-10-30 03:30:30','2010-12-06 16:31:20');
-INSERT INTO `nodes` VALUES (63,'Japan','Japan','japan',14,1,54,'Category',NULL,NULL,319,'2010-10-30 03:30:30','2010-12-06 16:52:37');
+INSERT INTO `nodes` VALUES (63,'Japan','Japan','japan',14,1,54,'Category',NULL,NULL,319,'2010-10-30 03:30:30','2011-05-28 04:24:00');
 INSERT INTO `nodes` VALUES (64,'Liberia','Liberia','liberia',14,1,55,'Category',NULL,NULL,329,'2010-10-30 03:30:30','2010-12-06 16:59:33');
 INSERT INTO `nodes` VALUES (65,'Malaya','Malaya','malaya',14,1,56,'Category',NULL,NULL,331,'2010-10-30 03:30:30','2011-01-03 19:39:47');
 INSERT INTO `nodes` VALUES (66,'Mexico','Mexico','mexico',14,1,57,'Category',NULL,NULL,332,'2010-10-30 03:30:30','2010-12-06 16:59:58');
@@ -2463,7 +2483,7 @@ INSERT INTO `nodes` VALUES (214,'582-602 ad gold solidus of maurice tiberius \"f
 INSERT INTO `nodes` VALUES (215,'685-695 ad gold half solidus of justinian ii','685-695 ad gold half solidus of justinian ii','685-695-ad-gold-half-solidus-of-justinian-ii',27,1,232,'Item',NULL,NULL,27,'2010-12-02 19:02:04','2011-01-25 17:29:20');
 INSERT INTO `nodes` VALUES (216,'685-695 ad gold solidus of justinian ii','685-695 ad gold solidus of justinian ii','685-695-ad-gold-solidus-of-justinian-ii-0',27,1,541,'Item',NULL,NULL,28,'2010-12-02 19:03:23','2010-12-02 19:03:23');
 INSERT INTO `nodes` VALUES (217,'325-241 bc silver didrachm of neapolis','325-241 bc silver didrachm of neapolis','325-241-bc-silver-didrachm-of-neapolis-0',28,0,538,'Item',NULL,NULL,NULL,'2010-12-02 19:05:14','2010-12-09 19:01:36');
-INSERT INTO `nodes` VALUES (218,'1951 proof set','1951 proof set','1951-proof-set-0',21,1,306,'Item',NULL,NULL,512,'2010-12-02 19:06:20','2010-12-02 19:06:20');
+INSERT INTO `nodes` VALUES (218,'1951 proof set','1951 proof set','1951-proof-set-0',21,1,306,'Item',NULL,NULL,511,'2010-12-02 19:06:20','2010-12-02 19:06:20');
 INSERT INTO `nodes` VALUES (220,'483-472 bc silver didrachm from himera','483-472 bc silver didrachm from himera','483-472-bc-silver-didrachm-from-himera-0',28,1,457,'Item',NULL,NULL,42,'2010-12-02 19:09:39','2010-12-02 19:09:39');
 INSERT INTO `nodes` VALUES (221,'600 bc electrum 1/24 stater','600 bc electrum 1/24 stater','600-bc-electrum-1-24-stater-0',28,1,653,'Item',NULL,NULL,43,'2010-12-02 19:10:38','2010-12-02 19:10:38');
 INSERT INTO `nodes` VALUES (222,'600-550 bc electrum twelfth stater','600-550 bc electrum twelfth stater','600-550-bc-electrum-twelfth-stater-0',28,1,654,'Item',NULL,NULL,44,'2010-12-02 19:12:08','2010-12-02 19:12:08');
@@ -2519,7 +2539,7 @@ INSERT INTO `nodes` VALUES (280,'Lysimachus, 215-195 b.c.  gold stater','Lysimac
 INSERT INTO `nodes` VALUES (281,'Lysimachus, 323-281 b.c.  gold stater','Lysimachus, 323-281 b.c.  gold stater','lysimachus-323-281-b-c-gold-stater-0',28,1,1057,'Item',NULL,NULL,53,'2010-12-03 13:06:42','2010-12-03 13:06:42');
 INSERT INTO `nodes` VALUES (282,'Neapolis in campania silver didrachm (325-241 b.c.)','Neapolis in campania silver didrachm (325-241 b.c.)','neapolis-in-campania-silver-didrachm-325-241-b-c',28,0,1074,'Item',NULL,NULL,NULL,'2010-12-03 13:07:38','2011-04-05 15:30:33');
 INSERT INTO `nodes` VALUES (283,'New style \"owl\" silver tetradrachm (1st-2nd cent. b.c.)','New style \"owl\" silver tetradrachm (1st-2nd cent. b.c.)','new-style-owl-silver-tetradrachm-1st-2nd-cent-b-c-0',28,1,1100,'Item',NULL,NULL,54,'2010-12-03 13:08:48','2010-12-03 13:08:48');
-INSERT INTO `nodes` VALUES (284,'Persia-sardeis in lydia (5th cent. bc) gold daric','Persia-sardeis in lydia (5th cent. bc) gold daric','persia-sardeis-in-lydia-5th-cent-bc-gold-daric-0',28,1,1420,'Item',NULL,NULL,55,'2010-12-03 13:09:36','2010-12-03 13:09:36');
+INSERT INTO `nodes` VALUES (284,'Persia-sardeis in lydia (5th cent. bc) gold daric','Persia-sardeis in lydia (5th cent. bc) gold daric','persia-sardeis-in-lydia-5th-cent-bc-gold-daric',28,0,1420,'Item',NULL,NULL,55,'2010-12-03 13:09:36','2011-05-23 18:47:37');
 INSERT INTO `nodes` VALUES (285,'Poseidonia silver stater (480-400bc)','Poseidonia silver stater (480-400bc)','poseidonia-silver-stater-480-400bc-0',28,1,449,'Item',NULL,NULL,56,'2010-12-03 13:10:27','2010-12-03 13:10:27');
 INSERT INTO `nodes` VALUES (286,'Seleukid, antiochus vii 138-129 b.c., ar tetradrachm euergetes','Seleukid, antiochus vii 138-129 b.c., ar tetradrachm euergetes','seleukid-antiochus-vii-138-129-b-c-ar-tetradrachm-euergetes-0',28,1,1021,'Item',NULL,NULL,57,'2010-12-03 13:11:15','2010-12-03 13:11:15');
 INSERT INTO `nodes` VALUES (287,'Sicily, himera, c.483-472 b.c., silver didrachm','Sicily, himera, c.483-472 b.c., silver didrachm','sicily-himera-c-483-472-b-c-silver-didrachm-0',28,1,1255,'Item',NULL,NULL,58,'2010-12-03 13:12:03','2010-12-03 13:12:03');
@@ -2546,7 +2566,7 @@ INSERT INTO `nodes` VALUES (307,'Brutus, d.42 b.c., silver denarius','Brutus, d.
 INSERT INTO `nodes` VALUES (308,'Julius caesar (42 b.c.) silver denarius','Julius caesar (42 b.c.) silver denarius','julius-caesar-42-b-c-silver-denarius-0',31,1,1025,'Item',NULL,NULL,80,'2010-12-03 13:30:26','2010-12-03 13:30:26');
 INSERT INTO `nodes` VALUES (309,'Julius caesar (49-86 b.c.) silver denarius','Julius caesar (49-86 b.c.) silver denarius','julius-caesar-49-86-b-c-silver-denarius-0',31,1,1345,'Item',NULL,NULL,81,'2010-12-03 13:31:10','2010-12-03 13:31:10');
 INSERT INTO `nodes` VALUES (310,'Julius caesar silver denarius (49-44 b.c.)','Julius caesar silver denarius (49-44 b.c.)','julius-caesar-silver-denarius-49-44-b-c-0',31,1,1346,'Item',NULL,NULL,82,'2010-12-03 13:31:56','2010-12-03 13:31:56');
-INSERT INTO `nodes` VALUES (311,'Julius caesar, 42 b.c., silver denarius, l. mussidius','Julius caesar, 42 b.c., silver denarius, l. mussidius','julius-caesar-42-b-c-silver-denarius-l-mussidius',31,1,1306,'Item',NULL,NULL,83,'2010-12-03 13:34:30','2011-03-25 20:23:49');
+INSERT INTO `nodes` VALUES (311,'Julius caesar, 42 b.c., silver denarius, l. mussidius','Julius caesar, 42 b.c., silver denarius, l. mussidius','julius-caesar-42-b-c-silver-denarius-l-mussidius',31,0,1306,'Item',NULL,NULL,83,'2010-12-03 13:34:30','2011-05-26 19:20:53');
 INSERT INTO `nodes` VALUES (312,'Julius caesar, 47-46 b.c., silver denarius, aeneas','Julius caesar, 47-46 b.c., silver denarius, aeneas','julius-caesar-47-46-b-c-silver-denarius-aeneas-0',31,1,1305,'Item',NULL,NULL,84,'2010-12-03 13:35:20','2010-12-03 13:35:20');
 INSERT INTO `nodes` VALUES (313,'Tiberius-pontif maxim (14-37ad) gold aureus/lugdunum mint','Tiberius-pontif maxim (14-37ad) gold aureus/lugdunum mint','tiberius-pontif-maxim-14-37ad-gold-aureus-lugdunum-mint-0',31,1,1387,'Item',NULL,NULL,85,'2010-12-03 13:36:01','2010-12-03 13:36:01');
 INSERT INTO `nodes` VALUES (314,'209-211 ad silver denarius of geta as augustus','209-211 ad silver denarius of geta as augustus','209-211-ad-silver-denarius-of-geta-as-augustus-0',32,1,241,'Item',NULL,NULL,90,'2010-12-03 13:36:44','2010-12-03 13:36:44');
@@ -2566,8 +2586,8 @@ INSERT INTO `nodes` VALUES (327,'Aurelian 270-275ad, ae antoninianus','Aurelian 
 INSERT INTO `nodes` VALUES (328,'Balbinus silver denarius (april-june 238ad)','Balbinus silver denarius (april-june 238ad)','balbinus-silver-denarius-april-june-238ad-0',32,1,1418,'Item',NULL,NULL,104,'2010-12-03 13:47:55','2010-12-03 13:47:55');
 INSERT INTO `nodes` VALUES (329,'Bosphorus, rheskuporis ii/severus alexander, el stater','Bosphorus, rheskuporis ii/severus alexander, el stater','bosphorus-rheskuporis-ii-severus-alexander-el-stater-0',32,1,1391,'Item',NULL,NULL,105,'2010-12-03 13:48:41','2010-12-03 13:48:41');
 INSERT INTO `nodes` VALUES (330,'Caracalla, 198-217ad  silver denarius','Caracalla, 198-217ad  silver denarius','caracalla-198-217ad-silver-denarius-0',32,1,912,'Item',NULL,NULL,106,'2010-12-03 13:50:10','2010-12-03 13:50:10');
-INSERT INTO `nodes` VALUES (331,'Carausius, ae antoninianus (286-293ad)','Carausius, ae antoninianus (286-293ad)','carausius-ae-antoninianus-286-293ad-0',32,1,1395,'Item',NULL,NULL,107,'2010-12-03 13:50:58','2010-12-03 13:50:58');
-INSERT INTO `nodes` VALUES (332,'Carausius, pax, ae antoninianus (286-293ad)','Carausius, pax, ae antoninianus (286-293ad)','carausius-pax-ae-antoninianus-286-293ad-0',32,1,1394,'Item',NULL,NULL,108,'2010-12-03 13:51:56','2010-12-03 13:51:56');
+INSERT INTO `nodes` VALUES (331,'Carausius, ae antoninianus (286-293ad)','Carausius, ae antoninianus (286-293ad)','carausius-ae-antoninianus-286-293ad',32,0,1395,'Item',NULL,NULL,107,'2010-12-03 13:50:58','2011-05-26 19:57:40');
+INSERT INTO `nodes` VALUES (332,'Carausius, pax, ae antoninianus (286-293ad)','Carausius, pax, ae antoninianus (286-293ad)','carausius-pax-ae-antoninianus-286-293ad',32,0,1394,'Item',NULL,NULL,108,'2010-12-03 13:51:56','2011-05-26 19:58:02');
 INSERT INTO `nodes` VALUES (333,'Constans gold solidus (340-350ad)','Constans gold solidus (340-350ad)','constans-gold-solidus-340-350ad',32,0,1396,'Item',NULL,NULL,NULL,'2010-12-03 13:52:51','2011-02-17 19:27:52');
 INSERT INTO `nodes` VALUES (334,'Domitian, cos iiii (76 a.d.) gold aureus','Domitian, cos iiii (76 a.d.) gold aureus','domitian-cos-iiii-76-a-d-gold-aureus-0',32,1,1045,'Item',NULL,NULL,109,'2010-12-03 13:53:28','2010-12-03 13:53:28');
 INSERT INTO `nodes` VALUES (335,'Faustina senior, 141-161 a.d.  silver denarius','Faustina senior, 141-161 a.d.  silver denarius','faustina-senior-141-161-a-d-silver-denarius',32,0,1048,'Item',NULL,NULL,NULL,'2010-12-03 13:54:24','2011-03-14 20:07:45');
@@ -2609,7 +2629,7 @@ INSERT INTO `nodes` VALUES (371,'Mn. fonteius (85 b.c.) silver denarius','Mn. fo
 INSERT INTO `nodes` VALUES (372,'L. censorinus, c.82 b..c., silver denarius','L. censorinus, c.82 b..c., silver denarius','l-censorinus-c-82-b-c-silver-denarius',33,0,1260,'Item',NULL,NULL,NULL,'2010-12-03 14:24:45','2011-03-17 18:43:01');
 INSERT INTO `nodes` VALUES (373,'Q.s. caepio brutus (m. junius brutus) silver denarius (54.b.c)','Q.s. caepio brutus (m. junius brutus) silver denarius (54.b.c)','q-s-caepio-brutus-m-junius-brutus-silver-denarius-54-b-c-0',33,1,1344,'Item',NULL,NULL,74,'2010-12-03 14:25:27','2010-12-03 14:25:27');
 INSERT INTO `nodes` VALUES (374,'Sabinus (89 b.c.) silver denarius \"rape of sabines\"','Sabinus (89 b.c.) silver denarius \"rape of sabines\"','sabinus-89-b-c-silver-denarius-rape-of-sabines-0',33,1,1185,'Item',NULL,NULL,75,'2010-12-03 14:26:10','2010-12-03 14:26:10');
-INSERT INTO `nodes` VALUES (375,'1995 us proof set in 1994!','1995 us proof set in 1994!','1995-us-proof-set-in-1994',13,1,625,'Item',NULL,NULL,517,'2010-12-03 14:27:28','2011-01-25 17:37:29');
+INSERT INTO `nodes` VALUES (375,'1995 us proof set in 1994!','1995 us proof set in 1994!','1995-us-proof-set-in-1994',13,1,625,'Item',NULL,NULL,516,'2010-12-03 14:27:28','2011-01-25 17:37:29');
 INSERT INTO `nodes` VALUES (376,'AH-1313 (c.1934)  Silver ABBASI','AH-1313 (c.1934)  Silver ABBASI','ah-1313-c-1934-silver-abbasi',34,1,576,'Item',NULL,NULL,151,'2010-12-03 14:37:05','2011-03-17 16:38:42');
 INSERT INTO `nodes` VALUES (377,'AH-1313 (c.1934) Silver HALF RUPEE','AH-1313 (c.1934) Silver HALF RUPEE','ah-1313-c-1934-silver-half-rupee',34,1,575,'Item',NULL,NULL,152,'2010-12-03 14:37:40','2011-03-17 16:37:14');
 INSERT INTO `nodes` VALUES (378,'AH-1313 (c.1934) Silver RUPEE','AH-1313 (c.1934) Silver RUPEE','ah-1313-c-1934-silver-rupee',34,1,574,'Item',NULL,NULL,153,'2010-12-03 14:38:29','2011-03-17 16:40:31');
@@ -2628,19 +2648,19 @@ INSERT INTO `nodes` VALUES (396,'1793NR JJ COLOMBIA Gold 8-Escudo','1793NR JJ CO
 INSERT INTO `nodes` VALUES (397,'1790-PTS PR Bolivia GOLD 8-Escudo','1790-PTS PR Bolivia GOLD 8-Escudo','1790-pts-pr-bolivia-gold-8-escudo',606,0,1475,'Item',NULL,NULL,NULL,'2010-12-03 16:40:56','2011-03-08 17:32:17');
 INSERT INTO `nodes` VALUES (398,'1875-CC Twenty-Cent Piece','1875-CC Twenty-Cent Piece','1875-cc-twenty-cent-piece',607,1,1136,'Item',NULL,NULL,428,'2010-12-03 16:42:13','2011-01-04 17:19:22');
 INSERT INTO `nodes` VALUES (399,'1879 Silver Metric Dollar (j-1618)','1879 Silver Metric Dollar (j-1618)','1879-silver-metric-dollar-j-1618',608,1,1336,'Item',NULL,NULL,499,'2010-12-03 16:43:53','2011-01-04 17:19:31');
-INSERT INTO `nodes` VALUES (401,'1667 silver luigino from fosdinovo italy','1667 silver luigino from fosdinovo italy','1667-silver-luigino-from-fosdinovo-italy-0',18,1,647,'Item',NULL,NULL,514,'2010-12-03 16:50:08','2010-12-03 16:52:51');
-INSERT INTO `nodes` VALUES (402,'1667 Silver Luiginos of Fosdinovo, Italy','1667 Silver Luiginos of Fosdinovo, Italy','1667-silver-luiginos-of-fosdinovo-italy-0',18,1,648,'Item',NULL,NULL,515,'2010-12-03 16:51:50','2010-12-03 16:52:27');
-INSERT INTO `nodes` VALUES (403,'1733 Gold Carolin of Wurttemberg','1733 Gold Carolin of Wurttemberg','1733-gold-carolin-of-wurttemberg',16,1,680,'Item',NULL,NULL,519,'2010-12-03 16:59:03','2011-01-25 02:33:52');
-INSERT INTO `nodes` VALUES (404,'297-281 BC Face of Alexander the Great','297-281 BC Face of Alexander the Great','297-281-bc-face-of-alexander-the-great',16,1,675,'Item',NULL,NULL,520,'2010-12-03 17:03:16','2011-01-25 02:41:45');
-INSERT INTO `nodes` VALUES (405,'641-668 AD Constans II Solidus','641-668 AD Constans II Solidus','641-668-ad-constans-ii-solidus',16,1,676,'Item',NULL,NULL,521,'2010-12-03 17:05:16','2011-01-25 02:40:11');
-INSERT INTO `nodes` VALUES (406,'Love Tokens Seated Liberty Dimes as Pin Bar','Love Tokens Seated Liberty Dimes as Pin Bar','love-tokens-seated-liberty-dimes-as-pin-bar',16,1,1120,'Item',NULL,NULL,522,'2010-12-03 17:07:24','2011-01-25 02:29:45');
-INSERT INTO `nodes` VALUES (407,'Modern Engraved Bloodstone Helios','Modern Engraved Bloodstone Helios','modern-engraved-bloodstone-helios',16,1,677,'Item',NULL,NULL,523,'2010-12-03 17:08:46','2011-01-25 02:43:44');
+INSERT INTO `nodes` VALUES (401,'1667 silver luigino from fosdinovo italy','1667 silver luigino from fosdinovo italy','1667-silver-luigino-from-fosdinovo-italy-0',18,1,647,'Item',NULL,NULL,513,'2010-12-03 16:50:08','2010-12-03 16:52:51');
+INSERT INTO `nodes` VALUES (402,'1667 Silver Luiginos of Fosdinovo, Italy','1667 Silver Luiginos of Fosdinovo, Italy','1667-silver-luiginos-of-fosdinovo-italy-0',18,1,648,'Item',NULL,NULL,514,'2010-12-03 16:51:50','2010-12-03 16:52:27');
+INSERT INTO `nodes` VALUES (403,'1733 Gold Carolin of Wurttemberg','1733 Gold Carolin of Wurttemberg','1733-gold-carolin-of-wurttemberg',16,1,680,'Item',NULL,NULL,518,'2010-12-03 16:59:03','2011-01-25 02:33:52');
+INSERT INTO `nodes` VALUES (404,'297-281 BC Face of Alexander the Great','297-281 BC Face of Alexander the Great','297-281-bc-face-of-alexander-the-great',16,1,675,'Item',NULL,NULL,519,'2010-12-03 17:03:16','2011-01-25 02:41:45');
+INSERT INTO `nodes` VALUES (405,'641-668 AD Constans II Solidus','641-668 AD Constans II Solidus','641-668-ad-constans-ii-solidus',16,1,676,'Item',NULL,NULL,520,'2010-12-03 17:05:16','2011-01-25 02:40:11');
+INSERT INTO `nodes` VALUES (406,'Love Tokens Seated Liberty Dimes as Pin Bar','Love Tokens Seated Liberty Dimes as Pin Bar','love-tokens-seated-liberty-dimes-as-pin-bar',16,1,1120,'Item',NULL,NULL,521,'2010-12-03 17:07:24','2011-01-25 02:29:45');
+INSERT INTO `nodes` VALUES (407,'Modern Engraved Bloodstone Helios','Modern Engraved Bloodstone Helios','modern-engraved-bloodstone-helios',16,1,677,'Item',NULL,NULL,522,'2010-12-03 17:08:46','2011-01-25 02:43:44');
 INSERT INTO `nodes` VALUES (408,'1035-1060 AD Silver Ireland Penny','1035-1060 AD Silver Ireland Penny','1035-1060-ad-silver-ireland-penny-0',84,1,250,'Item',NULL,NULL,140,'2010-12-03 22:53:03','2010-12-03 22:53:03');
 INSERT INTO `nodes` VALUES (409,'1042-1066 Silver Penny of Edward the Confessor','1042-1066 Silver Penny of Edward the Confessor','1042-1066-silver-penny-of-edward-the-confessor',83,0,239,'Item',NULL,NULL,NULL,'2010-12-03 22:55:21','2011-03-17 18:24:52');
 INSERT INTO `nodes` VALUES (410,'1042-66 Silver Penny \"Edward the Confessor\"','1042-66 Silver Penny \"Edward the Confessor\"','1-1042-66-silver-penny-edward-the-confessor',83,0,949,'Item',NULL,NULL,NULL,'2010-12-03 22:56:58','2011-03-17 18:25:12');
 INSERT INTO `nodes` VALUES (411,'1526-1532 Henry 8th Two Pence','1526-1532 Henry 8th Two Pence','1526-1532-henry-8th-two-pence',83,0,616,'Item',NULL,NULL,NULL,'2010-12-03 23:01:17','2011-03-17 18:25:31');
 INSERT INTO `nodes` VALUES (412,'737-758 AD Silver Sceat of Eadberht of Northumbria','737-758 AD Silver Sceat of Eadberht of Northumbria','737-758-ad-silver-sceat-of-eadberht-of-northumbria-0',83,1,238,'Item',NULL,NULL,137,'2010-12-03 23:04:40','2010-12-03 23:08:07');
-INSERT INTO `nodes` VALUES (413,'810-814 Silver Sceat Vilheah-Eanred','810-814 Silver Sceat Vilheah-Eanred','810-814-silver-sceat-vilheah-eanred',83,1,950,'Item',NULL,NULL,138,'2010-12-03 23:10:18','2011-03-17 18:27:29');
+INSERT INTO `nodes` VALUES (413,'810-814 Silver Sceat Vilheah-Eanred','810-814 Silver Sceat Vilheah-Eanred','810-814-silver-sceat-vilheah-eanred',83,0,950,'Item',NULL,NULL,138,'2010-12-03 23:10:18','2011-05-26 13:50:58');
 INSERT INTO `nodes` VALUES (414,'898-915 Ad Silver Penny of Siefred the Viking','898-915 Ad Silver Penny of Siefred the Viking','898-915-ad-silver-penny-of-siefred-the-viking',83,0,254,'Item',NULL,NULL,NULL,'2010-12-03 23:11:49','2011-03-17 18:26:07');
 INSERT INTO `nodes` VALUES (415,'C.710-760 Silver Sceat  (Kent, s-797)','C.710-760 Silver Sceat  (Kent, s-797)','c-710-760-silver-sceat-kent-s-797',83,0,951,'Item',NULL,NULL,NULL,'2010-12-03 23:13:59','2011-03-17 18:26:25');
 INSERT INTO `nodes` VALUES (416,'C.710-760 Silver Sceat \"Secondary Sceattas\"','C.710-760 Silver Sceat \"Secondary Sceattas\"','c-710-760-silver-sceat-secondary-sceattas',83,0,952,'Item',NULL,NULL,NULL,'2010-12-03 23:17:13','2011-03-17 18:26:43');
@@ -2785,20 +2805,20 @@ INSERT INTO `nodes` VALUES (556,'1911 b copper rappen','1911 b copper rappen','1
 INSERT INTO `nodes` VALUES (557,'1912 b copper rappen','1912 b copper rappen','1912-b-copper-rappen-0',82,1,132,'Item',NULL,NULL,400,'2010-12-06 18:28:26','2010-12-06 18:28:26');
 INSERT INTO `nodes` VALUES (558,'1939 silver laupen 5 francs','1939 silver laupen 5 francs','1939-silver-laupen-5-francs-0',82,1,690,'Item',NULL,NULL,401,'2010-12-06 18:29:28','2010-12-06 18:29:28');
 INSERT INTO `nodes` VALUES (563,'Auctions','Auctions','auctions',1,0,5,'DynamicPage',NULL,NULL,NULL,'2010-12-09 18:06:39','2011-01-15 15:25:27');
-INSERT INTO `nodes` VALUES (566,'Coinworld Articles','Coinworld Articles','coinworld-articles',2,1,6,'Blog',NULL,NULL,NULL,'2010-12-14 17:58:04','2011-05-19 14:13:45');
-INSERT INTO `nodes` VALUES (568,'CoinWorld - USA','CoinWorld - USA','coinworld-usa',566,1,5,'Post',NULL,NULL,NULL,'2010-12-15 14:01:04','2011-05-19 14:06:26');
-INSERT INTO `nodes` VALUES (569,'CoinWorld - Certified Foreign','CoinWorld - Certified Foreign','coinworld-certified-foreign',566,1,6,'Post',NULL,NULL,NULL,'2010-12-15 14:03:18','2011-05-19 14:07:06');
-INSERT INTO `nodes` VALUES (570,'CoinWorld - Ancients and More','CoinWorld - Ancients and More','coinworld-ancients-and-more',566,1,7,'Post',NULL,NULL,NULL,'2010-12-15 14:07:11','2011-05-19 14:07:35');
-INSERT INTO `nodes` VALUES (571,'CoinWorld - Certified Ancients','CoinWorld - Certified Ancients','coinworld-certified-ancients',566,1,8,'Post',NULL,NULL,NULL,'2010-12-15 14:09:14','2011-05-19 14:08:04');
-INSERT INTO `nodes` VALUES (572,'CoinWorld - Antiquities and Fun Stuff','CoinWorld - Antiquities and Fun Stuff','coinworld-antiquities-and-fun-stuff',566,1,9,'Post',NULL,NULL,NULL,'2010-12-15 14:11:40','2011-05-19 14:08:33');
-INSERT INTO `nodes` VALUES (573,'CoinWorld - USA 2','CoinWorld - USA 2','coinworld-usa-2',566,1,10,'Post',NULL,NULL,NULL,'2010-12-15 14:14:41','2011-05-19 14:09:37');
-INSERT INTO `nodes` VALUES (574,'CoinWorld - Certified Ancients 2','CoinWorld - Certified Ancients 2','coinworld-certified-ancients-2',566,1,11,'Post',NULL,NULL,NULL,'2010-12-15 14:16:45','2011-05-19 14:10:11');
-INSERT INTO `nodes` VALUES (575,'CoinWorld - Germanic','CoinWorld - Germanic','coinworld-germanic',566,1,12,'Post',NULL,NULL,NULL,'2010-12-15 14:18:36','2011-05-19 14:10:43');
-INSERT INTO `nodes` VALUES (576,'CoinWorld - The World Certified','CoinWorld - The World Certified','coinworld-the-world-certified',566,1,13,'Post',NULL,NULL,NULL,'2010-12-15 14:22:41','2011-05-19 14:11:40');
-INSERT INTO `nodes` VALUES (577,'CoinWorld - USA Fun Stuff','CoinWorld - USA Fun Stuff','coinworld-usa-fun-stuff',566,1,14,'Post',NULL,NULL,NULL,'2010-12-15 14:27:00','2011-05-19 14:12:09');
-INSERT INTO `nodes` VALUES (578,'CoinWorld - The Holy Land and Christianity ','CoinWorld - The Holy Land and Christianity ','coinworld-the-holy-land-and-christianity',566,1,15,'Post',NULL,NULL,NULL,'2010-12-15 14:40:58','2011-05-19 14:12:42');
-INSERT INTO `nodes` VALUES (579,'CoinWorld - World','CoinWorld - World','coinworld-world',566,1,16,'Post',NULL,NULL,NULL,'2010-12-15 14:54:06','2011-05-19 14:13:14');
-INSERT INTO `nodes` VALUES (584,'Bachelor of Arts in Numismatics','Bachelor of Arts in Numismatics','numismatics',7,1,6,'DynamicPage',NULL,NULL,527,'2010-12-20 14:25:29','2010-12-20 14:25:29');
+INSERT INTO `nodes` VALUES (566,'Coinworld Articles','Coinworld Articles','coinworld-articles',2,1,6,'Blog',NULL,NULL,NULL,'2010-12-14 17:58:04','2011-05-28 04:51:23');
+INSERT INTO `nodes` VALUES (568,'CoinWorld - USA','CoinWorld - USA','coinworld-usa',566,1,5,'Post',NULL,NULL,NULL,'2010-12-15 14:01:04','2011-05-28 03:46:34');
+INSERT INTO `nodes` VALUES (569,'CoinWorld - Certified Foreign','CoinWorld - Certified Foreign','coinworld-certified-foreign',566,1,6,'Post',NULL,NULL,NULL,'2010-12-15 14:03:18','2011-05-28 03:47:00');
+INSERT INTO `nodes` VALUES (570,'CoinWorld - Ancients and More','CoinWorld - Ancients and More','coinworld-ancients-and-more',566,1,7,'Post',NULL,NULL,NULL,'2010-12-15 14:07:11','2011-05-28 03:47:41');
+INSERT INTO `nodes` VALUES (571,'CoinWorld - Certified Ancients','CoinWorld - Certified Ancients','coinworld-certified-ancients',566,1,8,'Post',NULL,NULL,NULL,'2010-12-15 14:09:14','2011-05-28 03:48:19');
+INSERT INTO `nodes` VALUES (572,'CoinWorld - Antiquities and Fun Stuff','CoinWorld - Antiquities and Fun Stuff','coinworld-antiquities-and-fun-stuff',566,1,9,'Post',NULL,NULL,NULL,'2010-12-15 14:11:40','2011-05-28 03:54:05');
+INSERT INTO `nodes` VALUES (573,'CoinWorld - USA 2','CoinWorld - USA 2','coinworld-usa-2',566,1,10,'Post',NULL,NULL,NULL,'2010-12-15 14:14:41','2011-05-28 03:53:37');
+INSERT INTO `nodes` VALUES (574,'CoinWorld - Certified Ancients 2','CoinWorld - Certified Ancients 2','coinworld-certified-ancients-2',566,1,11,'Post',NULL,NULL,NULL,'2010-12-15 14:16:45','2011-05-28 03:53:14');
+INSERT INTO `nodes` VALUES (575,'CoinWorld - Germanic','CoinWorld - Germanic','coinworld-germanic',566,1,12,'Post',NULL,NULL,NULL,'2010-12-15 14:18:36','2011-05-28 03:52:51');
+INSERT INTO `nodes` VALUES (576,'CoinWorld - The World Certified','CoinWorld - The World Certified','coinworld-the-world-certified',566,1,13,'Post',NULL,NULL,NULL,'2010-12-15 14:22:41','2011-05-28 03:52:09');
+INSERT INTO `nodes` VALUES (577,'CoinWorld - USA Fun Stuff','CoinWorld - USA Fun Stuff','coinworld-usa-fun-stuff',566,1,14,'Post',NULL,NULL,NULL,'2010-12-15 14:27:00','2011-05-28 03:51:34');
+INSERT INTO `nodes` VALUES (578,'CoinWorld - The Holy Land and Christianity ','CoinWorld - The Holy Land and Christianity ','coinworld-the-holy-land-and-christianity',566,1,15,'Post',NULL,NULL,NULL,'2010-12-15 14:40:58','2011-05-28 03:51:05');
+INSERT INTO `nodes` VALUES (579,'CoinWorld - World','CoinWorld - World','coinworld-world',566,1,16,'Post',NULL,NULL,NULL,'2010-12-15 14:54:06','2011-05-28 03:50:01');
+INSERT INTO `nodes` VALUES (584,'Bachelor of Arts in Numismatics','Bachelor of Arts in Numismatics','numismatics',7,1,6,'DynamicPage',NULL,NULL,526,'2010-12-20 14:25:29','2010-12-20 14:25:29');
 INSERT INTO `nodes` VALUES (585,'Half Cents','Half Cents','half-cents',20,1,122,'Category',NULL,NULL,410,'2011-01-04 16:52:56','2011-01-04 16:52:56');
 INSERT INTO `nodes` VALUES (586,'Small Cents','Small Cents','small-cents',20,1,123,'Category',NULL,NULL,412,'2011-01-04 16:53:51','2011-01-04 16:53:51');
 INSERT INTO `nodes` VALUES (587,'Large Cents','Large Cents','large-cents',20,1,124,'Category',NULL,NULL,411,'2011-01-04 16:55:16','2011-01-04 16:55:16');
@@ -2809,7 +2829,7 @@ INSERT INTO `nodes` VALUES (591,'Nickels','Nickels','nickels',20,1,128,'Category
 INSERT INTO `nodes` VALUES (592,'Dimes','Dimes','dimes',20,1,129,'Category',NULL,NULL,423,'2011-01-04 16:58:17','2011-01-04 16:58:17');
 INSERT INTO `nodes` VALUES (593,'Quarters','Quarters','quarters',20,1,130,'Category',NULL,NULL,430,'2011-01-04 16:59:52','2011-01-04 16:59:52');
 INSERT INTO `nodes` VALUES (594,'Half Dollars','Half Dollars','half-dollars',20,1,131,'Category',NULL,NULL,440,'2011-01-04 17:02:21','2011-01-04 17:02:21');
-INSERT INTO `nodes` VALUES (595,'Silver Dollars','Silver Dollars','silver-dollars',20,1,132,'Category',NULL,NULL,444,'2011-01-04 17:05:43','2011-01-04 17:05:43');
+INSERT INTO `nodes` VALUES (595,'Silver Dollars','Silver Dollars','silver-dollars',20,1,132,'Category',NULL,NULL,444,'2011-01-04 17:05:43','2011-05-28 04:20:41');
 INSERT INTO `nodes` VALUES (596,'Gold Dollars','Gold Dollars','gold-dollars',20,1,133,'Category',NULL,NULL,468,'2011-01-04 17:09:07','2011-01-04 17:09:07');
 INSERT INTO `nodes` VALUES (597,'Gold Three Dollars','Gold Three Dollars','gold-three-dollars',20,1,134,'Category',NULL,NULL,471,'2011-01-04 17:09:45','2011-01-04 17:09:45');
 INSERT INTO `nodes` VALUES (598,'Quarter Eagles','Quarter Eagles','quarter-eagles',20,1,135,'Category',NULL,NULL,470,'2011-01-04 17:10:07','2011-01-04 17:10:07');
@@ -2826,7 +2846,7 @@ INSERT INTO `nodes` VALUES (617,'1913 Silver 2-SHILLINGS (NGC XF details)','1913
 INSERT INTO `nodes` VALUES (620,'1770G P Silver 8-Reales NGC VF-35','1770G P Silver 8-Reales NGC VF-35','1770g-p-silver-8-reales-ngc-vf-35',54,0,1487,'Item',NULL,NULL,NULL,'2011-02-25 21:37:57','2011-03-17 18:29:21');
 INSERT INTO `nodes` VALUES (621,'1861 Silver GULDEN (NGC MS62)','1861 Silver GULDEN (NGC MS62)','1861-silver-gulden-ngc-ms62',99,0,1488,'Item',NULL,NULL,NULL,'2011-02-25 22:39:42','2011-05-12 21:10:01');
 INSERT INTO `nodes` VALUES (622,'1594 Gold 1-DUCAT (NGC AU-50)','1594 Gold 1-DUCAT (NGC AU-50)','1594-gold-1-ducat-ngc-au-50',67,0,1489,'Item',NULL,NULL,NULL,'2011-02-25 22:41:43','2011-03-19 16:27:04');
-INSERT INTO `nodes` VALUES (623,'England (Coinworld Listing)','England (Coinworld Listing)','england-coinworld-listing',566,1,4,'Post',NULL,NULL,NULL,'2011-02-28 18:54:48','2011-05-19 14:04:35');
+INSERT INTO `nodes` VALUES (623,'England (Coinworld Listing)','England (Coinworld Listing)','england-coinworld-listing',566,1,4,'Post',NULL,NULL,NULL,'2011-02-28 18:54:48','2011-05-28 03:49:04');
 INSERT INTO `nodes` VALUES (624,'-325-320 bc gold stater','-325-320 bc gold stater','325-320-bc-gold-stater',NULL,0,89,'Item',NULL,NULL,NULL,'2011-02-28 20:17:45','2011-02-28 20:17:45');
 INSERT INTO `nodes` VALUES (625,'-370bc gold hecte from lesbos','-370bc gold hecte from lesbos','370bc-gold-hecte-from-lesbos',NULL,0,108,'Item',NULL,NULL,NULL,'2011-02-28 20:17:45','2011-02-28 20:17:45');
 INSERT INTO `nodes` VALUES (626,'-46 bc silver denarius of julius caesar','-46 bc silver denarius of julius caesar','46-bc-silver-denarius-of-julius-caesar',11,0,138,'Item',NULL,NULL,NULL,'2011-02-28 20:17:45','2011-03-01 19:10:14');
@@ -2851,7 +2871,6 @@ INSERT INTO `nodes` VALUES (645,'1807-Mo TH Silver 1/2 REAL  Mexico','1807-Mo TH
 INSERT INTO `nodes` VALUES (648,'2004 LEWIS & CLARK Bank Set','2004 LEWIS & CLARK Bank Set','2004-lewis-clark-bank-set',11,1,1497,'Item',NULL,NULL,3,'2011-03-16 15:46:45','2011-03-16 15:46:45');
 INSERT INTO `nodes` VALUES (649,'c.1807 GEORGE WASHINGTON Medal by Sansom','c.1807 GEORGE WASHINGTON Medal by Sansom','c-1807-george-washington-medal-by-sansom',25,1,1498,'Item',NULL,NULL,509,'2011-03-16 15:58:56','2011-03-16 15:58:56');
 INSERT INTO `nodes` VALUES (650,'c.1825-1860 WASHINGTON SUCCESS Silvered Token','c.1825-1860 WASHINGTON SUCCESS Silvered Token','c-1825-1860-washington-success-silvered-token',23,1,1499,'Item',NULL,NULL,507,'2011-03-16 16:03:22','2011-03-16 16:03:22');
-INSERT INTO `nodes` VALUES (651,'c.1807 GEORGE WASHINGTON Medal by Sansom','c.1807 GEORGE WASHINGTON Medal by Sansom','1-c-1807-george-washington-medal-by-sansom',25,1,1500,'Item',NULL,NULL,510,'2011-03-16 20:34:36','2011-03-16 20:34:36');
 INSERT INTO `nodes` VALUES (653,'1832-PTS JL Silver 8-SOLES','1832-PTS JL Silver 8-SOLES','1832-pts-jl-silver-8-soles',386,1,1502,'Item',NULL,NULL,164,'2011-03-17 16:10:01','2011-03-17 16:10:01');
 INSERT INTO `nodes` VALUES (654,'1921 Silver Quarter 25c','1921 Silver Quarter 25c','1921-silver-quarter-25c',40,1,1503,'Item',NULL,NULL,169,'2011-03-17 16:16:49','2011-03-17 16:16:49');
 INSERT INTO `nodes` VALUES (655,'1929 Silver DIME 10c','1929 Silver DIME 10c','1929-silver-dime-10c',40,1,1504,'Item',NULL,NULL,170,'2011-03-17 16:18:40','2011-03-17 16:18:40');
@@ -2866,9 +2885,9 @@ INSERT INTO `nodes` VALUES (665,'1925-Mo Silver COLON','1925-Mo Silver COLON','1
 INSERT INTO `nodes` VALUES (666,'1787 Great Britian SILVER 6-Pence','1787 Great Britian SILVER 6-Pence','1787-great-britian-silver-6-pence',606,1,1508,'Item',NULL,NULL,409,'2011-03-19 16:43:38','2011-03-19 16:43:38');
 INSERT INTO `nodes` VALUES (667,'Athens \"OWL\" Silver Tetradrachm','Athens \"OWL\" Silver Tetradrachm','athens-owl-silver-tetradrachm',28,1,1509,'Item',NULL,NULL,61,'2011-03-19 17:09:13','2011-03-19 17:09:13');
 INSERT INTO `nodes` VALUES (668,'Athens \"OWL\" Silver Tetradrachm','Athens \"OWL\" Silver Tetradrachm','1-athens-owl-silver-tetradrachm',28,1,1510,'Item',NULL,NULL,62,'2011-03-19 17:11:51','2011-03-19 17:11:51');
-INSERT INTO `nodes` VALUES (669,'Legal','Legal','legal',7,1,7,'DynamicPage',NULL,NULL,529,'2011-03-19 17:25:44','2011-03-19 17:25:44');
-INSERT INTO `nodes` VALUES (670,'Privacy Policy','Privacy Policy','privacy-policy',7,1,8,'DynamicPage',NULL,NULL,528,'2011-03-19 17:27:06','2011-03-19 17:27:06');
-INSERT INTO `nodes` VALUES (671,'Terms of Use','Terms of Use','terms-of-use',7,1,9,'DynamicPage',NULL,NULL,530,'2011-03-19 17:27:35','2011-03-19 17:27:35');
+INSERT INTO `nodes` VALUES (669,'Legal','Legal','legal',7,1,7,'DynamicPage',NULL,NULL,528,'2011-03-19 17:25:44','2011-03-19 17:25:44');
+INSERT INTO `nodes` VALUES (670,'Privacy Policy','Privacy Policy','privacy-policy',7,1,8,'DynamicPage',NULL,NULL,527,'2011-03-19 17:27:06','2011-03-19 17:27:06');
+INSERT INTO `nodes` VALUES (671,'Terms of Use','Terms of Use','terms-of-use',7,1,9,'DynamicPage',NULL,NULL,529,'2011-03-19 17:27:35','2011-03-19 17:27:35');
 INSERT INTO `nodes` VALUES (672,'1880-KB Gold 20-FRANCS','1880-KB Gold 20-FRANCS','1880-kb-gold-20-francs',57,1,1511,'Item',NULL,NULL,277,'2011-03-21 17:13:33','2011-03-21 17:13:33');
 INSERT INTO `nodes` VALUES (673,'1869-R Gold 5-PESOS','1869-R Gold 5-PESOS','1869-r-gold-5-pesos',54,1,1512,'Item',NULL,NULL,273,'2011-03-21 17:15:52','2011-03-21 17:15:52');
 INSERT INTO `nodes` VALUES (674,'1859 Silver ONE FLORIN','1859 Silver ONE FLORIN','1859-silver-one-florin',52,1,1513,'Item',NULL,NULL,268,'2011-03-21 17:18:36','2011-03-21 17:18:36');
@@ -2896,7 +2915,6 @@ INSERT INTO `nodes` VALUES (702,'1958-P WASHINGTON Quarter','1958-P WASHINGTON Q
 INSERT INTO `nodes` VALUES (703,'1958-P WASHINGTON Quarter','1958-P WASHINGTON Quarter','1-1958-p-washington-quarter',593,1,1541,'Item',NULL,NULL,437,'2011-04-09 15:25:00','2011-04-09 15:25:00');
 INSERT INTO `nodes` VALUES (704,'1958-D WASHINGTON Quarter','1958-D WASHINGTON Quarter','1958-d-washington-quarter',593,1,1542,'Item',NULL,NULL,438,'2011-04-09 15:27:59','2011-04-09 15:27:59');
 INSERT INTO `nodes` VALUES (705,'1958-D WASHINGTON Quarter','1958-D WASHINGTON Quarter','1-1958-d-washington-quarter',593,1,1543,'Item',NULL,NULL,439,'2011-04-09 15:30:39','2011-04-09 15:30:39');
-INSERT INTO `nodes` VALUES (706,'1832 CAPPED BUST Half Dollar','1832 CAPPED BUST Half Dollar','1832-capped-bust-half-dollar',594,1,1544,'Item',NULL,NULL,443,'2011-04-09 16:34:13','2011-04-09 16:34:13');
 INSERT INTO `nodes` VALUES (708,'1799 DRAPED BUST Silver Dollar','1799 DRAPED BUST Silver Dollar','1799-draped-bust-silver-dollar',595,0,1546,'Item',NULL,NULL,NULL,'2011-04-09 16:40:22','2011-05-13 18:08:00');
 INSERT INTO `nodes` VALUES (709,'1836 GROBECHT Dollar, Original Strike','1836 GROBECHT Dollar, Original Strike','1836-grobecht-dollar-original-strike',595,1,1547,'Item',NULL,NULL,451,'2011-04-09 16:44:17','2011-04-09 16:44:17');
 INSERT INTO `nodes` VALUES (710,'1872-P SEATED LIBERTY Dollar','1872-P SEATED LIBERTY Dollar','1872-p-seated-liberty-dollar',595,1,1548,'Item',NULL,NULL,452,'2011-04-09 16:46:15','2011-04-09 16:46:15');
@@ -2952,7 +2970,7 @@ INSERT INTO `nodes` VALUES (763,'1902 Silver 5-MARK','1902 Silver 5-MARK','1902-
 INSERT INTO `nodes` VALUES (764,'1908 Silver 5-MARK','1908 Silver 5-MARK','1908-silver-5-mark',762,1,1572,'Item',NULL,NULL,250,'2011-04-20 13:58:59','2011-04-20 13:58:59');
 INSERT INTO `nodes` VALUES (765,'1910-A Silver 3-MARK','1910-A Silver 3-MARK','1910-a-silver-3-mark',762,1,1573,'Item',NULL,NULL,251,'2011-04-21 15:43:09','2011-04-21 15:43:09');
 INSERT INTO `nodes` VALUES (766,'1915 Silver 3-MARK','1915 Silver 3-MARK','1915-silver-3-mark',109,1,1574,'Item',NULL,NULL,248,'2011-04-21 15:46:19','2011-04-21 15:46:19');
-INSERT INTO `nodes` VALUES (767,'MARCH COIN WORLD 2011','MARCH COIN WORLD 2011','march-coin-world-2011',566,1,19,'Post',NULL,NULL,NULL,'2011-04-22 18:22:41','2011-05-19 14:13:45');
+INSERT INTO `nodes` VALUES (767,'MARCH COIN WORLD 2011','MARCH COIN WORLD 2011','march-coin-world-2011',566,1,19,'Post',NULL,NULL,NULL,'2011-04-22 18:22:41','2011-05-28 03:46:04');
 INSERT INTO `nodes` VALUES (768,'HALF SHEKEL (87/6 B.C.) ','HALF SHEKEL (87/6 B.C.) ','half-shekel-87-6-b-c',26,1,1575,'Item',NULL,NULL,24,'2011-05-04 21:34:30','2011-05-04 21:36:37');
 INSERT INTO `nodes` VALUES (769,'ANTOCHOS VI \" Infant King\" Silver Drachm','ANTOCHOS VI \" Infant King\" Silver Drachm','antochos-vi-infant-king-silver-drachm',28,1,1576,'Item',NULL,NULL,63,'2011-05-05 14:16:54','2011-05-05 14:16:54');
 INSERT INTO `nodes` VALUES (770,'Sicily, SICULO-PUNIC AR Ttetradrachm','Sicily, SICULO-PUNIC AR Ttetradrachm','sicily-siculo-punic-ar-ttetradrachm',28,1,1577,'Item',NULL,NULL,64,'2011-05-05 14:22:41','2011-05-05 14:22:41');
@@ -3000,6 +3018,11 @@ INSERT INTO `nodes` VALUES (811,'1593 silver double (2) thaler','1593 silver dou
 INSERT INTO `nodes` VALUES (812,'160-145 bc silver drachm of menander','160-145 bc silver drachm of menander','160-145-bc-silver-drachm-of-menander',NULL,0,441,'Item',NULL,NULL,NULL,'2011-05-17 21:41:46','2011-05-17 21:41:46');
 INSERT INTO `nodes` VALUES (813,'160-145 bc silver drachm of menander','160-145 bc silver drachm of menander','1-160-145-bc-silver-drachm-of-menander',NULL,0,442,'Item',NULL,NULL,NULL,'2011-05-17 21:41:46','2011-05-17 21:41:46');
 INSERT INTO `nodes` VALUES (814,'161 ad sestertius of marcus aurelius','161 ad sestertius of marcus aurelius','161-ad-sestertius-of-marcus-aurelius',NULL,0,592,'Item',NULL,NULL,NULL,'2011-05-17 21:41:46','2011-05-17 21:41:46');
+INSERT INTO `nodes` VALUES (815,'APRIL 2011 COIN WORLD','APRIL 2011 COIN WORLD','april-2011-coin-world',566,1,20,'Post',NULL,NULL,1,'2011-05-19 20:00:54','2011-05-28 04:51:23');
+INSERT INTO `nodes` VALUES (816,'1704 Silver Taler \"LEOPOLD the HOGMOUTH\"','1704 Silver Taler \"LEOPOLD the HOGMOUTH\"','0-1704-silver-taler-leopold-the-hogmouth',37,1,1601,'Item',NULL,NULL,159,'2011-05-20 14:58:08','2011-05-28 04:15:59');
+INSERT INTO `nodes` VALUES (817,'1864 LIBERTY SEATED Dollar','1864 LIBERTY SEATED Dollar','0-1864-liberty-seated-dollar',595,1,1602,'Item',NULL,NULL,468,'2011-05-25 15:45:49','2011-05-28 04:20:40');
+INSERT INTO `nodes` VALUES (818,'(14-20AD) Bronze 25-Huo Bu \"PANTS MONEY\"','(14-20AD) Bronze 25-Huo Bu \"PANTS MONEY\"','0-14-20ad-bronze-25-huo-bu-pants-money',41,1,1603,'Item',NULL,NULL,1,'2011-05-26 14:38:11','2011-05-28 04:22:34');
+INSERT INTO `nodes` VALUES (819,'1868-69 Gold 2-BU \"MEIJI ERA\"','1868-69 Gold 2-BU \"MEIJI ERA\"','0-1868-69-gold-2-bu-meiji-era',63,1,1604,'Item',NULL,NULL,329,'2011-05-26 14:51:21','2011-05-28 04:24:00');
 /*!40000 ALTER TABLE `nodes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3021,7 +3044,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`id`),
   KEY `index_posts_on_blog_id` (`blog_id`),
   KEY `index_posts_on_blog_id_and_post_date` (`blog_id`,`post_date`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3030,20 +3053,21 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (4,'England (Coinworld Listing)','<p>\r\n	<a class=\"attach_pdf?1292350538\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/10/2006_april06.pdf?1292350538\">Coinworld England PDF</a></p>\r\n',6,'2010-12-14 18:17:23','2011-05-19 14:04:35','2006-04-06 04:00:00');
-INSERT INTO `posts` VALUES (5,'CoinWorld - USA','<p>\r\n	<a class=\"attach_pdf\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/7/2007_may21_usa.pdf\" title=\"May 21, 2007\">Download &nbsp;PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:01:04','2011-05-19 14:06:26','2007-05-27 04:00:00');
-INSERT INTO `posts` VALUES (6,'CoinWorld - Certified Foreign','<p>\r\n	<a class=\"attach_pdf?1292421777\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/11/2007_may14_certified.pdf?1292421777\" title=\"May 14, 2007\">Download PDF FIle &gt;</a></p>\r\n',6,'2010-12-15 14:03:18','2011-05-19 14:07:06','2007-05-14 04:00:00');
-INSERT INTO `posts` VALUES (7,'CoinWorld - Ancients and More','<p>\r\n	<a class=\"attach_pdf?1292421952\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/12/2007_may07_ancients.pdf?1292421952\" title=\"2007_may07_ancients.pdf?1292421952\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:07:11','2011-05-19 14:07:35','2007-05-07 04:00:00');
-INSERT INTO `posts` VALUES (8,'CoinWorld - Certified Ancients','<p>\r\n	<a class=\"attach_pdf?1292422140\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/13/2007_april30_certified.pdf?1292422140\" title=\"2007_april30_certified.pdf?1292422140\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:09:14','2011-05-19 14:08:04','2007-04-30 04:00:00');
-INSERT INTO `posts` VALUES (9,'CoinWorld - Antiquities and Fun Stuff','<p>\r\n	<a class=\"attach_pdf?1292422296\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/14/2007_april09_antiquities.pdf?1292422296\" title=\"2007_april09_antiquities.pdf?1292422296\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:11:40','2011-05-19 14:08:33','2007-04-09 04:00:00');
-INSERT INTO `posts` VALUES (10,'CoinWorld - USA 2','<p>\r\n	<a class=\"attach_pdf?1292422404\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/15/2007_march26_usa.pdf?1292422404\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:14:41','2011-05-19 14:09:37','2007-03-26 04:00:00');
-INSERT INTO `posts` VALUES (11,'CoinWorld - Certified Ancients 2','<p>\r\n	<a class=\"attach_pdf?1292422576\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/16/2007_march19_certified.pdf?1292422576\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:16:45','2011-05-19 14:10:11','2007-03-19 04:00:00');
-INSERT INTO `posts` VALUES (12,'CoinWorld - Germanic','<p>\r\n	<a class=\"attach_pdf?1292422705\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/17/2006_germanic.pdf?1292422705\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:18:35','2011-05-19 14:10:43','2006-06-26 04:00:00');
-INSERT INTO `posts` VALUES (13,'CoinWorld - The World Certified','<p>\r\n	<a class=\"attach_pdf?1292422952\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/18/2006_certified.pdf?1292422952\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:22:41','2011-05-19 14:11:40','2006-06-19 04:00:00');
-INSERT INTO `posts` VALUES (14,'CoinWorld - USA Fun Stuff','<p>\r\n	<a class=\"attach_pdf?1292423209\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/19/2006_usa.pdf?1292423209\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:27:00','2011-05-19 14:12:09','2006-06-05 04:00:00');
-INSERT INTO `posts` VALUES (15,'CoinWorld - The Holy Land and Christianity ','<p>\r\n	<a class=\"attach_pdf?1292423450\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/20/2006_may29_pg1.pdf?1292423450\" title=\"2006_may29_pg1.pdf?1292423450\">Download PDF File &gt; (Page 1)</a><br />\r\n	<a class=\"attach_pdf?1292423676\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/21/2006_may29_pg2.pdf?1292423676\" title=\"2006_may29_pg2.pdf?1292423676\">Download PDF File &gt; (Page 2)</a><br />\r\n	<a class=\"attach_pdf?1292424010\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/22/2006_may29_pg3.pdf?1292424010\" title=\"2006_may29_pg3.pdf?1292424010\">Download PDF File &gt; (Page 3)</a></p>\r\n',6,'2010-12-15 14:40:58','2011-05-19 14:12:42','2006-05-29 04:00:00');
-INSERT INTO `posts` VALUES (16,'CoinWorld - World','<p>\r\n	<a class=\"attach_pdf?1292424359\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/23/2006_may22_pg1.pdf?1292424359\" title=\"2006_may22_pg1.pdf?1292424359\">Download PDF File &gt; (Page 1)</a><br />\r\n	<a class=\"attach_pdf?1292424787\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/24/2006_may22_pg2.pdf?1292424787\" title=\"2006_may22_pg2.pdf?1292424787\">Download PDF File &gt; (Page 2)</a></p>\r\n',6,'2010-12-15 14:54:06','2011-05-19 14:13:14','2006-05-22 04:00:00');
-INSERT INTO `posts` VALUES (19,'MARCH COIN WORLD 2011','<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/55/COIN WORLD MARCH 2011 pg1-5.pdf\">PAGES 1-5</a></p>\r\n',6,'2011-04-22 18:22:41','2011-05-19 14:13:45','2011-03-04 05:00:00');
+INSERT INTO `posts` VALUES (4,'England (Coinworld Listing)','<p>\r\n	<a class=\"attach_pdf?1292350538\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/10/2006_april06.pdf?1292350538\">Coinworld England PDF</a></p>\r\n',6,'2010-12-14 18:17:23','2011-05-28 03:49:04','2006-04-06 04:00:00');
+INSERT INTO `posts` VALUES (5,'CoinWorld - USA','<p>\r\n	<a class=\"attach_pdf\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/7/2007_may21_usa.pdf\" title=\"May 21, 2007\">Download &nbsp;PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:01:04','2011-05-28 03:46:34','2007-05-27 04:00:00');
+INSERT INTO `posts` VALUES (6,'CoinWorld - Certified Foreign','<p>\r\n	<a class=\"attach_pdf?1292421777\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/11/2007_may14_certified.pdf?1292421777\" title=\"May 14, 2007\">Download PDF FIle &gt;</a></p>\r\n',6,'2010-12-15 14:03:18','2011-05-28 03:47:00','2007-05-14 04:00:00');
+INSERT INTO `posts` VALUES (7,'CoinWorld - Ancients and More','<p>\r\n	<a class=\"attach_pdf?1292421952\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/12/2007_may07_ancients.pdf?1292421952\" title=\"2007_may07_ancients.pdf?1292421952\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:07:11','2011-05-28 03:47:41','2007-05-07 04:00:00');
+INSERT INTO `posts` VALUES (8,'CoinWorld - Certified Ancients','<p>\r\n	<a class=\"attach_pdf?1292422140\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/13/2007_april30_certified.pdf?1292422140\" title=\"2007_april30_certified.pdf?1292422140\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:09:14','2011-05-28 03:48:19','2007-04-30 04:00:00');
+INSERT INTO `posts` VALUES (9,'CoinWorld - Antiquities and Fun Stuff','<p>\r\n	<a class=\"attach_pdf?1292422296\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/14/2007_april09_antiquities.pdf?1292422296\" title=\"2007_april09_antiquities.pdf?1292422296\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:11:40','2011-05-28 03:54:05','2007-04-09 04:00:00');
+INSERT INTO `posts` VALUES (10,'CoinWorld - USA 2','<p>\r\n	<a class=\"attach_pdf?1292422404\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/15/2007_march26_usa.pdf?1292422404\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:14:41','2011-05-28 03:53:37','2007-03-26 04:00:00');
+INSERT INTO `posts` VALUES (11,'CoinWorld - Certified Ancients 2','<p>\r\n	<a class=\"attach_pdf?1292422576\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/16/2007_march19_certified.pdf?1292422576\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:16:45','2011-05-28 03:53:14','2007-03-19 04:00:00');
+INSERT INTO `posts` VALUES (12,'CoinWorld - Germanic','<p>\r\n	<a class=\"attach_pdf?1292422705\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/17/2006_germanic.pdf?1292422705\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:18:35','2011-05-28 03:52:51','2006-06-26 04:00:00');
+INSERT INTO `posts` VALUES (13,'CoinWorld - The World Certified','<p>\r\n	<a class=\"attach_pdf?1292422952\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/18/2006_certified.pdf?1292422952\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:22:41','2011-05-28 03:52:09','2006-06-19 04:00:00');
+INSERT INTO `posts` VALUES (14,'CoinWorld - USA Fun Stuff','<p>\r\n	<a class=\"attach_pdf?1292423209\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/19/2006_usa.pdf?1292423209\" title=\"Download PDF File &gt;\">Download PDF File &gt;</a></p>\r\n',6,'2010-12-15 14:27:00','2011-05-28 03:51:34','2006-06-05 04:00:00');
+INSERT INTO `posts` VALUES (15,'CoinWorld - The Holy Land and Christianity ','<p>\r\n	<a class=\"attach_pdf?1292423450\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/20/2006_may29_pg1.pdf?1292423450\" title=\"2006_may29_pg1.pdf?1292423450\">Download PDF File &gt; (Page 1)</a><br />\r\n	<a class=\"attach_pdf?1292423676\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/21/2006_may29_pg2.pdf?1292423676\" title=\"2006_may29_pg2.pdf?1292423676\">Download PDF File &gt; (Page 2)</a><br />\r\n	<a class=\"attach_pdf?1292424010\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/22/2006_may29_pg3.pdf?1292424010\" title=\"2006_may29_pg3.pdf?1292424010\">Download PDF File &gt; (Page 3)</a></p>\r\n',6,'2010-12-15 14:40:58','2011-05-28 03:51:05','2006-05-29 04:00:00');
+INSERT INTO `posts` VALUES (16,'CoinWorld - World','<p>\r\n	<a class=\"attach_pdf?1292424359\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/23/2006_may22_pg1.pdf?1292424359\" title=\"2006_may22_pg1.pdf?1292424359\">Download PDF File &gt; (Page 1)</a><br />\r\n	<a class=\"attach_pdf?1292424787\" href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/24/2006_may22_pg2.pdf?1292424787\" title=\"2006_may22_pg2.pdf?1292424787\">Download PDF File &gt; (Page 2)</a></p>\r\n',6,'2010-12-15 14:54:06','2011-05-28 03:50:01','2006-05-22 04:00:00');
+INSERT INTO `posts` VALUES (19,'MARCH COIN WORLD 2011','<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/55/COIN WORLD MARCH 2011 pg1-5.pdf\">PAGES 1-5</a></p>\r\n',6,'2011-04-22 18:22:41','2011-05-28 03:46:04','2011-03-04 05:00:00');
+INSERT INTO `posts` VALUES (20,'APRIL 2011 COIN WORLD','<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/69/COIN WORLD APRIL 2011 PG1.pdf\">PAGE 1</a></p>\r\n<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/70/COIN WORLD APRIL 2011 PG2.pdf\">PAGE 2</a></p>\r\n<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/74/COIN WORLD APRIL 2011 PG3.pdf?1306558179\">PAGE 3</a></p>\r\n<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/71/COIN WORLD APRIL 2011 PG4.pdf?1306557550\">PAGE 4</a></p>\r\n<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/72/COIN WORLD APRIL 2011 PG5.pdf?1306557615\">PAGE 5</a></p>\r\n<p>\r\n	<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/73/COIN WORLD APRIL 2011 PG6.pdf?1306557977\">PAGE 6</a></p>\r\n',6,'2011-05-19 20:00:53','2011-05-28 04:51:23','2011-05-19 04:00:00');
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3067,7 +3091,7 @@ CREATE TABLE `product_images` (
   PRIMARY KEY (`id`),
   KEY `index_product_images_on_item_id` (`item_id`),
   KEY `index_product_images_on_item_id_and_primary_image` (`item_id`,`primary_image`)
-) ENGINE=InnoDB AUTO_INCREMENT=1490 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1510 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4130,9 +4154,6 @@ INSERT INTO `product_images` VALUES (1169,'SANSOM MEDAL.jpg','image/jpeg',57007,
 INSERT INTO `product_images` VALUES (1170,'WASH TOKEN OBV.jpg','image/jpeg',82441,'2011-03-16 16:03:09',1499,1,'2011-03-16 16:03:19','2011-03-16 16:03:19');
 INSERT INTO `product_images` VALUES (1171,'WASH TOKEN REV.jpg','image/jpeg',94390,'2011-03-16 16:03:11',1499,0,'2011-03-16 16:03:20','2011-03-16 16:03:20');
 INSERT INTO `product_images` VALUES (1172,'WASH TOKEN.jpg','image/jpeg',52989,'2011-03-16 16:03:12',1499,0,'2011-03-16 16:03:21','2011-03-16 16:03:21');
-INSERT INTO `product_images` VALUES (1173,'SANSOM MEDAL OBV.jpg','image/jpeg',78237,'2011-03-16 20:33:51',1500,1,'2011-03-16 20:34:20','2011-03-16 20:34:20');
-INSERT INTO `product_images` VALUES (1174,'SANSOM MEDAL REV.jpg','image/jpeg',84788,'2011-03-16 20:33:59',1500,0,'2011-03-16 20:34:29','2011-03-16 20:34:29');
-INSERT INTO `product_images` VALUES (1175,'SANSOM MEDAL.jpg','image/jpeg',57007,'2011-03-16 20:34:02',1500,0,'2011-03-16 20:34:32','2011-03-16 20:34:32');
 INSERT INTO `product_images` VALUES (1176,'AUSSIE 1913 2S REV.jpg','image/jpeg',98155,'2011-03-17 16:02:17',1485,1,'2011-03-17 16:02:19','2011-03-17 16:02:19');
 INSERT INTO `product_images` VALUES (1177,'AUSSIE 1913 2S OBV.jpg','image/jpeg',95235,'2011-03-17 16:02:18',1485,0,'2011-03-17 16:02:20','2011-03-17 16:02:20');
 INSERT INTO `product_images` VALUES (1178,'AUSSIE 1913 2S.jpg','image/jpeg',56934,'2011-03-17 16:02:19',1485,0,'2011-03-17 16:02:20','2011-03-17 16:02:20');
@@ -4245,9 +4266,6 @@ INSERT INTO `product_images` VALUES (1313,'1958-D 25C NGC.jpg','image/jpeg',5323
 INSERT INTO `product_images` VALUES (1314,'1958 25C NGC MS66-2 OBV.jpg','image/jpeg',90888,'2011-04-09 15:30:37',1543,1,'2011-04-09 15:30:39','2011-04-09 15:30:39');
 INSERT INTO `product_images` VALUES (1315,'1958 25C NGC MS66-2 REV.jpg','image/jpeg',110961,'2011-04-09 15:30:38',1543,0,'2011-04-09 15:30:39','2011-04-09 15:30:39');
 INSERT INTO `product_images` VALUES (1316,'1958 25C NGC MS66-2.jpg','image/jpeg',57164,'2011-04-09 15:30:38',1543,0,'2011-04-09 15:30:39','2011-04-09 15:30:39');
-INSERT INTO `product_images` VALUES (1317,'1832 50C NGC OBV.jpg','image/jpeg',87470,'2011-04-09 16:34:12',1544,1,'2011-04-09 16:34:13','2011-04-09 16:34:13');
-INSERT INTO `product_images` VALUES (1318,'1832 50C NGC REV.jpg','image/jpeg',95747,'2011-04-09 16:34:12',1544,0,'2011-04-09 16:34:13','2011-04-09 16:34:13');
-INSERT INTO `product_images` VALUES (1319,'1832 50C NGC.jpg','image/jpeg',55415,'2011-04-09 16:34:13',1544,0,'2011-04-09 16:34:13','2011-04-09 16:34:13');
 INSERT INTO `product_images` VALUES (1323,'1799 $ NGC OBV.jpg','image/jpeg',91504,'2011-04-09 16:40:21',1546,1,'2011-04-09 16:40:22','2011-04-09 16:40:22');
 INSERT INTO `product_images` VALUES (1324,'1799 $ NGC REV.jpg','image/jpeg',98111,'2011-04-09 16:40:21',1546,0,'2011-04-09 16:40:22','2011-04-09 16:40:22');
 INSERT INTO `product_images` VALUES (1325,'1799 $ NGC.jpg','image/jpeg',63181,'2011-04-09 16:40:21',1546,0,'2011-04-09 16:40:22','2011-04-09 16:40:22');
@@ -4403,6 +4421,16 @@ INSERT INTO `product_images` VALUES (1486,'GERM-HAN 1669 4MG.jpg','image/jpeg',6
 INSERT INTO `product_images` VALUES (1487,'GERM-HES-DARM 1834 6K OBV.jpg','image/jpeg',118130,'2011-05-13 18:57:48',1600,1,'2011-05-13 18:57:49','2011-05-13 18:57:49');
 INSERT INTO `product_images` VALUES (1488,'GERM-HES-DARM 1834 6K REV.jpg','image/jpeg',105636,'2011-05-13 18:57:48',1600,0,'2011-05-13 18:57:49','2011-05-13 18:57:49');
 INSERT INTO `product_images` VALUES (1489,'GERM-HES-DARM 1834 6K.jpg','image/jpeg',64187,'2011-05-13 18:57:49',1600,0,'2011-05-13 18:57:49','2011-05-13 18:57:49');
+INSERT INTO `product_images` VALUES (1500,'image_original.jpg','image/jpeg',141978,'2011-05-28 04:15:41',1601,1,'2011-05-28 04:15:46','2011-05-28 04:15:46');
+INSERT INTO `product_images` VALUES (1501,'image_original.jpg','image/jpeg',164776,'2011-05-28 04:15:42',1601,0,'2011-05-28 04:15:50','2011-05-28 04:15:50');
+INSERT INTO `product_images` VALUES (1502,'image_original.jpg','image/jpeg',98293,'2011-05-28 04:15:43',1601,0,'2011-05-28 04:15:55','2011-05-28 04:15:55');
+INSERT INTO `product_images` VALUES (1503,'image_original.jpg','image/jpeg',215220,'2011-05-28 04:20:20',1602,1,'2011-05-28 04:20:24','2011-05-28 04:20:24');
+INSERT INTO `product_images` VALUES (1504,'image_original.jpg','image/jpeg',256306,'2011-05-28 04:20:21',1602,0,'2011-05-28 04:20:30','2011-05-28 04:20:30');
+INSERT INTO `product_images` VALUES (1505,'image_original.jpg','image/jpeg',126721,'2011-05-28 04:20:21',1602,0,'2011-05-28 04:20:36','2011-05-28 04:20:36');
+INSERT INTO `product_images` VALUES (1506,'image_original.jpg','image/jpeg',80293,'2011-05-28 04:22:23',1603,1,'2011-05-28 04:22:26','2011-05-28 04:22:26');
+INSERT INTO `product_images` VALUES (1507,'image_original.jpg','image/jpeg',83479,'2011-05-28 04:22:24',1603,0,'2011-05-28 04:22:29','2011-05-28 04:22:29');
+INSERT INTO `product_images` VALUES (1508,'image_original.jpg','image/jpeg',147833,'2011-05-28 04:23:47',1604,1,'2011-05-28 04:23:49','2011-05-28 04:23:49');
+INSERT INTO `product_images` VALUES (1509,'image_original.jpg','image/jpeg',150216,'2011-05-28 04:23:47',1604,0,'2011-05-28 04:23:54','2011-05-28 04:23:54');
 /*!40000 ALTER TABLE `product_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4436,7 +4464,7 @@ CREATE TABLE `questions` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_questions_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4458,6 +4486,10 @@ INSERT INTO `questions` VALUES (14,NULL,'Sharan','Gwynn','','691 Spring Ridge Dr
 INSERT INTO `questions` VALUES (15,NULL,'joseph','boniellio','','2087 n pte alexis drive','','tarpon springs','FL','','34689','5165108910','','farmwayproducts@earthlink.net','','1792 getz cent','we have a 1792 getz cent\'half dollar\'small eagle and a 1791 small eagle one cent,,,we heard u are the pro,,,saw randy campbell yesterday in florida...',NULL,'2011-05-17 14:27:47','2011-05-17 14:27:47');
 INSERT INTO `questions` VALUES (16,NULL,'Julie','Reed','','','','','','','','','','julia.reed@scott.kyschools.us','','silver','Hello, my father has several pieces of sterling and silver coins that he would like to sell. If you buy silver, how much per ounce do you purchase for? Thank you.',NULL,'2011-05-17 22:35:38','2011-05-17 22:35:38');
 INSERT INTO `questions` VALUES (17,NULL,'dxfdf','dfdf','','','','','','','','','','dcpayne@gmail.com','','dsfsfd','dsff',NULL,'2011-05-18 13:53:53','2011-05-18 13:53:53');
+INSERT INTO `questions` VALUES (18,NULL,'Joshua','Nitz','','8390 Washington Village Dr','','Dayton','OH','United States','45458','937.510.1795','','jdnitz@yahoo.com','','28th Annual Greater Cincinnati Numismatic Exposition','Mr. Kern,\r\n\r\nAre you planning to be at the 28th Annual Greater Cincinnati Numismatic Exposition June 10th and 11th?  I\'m planning to shop the show on Friday 10th, and was checking to make sure you\'ll be there... Thanks!\r\n\r\nJosh\r\n',NULL,'2011-05-19 14:04:16','2011-05-19 14:04:16');
+INSERT INTO `questions` VALUES (19,NULL,'Jaime','Jacob','Internet Marketing Company','Delta','Delta','Delta','CO','Ukraine','81416','259-874-7854','','jesseholden116@gmail.com','','Idea for your website','What would a huge increase in relevant traffic mean for your business?  If I could greatly increase the amount of customers who are interested in your products and services, wouldn\'t you be interested',NULL,'2011-05-19 22:34:06','2011-05-19 22:34:06');
+INSERT INTO `questions` VALUES (20,NULL,'jcpyqvc','jcpyqvc','nTGuBTpCdMrKyIYAbh','TJxxZSibRlilUvszMyt','ZapNgXexhGHPYEFkNg','New York','MT','Lao People\'s Democratic Republic','5091','http://wqaacvcemcvs.com/','12338408842','xhocka@rrgfar.com','http://wqaacvcemcvs.com/','aaVtfykLGrfcmtwv','gImNTv  <a href=\"http://qqzuerbfjoqa.com/\">qqzuerbfjoqa</a>, [url=http://chzuhlmvnkjd.com/]chzuhlmvnkjd[/url], [link=http://rtuydkcgzrrg.com/]rtuydkcgzrrg[/link], http://jtbvjmilndpx.com/',NULL,'2011-05-20 04:08:16','2011-05-20 04:08:16');
+INSERT INTO `questions` VALUES (21,NULL,'John','nelson','','282 letha petrey rd','','williamsburg','KY','United States','40769','6065493440','','j.guitar@live.com','','draped bust culls','I\'m looking for a damaged,holed,plugged draped bust dollar or half can you put me on a wish list for a few months? than-you',NULL,'2011-05-22 20:49:03','2011-05-22 20:49:03');
 /*!40000 ALTER TABLE `questions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4523,7 +4555,7 @@ CREATE TABLE `text_elems` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4532,17 +4564,17 @@ CREATE TABLE `text_elems` (
 
 LOCK TABLES `text_elems` WRITE;
 /*!40000 ALTER TABLE `text_elems` DISABLE KEYS */;
-INSERT INTO `text_elems` VALUES (4,'<p>\r\n	Since 1971 Jonathan Kern has been a knowledgeable dealer and collector in ancient, foreign, and U.S. coinage along with tokens, paper money and antiquities.</p>\r\n<p>\r\n	We take great pride in putting the customer first. Please take a look at our current inventory listing or drop us a line so we may help you with your numismatic need.</p>\r\n<p>\r\n	<a href=\"/about-us\"><img alt=\"Learn More About Us\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/4/content_learn-more.png\" style=\"float: right; margin-top: 8px;\" /></a></p>\r\n','2010-10-30 03:30:30','2011-05-19 14:17:51');
+INSERT INTO `text_elems` VALUES (4,'<p>\r\n	Since 1971 Jonathan Kern has been a knowledgeable dealer and collector in ancient, foreign, and U.S. coinage along with tokens, paper money and antiquities.</p>\r\n<p>\r\n	We take great pride in putting the customer first. Please take a look at our current inventory listing or drop us a line so we may help you with your numismatic need.</p>\r\n<p>\r\n	<a href=\"/about-us\"><img alt=\"Learn More About Us\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/4/content_learn-more.png\" style=\"float: right; margin-top: 8px;\" /></a></p>\r\n','2010-10-30 03:30:30','2011-05-28 03:41:43');
 INSERT INTO `text_elems` VALUES (5,'<p>\r\n	<span class=\"makeBold\">Jonathan K. Kern</span> was born in 1952, and at the age of 8 started collecting coins of the Netherlands East Indies while in Indonesia. After returning to Lexington, Kentucky in 1962, with the encouragement of his mother, he joined the Bluegrass Coin Club, of which he was later secretary and president. While attending the University of Kentucky in 1969 with a major in geology, he got his first over the counter coin retailing experience working for Larry Goodman&rsquo;s Jewel Box. After three semesters, he dropped out and worked for $35. a week running Paul Stockton&rsquo;s Pioneer Coins while apprenticing in the art of coin restoration and conservation. After being fired from this last job ever, and losing the $1 an hour income, he quickly evaluated his life and got married. Confident that he could live on $2000 a year from flea markets, coin shop rounds, and driving to coin shows, he was happy never working for anyone else again. Attracted back to the University of Kentucky by its Honors Program and topical major options, he graduated in 1973 with a <a href=\"numismatics\">Bachelor of Arts with a major in numismatics</a>. About 25% of all credit hours were topical, and his independent research thesis studied Spanish Colonial coins from the Colombian mint with non-destructive thermal neutron activation analysis.</p>\r\n<p>\r\n	Jonathan Kern opened his first coin shop as Bluegrass Coins and attended hundreds of coin shows in the 1970s including bourse tables in London, Munich and Zurich. In addition to foreign and US coins he started dealing avidly in ancients by the mid 70s. He joined the ANS, became an ANA life member and joined many other state and regional coin organizations.&nbsp; After the boom of&nbsp; 1980 he sold Bluegrass Coins and began regular Coin World advertising as Jonathan K. Kern Company while still attending all major and Midwest regional shows. Jonathan is very grateful for all the opportunities in life brought to him by the rare coin business in the last 35 years, including meeting and sharing our hobby with some of the finest people in the world.</p>\r\n<p>\r\n	&nbsp;</p>\r\n','2010-10-30 03:30:30','2011-01-15 15:32:14');
 INSERT INTO `text_elems` VALUES (7,'<p>\r\n	Stay tuned...</p>\r\n','2010-10-30 04:04:10','2010-10-30 04:04:35');
 INSERT INTO `text_elems` VALUES (11,'<p>\r\n	We offer an<a href=\"http://184.106.241.188/Inventory\"><span style=\"color: rgb(255, 255, 0);\"> inventory</span></a> that is second-to-none featuring ancient, foreign, medieval, US and numerous other types of coins. Visit our online store, view our inventory, and purchase coins!</p>\r\n<p>\r\n	&nbsp;</p>\r\n','2010-11-26 21:03:58','2010-12-15 22:09:50');
-INSERT INTO `text_elems` VALUES (14,'<p>\r\n	<img alt=\"\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/6/content_archive-thumb.jpg\" style=\"margin-right: 10px; margin-bottom: 10px; float: left; width: 95px; height: 105px; \" />The following documents are available in Adobe Reader format, Adobe Flashpaper format, or both. Of the two, the flashpaper will load much faster and there are far fewer browser incompatibilities; you need only a Flash player to view them. However, the Adobe Reader (pdf) documents will have sharper images of the coins featured. Choose the document you want to view, and click on the format you wish to view it in.</p>\r\n','2010-12-07 00:00:39','2011-05-19 22:12:52');
-INSERT INTO `text_elems` VALUES (16,'<h1>\r\n	<span style=\"color: rgb(240, 255, 240);\">Special Offers</span></h1>\r\n<p>\r\n	Please take a moment to view our current special offers on coins of all sorts!</p>\r\n<p>\r\n	<a href=\"special-offers\"><img alt=\"View Offers\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/3/content_view-offers.png\" style=\"margin: 30px -4px 0pt;\" /></a></p>\r\n','2010-12-15 20:57:48','2011-05-19 14:17:06');
+INSERT INTO `text_elems` VALUES (14,'<p>\r\n	<img alt=\"\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/6/content_archive-thumb.jpg\" style=\"margin-right: 10px; margin-bottom: 10px; float: left; width: 95px; height: 105px; \" />The following documents are available in Adobe Reader format, Adobe Flashpaper format, or both. Of the two, the flashpaper will load much faster and there are far fewer browser incompatibilities; you need only a Flash player to view them. However, the Adobe Reader (pdf) documents will have sharper images of the coins featured. Choose the document you want to view, and click on the format you wish to view it in.</p>\r\n','2010-12-07 00:00:39','2011-05-28 03:44:47');
+INSERT INTO `text_elems` VALUES (16,'<h1>\r\n	<span style=\"color: rgb(240, 255, 240);\">Special Offers</span></h1>\r\n<p>\r\n	Please take a moment to view our current special offers on coins of all sorts!</p>\r\n<p>\r\n	<a href=\"special-offers\"><img alt=\"View Offers\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/3/content_view-offers.png\" style=\"margin: 30px -4px 0pt;\" /></a></p>\r\n','2010-12-15 20:57:48','2011-05-28 03:40:52');
+INSERT INTO `text_elems` VALUES (18,'<p style=\"text-align: center;\">\r\n	<img alt=\"\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/25/content_1_pic1.jpg?1292450892\" style=\"width: 95px; height: 105px;\" /></p>\r\n','2010-12-15 22:08:18','2011-05-28 03:57:27');
 INSERT INTO `text_elems` VALUES (19,'<p>\r\n	<span class=\"makeBold\">In the early 70&rsquo;s</span> I was attending the University of Kentucky in the honors program as a geology major. Coins were rapidly becoming much more fun than rocks. I dropped out of the second semester of my sophomore year to get married and do coins full time. I apprenticed under the coin repair master Paul Stockton for 3 months. We were mutually compensated since I was running his over the counter Pioneer Coin Shop for $1.00 an hour for his 35 hour week Monday through Friday. By working flea markets and coin shows on weekends I came to the conclusion that I could earn $2,000 a year doing my hobby as a business, and I could survive on this income. Frugal living was acceptable to me if I could be my own boss.</p>\r\n<p>\r\n	The importance of a college degree could still not be overlooked and I probably knew that if I didn&rsquo;t do it soon I might not ever graduate. I am very grateful that academia had entered the &ldquo;Age of Relevancy&rdquo;. The honors program offered tailored majors for a Bachelor&rsquo;s degree if several criteria were met. All the course work for the usual Bachelor of Arts, Science or General Studies degrees must be met.&nbsp; Courses related to the chosen major or independent course work at the junior and senior levels must be taken to meet the major requirements. Any independent work in the chosen major needed a faculty advisor capable of evaluating the quality of the study or research.</p>\r\n<p>\r\n	So I went back for my junior and senior years and got my Bachelor of Arts with a major in Numismatics in June of 1973. The normally offered courses that I took in the College of Arts and Sciences related to numismatics included: art appreciation, economics, ancient, medieval, and modern history, chemistry, physics and radiochemistry. Eighty per cent of my independent study credit hours were devoted to my undergraduate thesis. I analyzed non-destructively a series of silver coins struck at the Spanish colonial mints of Santa Fe de Bogota and Popayan. Silver from these two mints was largely a by product of the gold mining activities, and &frac12; to 8 reales were struck in limited numbers. Refining materials were scarce and contemporary sources mention possible gold impurities in the silver coins. To verify these statements non-destructively I used a high thermal neutron flux generated by a Californium-252 source to make my sample coins radioactive for a short period of time. By identifying and measuring the radiation emitted from the coins, the gold impurities could be quantified. Many of the samples had a 5% gold content, which raised the intrinsic value over the face value. This could easily have contributed to the numismatic scarcity of the silver coins from these mints.</p>\r\n<p>\r\n	My chemistry professor, Dr. Ehmann, evaluated the radiochemistry scholarship, and my history professor and honors advisor, Dr. Scarborough, evaluated by numismatic research. I was fortunate that Dr. Scarborough was interested in the archaeological uses of Numismatics and appreciated research into this specialized field. I do not know if a similar topical major program is offered at any universities today.</p>\r\n','2010-12-20 14:27:06','2010-12-20 14:27:06');
-INSERT INTO `text_elems` VALUES (22,'<table border=\"0\" cellpadding=\"0\" cellspacing=\"1\" style=\"font-size: 12px; width: 246px; height: 147px;\">\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/48/COIN WORLD MAY 2011 PG1.pdf\">MAY PG-1</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/36/COIN WORLD APRIL 2011 PG1.pdf\">APRIL PG-1</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/50/COIN WORLD MAY 2011 PG2.pdf\">MAY PG-2</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/37/COIN WORLD APRIL 2011 PG2.pdf\">APRIL PG-2</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/51/COIN WORLD MAY 2011 PG3.pdf\">MAY PG-3</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/38/COIN WORLD APRIL 2011 PG3.pdf\"> </a><a href=\"/site_assets/files/38/COIN WORLD APRIL 2011 PG3.pdf\">APRIL PG-3</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/52/COIN WORLD MAY 2011 PG4.pdf\">MAY PG-4</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/39/COIN WORLD APRIL 2011 PG4.pdf\">APRIL PG-4</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/53/COIN WORLD MAY 2011 PG5.pdf\">MAY PG-5</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/40/COIN WORLD APRIL 2011 PG5.pdf\">APRIL PG-5</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/54/COIN WORLD MAY 2011 PG6.pdf\">MAY PG-6</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/46/COIN WORLD APRIL 2011 PG6.pdf\">APRIL PG-6</a></td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n<p>\r\n	&nbsp;</p>\r\n','2011-02-10 17:42:31','2011-05-19 21:10:37');
+INSERT INTO `text_elems` VALUES (22,'<table border=\"0\" cellpadding=\"0\" cellspacing=\"1\" style=\"font-size: 12px; width: 246px; height: 147px;\">\r\n	<tbody>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/48/COIN WORLD MAY 2011 PG1.pdf\">MAY PG-1</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/63/COIN WORLD JUNE 2011 PG1.pdf\">JUNE PG-1</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/50/COIN WORLD MAY 2011 PG2.pdf\">MAY PG-2</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/64/COIN WORLD JUNE 2011 PG2.pdf\">JUNE PG-2</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/51/COIN WORLD MAY 2011 PG3.pdf\">MAY PG-3</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/65/COIN WORLD JUNE 2011 PG3.pdf\">JUNE PG-3</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/52/COIN WORLD MAY 2011 PG4.pdf\">MAY PG-4</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/66/COIN WORLD JUNE 2011 PG4.pdf\">JUNE PG-4</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/53/COIN WORLD MAY 2011 PG5.pdf\">MAY PG-5</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/67/COIN WORLD JUNE 2011 PG5.pdf\">JUNE PG-5</a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/54/COIN WORLD MAY 2011 PG6.pdf\">MAY PG-6</a></td>\r\n			<td>\r\n				<a href=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/files/68/COIN WORLD JUNE 2011 PG6.pdf\">JUNE PG-6</a></td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n<p>\r\n	&nbsp;</p>\r\n','2011-02-10 17:42:31','2011-05-28 03:43:18');
 INSERT INTO `text_elems` VALUES (24,'','2011-02-23 19:32:33','2011-02-23 19:32:33');
 INSERT INTO `text_elems` VALUES (26,'<p>\r\n	Content needed.</p>\r\n','2011-03-19 17:26:28','2011-03-19 17:26:28');
-INSERT INTO `text_elems` VALUES (31,'<p style=\"text-align: center;\">\r\n	<img alt=\"\" src=\"http://s3.amazonaws.com/Jkerncoins-production/site_assets/images/56/content_content_1_pic1.jpg\" style=\"width: 95px; height: 105px;\" /></p>\r\n','2011-05-19 21:31:15','2011-05-19 21:31:43');
 /*!40000 ALTER TABLE `text_elems` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4559,4 +4591,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-05-23 12:14:37
+-- Dump completed on 2011-05-28  0:52:53
