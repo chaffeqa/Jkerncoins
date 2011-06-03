@@ -25,7 +25,8 @@ class ApplicationController < ActionController::Base
 
 
   def get_node
-    @shortcut ||= params[:shortcut].blank? ? nil : params[:shortcut]
+    # If /:shortcut is blank, then default to the Home page
+    @shortcut ||= params[:shortcut].blank? ? @home_node.shortcut : params[:shortcut]
     @node ||= Node.find_shortcut(@shortcut)
     redirect_to(error_path(:shortcut => @shortcut )) unless @node
     @node

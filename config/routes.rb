@@ -2,7 +2,7 @@ KernCoinProject::Application.routes.draw do
 
 
 
-  root :to => redirect('/Home')
+  root :to => 'shortcut#route'
 
   match "error" => 'shortcut#error', :as => :error
 
