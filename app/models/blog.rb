@@ -28,6 +28,7 @@ class Blog < ActiveRecord::Base
     logger.debug "DB ********** Touching BlogElem #{id} ********** "
     self.touch
     self.blog_elems.each {|elem| elem.try(:update_cache_chain) }
+    self.blog_elem.try(:update_cache_chain)
   end
 
 
