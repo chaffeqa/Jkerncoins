@@ -23,21 +23,29 @@
 
 <!-- Content_for componenst to insert into static_page -->
 <%= content_for :subColumn do %>
-  <h3><%= @node.menu_name %></h3>
+  <h3><%= @node.title %></h3>
   <div id="categorySub">
-    <%= render_navigation(:level => 2..10) %>
+  <ul><li><ul>
+    <% @node.page.posts.each do |post| %>
+      <%= content_tag_for(:li, post) do %>
+        <%= link_to(post.node.menu_name, shortcut_path(post.node.shortcut)) %>
+      <% end %> 
+    <% end %>
+  </ul></li></ul>
   </div>
 <% end %>
 
 <%= content_for :breadcrumb do %>
   <div class="breadcrumb">
-    <%= render_navigation(:renderer => :breadcrumbs, :join_with => " &gt; ") %>
+    <%= link_to @home_node.title, shortcut_path(@home_node.shortcut) %> &gt; <%= link_to @node.title, shortcut_path(@node.shortcut) %>
   </div>
 <% end %>
 
-<% content_for :page_admin_bar do %>
-  <%#= link_to('Blog Settings',  edit_admin_blog_path(@node.page), :class => 'btn large') %>
-  <%= link_to('New Post',  new_admin_blog_post_path(@node.page), :class => 'btn large') %>
+<% if admin? %> 
+  <% content_for :page_admin_bar do %>
+    <%#= link_to('Blog Settings',  edit_admin_blog_path(@node.page), :class => 'btn large') %>
+    <%= link_to('New Post',  new_admin_blog_post_path(@node.page), :class => 'btn large') %>
+  <% end %>
 <% end %>
 
 

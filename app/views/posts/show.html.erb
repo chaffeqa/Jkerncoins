@@ -3,19 +3,13 @@
 @blog = @post.blog
 %>
 
-<% content_for :page_admin_bar do %>
-  <%= link_to 'Blog Settings', edit_admin_blog_post_path(@blog, @post), :class => 'btn large' %>
-<% end %>
-
-
-
 
 <% if admin? %> <div class="admin clearfix"> <% end %>
   <article class="post">
     <% if admin? %>
     <span class="controls">
       <%= link_to 'Edit Post', edit_admin_blog_post_path(@blog, @post), :class => 'btn small' %>
-      <%= link_to 'X', admin_blog_posts_path(@blog, @post) , :confirm => "Are you sure?", :method => :delete, :class => 'btn control small' %>
+      <%= link_to 'X', admin_blog_post_path(@blog, @post) , :confirm => "Are you sure?", :method => :delete, :class => 'btn control small' %>
     </span>
     <% end %>
     <h1 class="title"> <%= @post.title %> </h1>
@@ -23,3 +17,40 @@
     <p><%=raw @post.body %></p>
   </article>
 <% if admin? %> </div><% end %>
+
+
+
+
+<!-- Content_for componenst to insert into static_page -->
+<%= content_for :subColumn do %>
+  <h3><%= @blog.node.title %></h3>
+  <div id="categorySub">
+  <ul><li><ul>
+    <% @blog.posts.each do |post| %>
+      <%= content_tag_for(:li, post) do %>
+        <%= link_to(post.node.menu_name, shortcut_path(post.node.shortcut), :class => (post.id == @post.id) ? 'selected' : '' ) %>
+      <% end %> 
+    <% end %>
+  </ul></li></ul>
+  </div>
+<% end %>
+
+<%= content_for :breadcrumb do %>
+  <div class="breadcrumb">
+    <%= link_to @home_node.title, shortcut_path(@home_node.shortcut) %> &gt; <%= link_to @blog.node.title, shortcut_path(@blog.node.shortcut) %> &gt; <%= link_to @post.node.title, shortcut_path(@post.node.shortcut) %>
+  </div>
+<% end %>
+
+<% if admin? %> 
+  <% content_for :page_admin_bar do %>
+    <%= link_to "Post's Blog", shortcut_path(@blog.node.shortcut), :class => 'btn large' %>
+    <%= link_to 'Edit Post', edit_admin_blog_post_path(@blog, @post), :class => 'btn large' %>
+    <%= link_to 'Delete Post', admin_blog_post_path(@blog, @post) , :confirm => "Are you sure?", :method => :delete, :class => 'btn large' %>
+  <% end %>
+<% end %>
+
+
+<% content_for :page_title do %>
+  <%= @node.title %>
+<% end %>
+<!-- End -->
