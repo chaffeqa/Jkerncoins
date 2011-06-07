@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110518180550) do
+ActiveRecord::Schema.define(:version => 20110607010742) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                             :default => "", :null => false
-    t.string   "encrypted_password", :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                     :default => "", :null => false
+    t.string   "email",                             :null => false
+    t.string   "encrypted_password", :limit => 128, :null => false
+    t.string   "password_salt",                     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(:version => 20110518180550) do
 
   create_table "blog_elems", :force => true do |t|
     t.integer  "count_limit"
-    t.date     "past_limit"
     t.string   "display_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "past_days_limit"
   end
 
   create_table "blogs", :force => true do |t|
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(:version => 20110518180550) do
     t.string   "assetable_type",    :limit => 30
     t.string   "type",              :limit => 25
     t.string   "guid",              :limit => 10
-    t.integer  "locale",            :limit => 1,  :default => 0
+    t.integer  "locale",                          :default => 0
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

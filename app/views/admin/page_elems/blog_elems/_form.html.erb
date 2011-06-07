@@ -64,15 +64,18 @@
 
     <div class="field"><span class="hint">How many posts do you want to show? <a class="expander">Explain further</a></span>
       <%= f.label :count_limit, 'Post Limit' %>
-      <%= f.text_field :count_limit %>
+      <%= f.text_field :count_limit, :class => "thirdw" %> Posts
       <span class="expanded-hint">Choose how many of your recent posts to display in the list. For example you may only want to list 4-5 recent posts on the home page of your website, but then show all posts on another page that functions as an archive.
       </span>
     </div>
     <hr />
 
-    <div class="field"><span class="hint">How many days into the past do you want to show? You can leave this blank to display all posts.</span>
-      <%= f.label :past_limit, 'History' %>
-      <%= f.text_field :past_limit %>
+    <div class="field"><span class="hint">How many days into the past do you want to show? <a class="expander">Explain further</a></span></span>
+      <%= f.label :past_days_limit, 'Maximum Blog Post Age' %>
+      <%= f.text_field :past_days_limit, :class => "thirdw" %> Days Back
+      <span class="expanded-hint"> Input a number of days or leave this blank to display all posts.  
+        The number of days will be the maximum age for any post to be displayed in this Element.
+      </span>
     </div>
 
     <%= render :partial => 'admin/submit', :locals => {:f => f, :type => 'element'} %>

@@ -11,13 +11,15 @@
 <% end %>
 
 <% if elem.blog %>
-  <%
-  blog = elem.blog
-  other_blogs = elem.blogs
-  posts = Post.order("post_date DESC").where('post_date <= ?', Time.now)
-  posts = posts.limit(elem.count_limit) unless elem.count_limit.blank?
-  posts = posts.where("posts.post_date >= ?", elem.past_limit) unless elem.past_limit.blank?
-  posts = posts.where("posts.blog_id IN (?)", [blog.id] + other_blogs.collect {|b| b.id })
+  <% 
+  # All the below is now inside #get_posts
+  posts = elem.get_posts
+  #blog = elem.blog
+  #other_blogs = elem.blogs
+  #posts = Post.order("post_date DESC").where('post_date <= ?', Time.now)
+  #posts = posts.limit(elem.count_limit) unless elem.count_limit.blank?
+  #posts = posts.where("posts.post_date >= ?", posts.post_date - elem.past_days_limit.days) unless elem.past_days_limit.blank?
+  #posts = posts.where("posts.blog_id IN (?)", [blog.id] + other_blogs.collect {|b| b.id })
 %>
 
 
@@ -27,7 +29,7 @@
   <% end %>
 
   <% if posts[0] %>
-    <%= render :partial => "elem_partials/blog_elem_partials/#{elem.display_type_partial}", :locals => {:blog => blog, :posts => posts} %>
+    <%= render :partial => "elem_partials/blog_elem_partials/#{elem.display_type_partial}", :locals => {:blog => elem.blog, :posts => posts} %>
   <% else %>
     <p>Right now, you do not have any blog posts displayed.
       Click &#8220;New Post&#8221; on the menu above or click &#8220;Settings&#8221; to import posts or change how the blog is displayed.</p>

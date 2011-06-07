@@ -16,6 +16,8 @@ class BlogElem < ActiveRecord::Base
 
   #  validates_numericality_of :limit
   validates :display_type, :inclusion => { :in => DISPLAY_TYPE }
+  validates :past_days_limit, :numericality => {:allow_blank => true}
+  validates :count_limit, :numericality => {:allow_blank => true}
   after_save :persist_title
   #  validates_associated :blog
   
@@ -27,6 +29,15 @@ class BlogElem < ActiveRecord::Base
     logger.debug "DB ********** Touching BlogElem #{id} ********** "
     self.touch
     self.element.try(:update_cache_chain)
+  end
+  
+  
+  # Returns the posts that this blog_elem should display
+  def get_posts
+    posts = Post.order("post_date DESC").where('post_date <= ?', Time.now)
+    posts = posts.limit(count_limit) unless count_limit.blank?
+    posts = posts.where("posts.post_date >= ?", Time.now - past_days_limit.days) unless past_days_limit.blank?
+    posts = posts.where("posts.blog_id IN (?)", [blog.id] + blog_ids )
   end
 
 
