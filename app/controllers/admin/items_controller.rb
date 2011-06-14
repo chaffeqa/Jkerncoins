@@ -18,11 +18,15 @@ class Admin::ItemsController < ApplicationController
 
 
   def new
+    session[:last_view] = request.env["HTTP_REFERER"] || admin_items_url
+    logger.debug "************ CODE **************\nSaved session 'last_view': #{session[:last_view]}\n************ END **************"
     @item = Item.new
     @item.nodes.build(:displayed => true) unless @item.nodes.count > 0
   end
 
   def edit
+    session[:last_view] = request.env["HTTP_REFERER"] || admin_items_url
+    logger.debug "************ CODE **************\nSaved session 'last_view': #{session[:last_view]}\n************ END **************"
     @item = Item.find(params[:id])
     @item.nodes.build(:displayed => true) unless @item.nodes.count > 0
   end
@@ -30,7 +34,8 @@ class Admin::ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
     if @item.save
-      redirect_to(admin_items_path, :notice => 'Item was successfully created.')
+      #redirect_to(admin_items_path, :notice => 'Item was successfully created.')
+      redirect_to(session[:last_view], :notice => 'Item was successfully created.')
     else
       render :action => "new"
     end
@@ -39,7 +44,8 @@ class Admin::ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     if @item.update_attributes(params[:item])
-      redirect_to(admin_items_path, :notice => 'Item was successfully updated.')
+      #redirect_to(admin_items_path, :notice => 'Item was successfully updated.')
+      redirect_to(session[:last_view], :notice => 'Item was successfully updated.')
     else
       render :action => "edit"
     end
@@ -48,7 +54,7 @@ class Admin::ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-    redirect_to(admin_items_url, :notice => 'Item was successfully destroyed.' )
+    redirect_to(:back, :notice => 'Item was successfully destroyed.' )
   end
 
   # CRUD operation
