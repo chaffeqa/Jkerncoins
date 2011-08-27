@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
 
   #TODO
   def admin?
-    admin_signed_in?
+    admin_signed_in? || Rails.env.development?
   end
 
   def check_admin

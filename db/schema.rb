@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(:version => 20110607010742) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                             :null => false
-    t.string   "encrypted_password", :limit => 128, :null => false
-    t.string   "password_salt",                     :null => false
+    t.string   "email",                             :default => "", :null => false
+    t.string   "encrypted_password", :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                     :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(:version => 20110607010742) do
     t.string   "assetable_type",    :limit => 30
     t.string   "type",              :limit => 25
     t.string   "guid",              :limit => 10
-    t.integer  "locale",                          :default => 0
+    t.integer  "locale",            :limit => 1,  :default => 0
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

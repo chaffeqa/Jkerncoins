@@ -54,7 +54,7 @@ class Admin::ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-    redirect_to(:back, :notice => 'Item was successfully destroyed.' )
+    redirect_to(root_path, :notice => 'Item was successfully destroyed.' )
   end
 
   # CRUD operation
