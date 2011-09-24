@@ -32,15 +32,15 @@ class Item < ActiveRecord::Base
   after_destroy     :full_item_counts_update
   after_save        :update_cache_chain
   before_destroy    :update_cache_chain
-  
+
   # Global method to trigger caching updates for all objects that rely on this object's information
   # This will be called in one of two cases:
   #   1) This object has changed, and effected cached objects need to recache
-  #   2) An object has notified this object that it needs to recache 
+  #   2) An object has notified this object that it needs to recache
   # Since autosave doesn't seem to be working, this will force the item_categories to resave
   def update_cache_chain
     logger.debug "DB ********** Touching Item #{id} ********** "
-    self.touch
+    self.touch unless self.marked_for_destruction?
     self.item_elems.each {|elem| elem.try(:update_cache_chain) }
   end
 
