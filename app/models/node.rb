@@ -25,11 +25,11 @@ class Node < ActiveRecord::Base
 #  before_validation :fill_missing_fields
   after_save :update_cache_chain
   before_destroy :update_cache_chain
-  
+
   # Global method to trigger caching updates for all objects that rely on this object's information
   # This will be called in one of two cases:
   #   1) This object has changed, and effected cached objects need to recache
-  #   2) An object has notified this object that it needs to recache 
+  #   2) An object has notified this object that it needs to recache
   # Clears the cache items of Node calls
   def update_cache_chain
     unless self.marked_for_destruction?
@@ -101,7 +101,7 @@ class Node < ActiveRecord::Base
   scope :no_items, where("page_type != 'Item' OR page_type IS NULL")
 
   def self.home
-	  where(:shortcut => 'Home').first
+    where(:shortcut => 'Home').first
   end
 
   def self.find_shortcut(shortcut='')
@@ -173,7 +173,7 @@ class Node < ActiveRecord::Base
   ####################################################################
   # Node Tree Creator
   ##########
-  
+
   # Caller for the FLAT (level 1 and 2 combined) node tree creation
   def flat_node_tree
     flat_tree = ([{
@@ -207,7 +207,7 @@ class Node < ActiveRecord::Base
 
 
   private
-  
+
   # Actual behind the scenes ordering of the Node tree
   def self.order_helper( json, position = 0, parent_id = nil)
     json.each do |hash|
@@ -215,12 +215,11 @@ class Node < ActiveRecord::Base
       Node.update_all(['position = ?, parent_id = ?', position, parent_id], ['id = ?', node_id])
       position += 1
       if hash['children']
-        position = order_helper( hash['children'], position, node_id)
+        order_helper( hash['children'], 0, node_id)
       end
     end
-    position
   end
-  
+
   # Replaces special characters in a string so that it may be used as part of a ‘pretty’ URL.
   def parameterize(parameterized_string, sep = '-')
     # Turn unwanted chars into the separator
@@ -243,11 +242,11 @@ class Node < ActiveRecord::Base
     logger.error "Error: '#{msg}'"
     logger.error "DB ******** End Node Error ********"
   end
-  
-  
 
 
-  
+
+
+
 
   # Called to order the Node tree based on passed in json
   def self.order_tree(json)

@@ -16,6 +16,20 @@ class Admin::ItemsController < ApplicationController
     @items = @items.paginate :page => @full_params[:page], :per_page => @full_params[:per_page], :order => (sort_column + " " + sort_direction)
   end
 
+  def sort_alphanumerically
+    if request.post?
+      Category.all.each do |cat|
+        child_nodes = cat.node.children.collect {|n| n }
+        unless child_nodes.empty?
+          child_nodes.sort_by {|node| node.title }.each_with_index do |node, i|
+            Node.update_all(['position = ?', i], ['id = ?', node.id]) unless node.position == i
+          end
+        end
+      end
+    end
+    redirect_to admin_items_path, :notice => "Items Successfully Sorted Alphanumerically!"
+  end
+
 
   def new
     session[:last_view] = request.env["HTTP_REFERER"] || admin_items_url

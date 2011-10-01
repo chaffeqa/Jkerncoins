@@ -7,7 +7,7 @@ $(function() {
         var new_id = new Date().getTime();
 
         $(this).parent().before(content.replace(regexp, new_id));
-        
+
         init_dynamic_fields();      // Sanatize forms Jquery
         init_toggleable_fields();   // Sanatize forms Jquery
         return false;
@@ -24,7 +24,7 @@ $(function() {
         return false;
     });
 
-    
+
     /* Toggles fields based on this field's value
      * DOM Structure:
      * <div>
@@ -58,7 +58,7 @@ $(function() {
         $(this).parent().children('.toggleable-dynamic-field.' + val ).show();
     })
 
-    
+
 
     $('a.gallery').colorbox();
 
@@ -69,7 +69,7 @@ $(function() {
     preview.live('click', function() {
         admin_divs.toggleClass("admin");
     });
-    
+
     preview.live('click', function() {
         if (preview.text() == 'Preview Page') {
             preview.text('Admin View');
@@ -77,6 +77,17 @@ $(function() {
         else {
             preview.text('Preview Page');
         }
+    });
+
+    $('a[data-disable-with]').live('click', function(e) {
+      var disable_msg = $(this).attr('data-disable-with');
+      if ($(this).html() == disable_msg) {
+        e.preventDefault();
+      }else{
+        $(this).html(disable_msg);
+        return true;
+      }
+      return false;
     });
 });
 

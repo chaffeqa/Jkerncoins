@@ -7,12 +7,12 @@ gem 'ckeditor', '3.4.3.pre'
 gem 'paperclip'
 
 gem 'simple-navigation'#, :git => 'git://github.com/andi/simple-navigation.git'
-  
+
 gem 'devise'
 
 gem 'acts_as_tree'#, :git => 'git://github.com/parasew/acts_as_tree.git'
 
-gem 'acts_as_list'
+gem 'acts_as_list', "~> 0.1.4"
 
 gem 'carmen'
 
@@ -33,6 +33,6 @@ group :development, :test do
 end
 
 group :production do
-  #gem 'pg'  
+  #gem 'pg'
 end
 

@@ -1,8 +1,9 @@
 <h1 class="title">Items</h1>
 
-<p>[Instructions here...]</p>
+<p>Used to manage all your items.</p>
 
-<p><%= link_to 'New Item', new_admin_item_path, :class => "btn large" %></p>
+<p><%= link_to 'New Item', new_admin_item_path, :class => "btn large" %>
+<%= link_to 'Sort Items Alphanumerically', sort_alphanumerically_admin_items_path, :method => :post, :disable_with => "Please Wait...", :class => "btn large" %></p>
 
 <table id="itemAdminTable">
   <tr>
