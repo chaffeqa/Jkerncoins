@@ -26,6 +26,7 @@ class Admin::ItemsController < ApplicationController
           end
         end
       end
+      @home_node.touch
     end
     redirect_to admin_items_path, :notice => "Items Successfully Sorted Alphanumerically!"
   end

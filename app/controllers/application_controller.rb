@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
   include ApplicationHelper
-  
+
   protect_from_forgery
   rescue_from ActiveRecord::RecordNotFound, :with => :error_rescue
   rescue_from ActionController::RoutingError, :with => :error_rescue
-  
-  before_filter :get_home_node  
-  
+
+  before_filter :get_home_node
+
   helper :all
   helper_method :get_node, :categories_for_items, :get_home_node, :admin?
   layout 'static_page'
@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
       redirect_to error_path(:message => 'Unauthorized Access')
     end
   end
-  
+
   # Renders our error pages, with passed in status and log message.  Returns false
   def render_error_status(status=500, log_msg = "")
     logger.error "REQUEST **************** Rendering #{status}: #{log_msg}. Request URI: #{request.url} ****************"
