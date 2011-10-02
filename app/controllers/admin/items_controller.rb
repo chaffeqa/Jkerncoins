@@ -19,9 +19,9 @@ class Admin::ItemsController < ApplicationController
   def sort_alphanumerically
     if request.post?
       Category.all.each do |cat|
-        child_nodes = cat.node.children.collect {|n| n }
-        unless child_nodes.empty?
-          child_nodes.sort_by {|node| node.title }.each_with_index do |node, i|
+        item_nodes = cat.node.children.items.collect {|n| n }
+        unless item_nodes.empty?
+          item_nodes.sort_by {|node| node.title }.each_with_index do |node, i|
             Node.update_all(['position = ?', i], ['id = ?', node.id]) unless node.position == i
           end
         end
@@ -69,7 +69,13 @@ class Admin::ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-    redirect_to(root_path, :notice => 'Item was successfully destroyed.' )
+    flash.notice = 'Item was successfully destroyed.'
+    puts "***************** #{request.env['HTTP_REFERER']}\n\n"
+    if request.env['HTTP_REFERER'] == admin_items_url
+      redirect_to(admin_items_path)
+    else
+      redirect_to root_path
+    end
   end
 
   # CRUD operation
