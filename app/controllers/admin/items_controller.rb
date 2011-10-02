@@ -70,8 +70,7 @@ class Admin::ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.destroy
     flash.notice = 'Item was successfully destroyed.'
-    puts "***************** #{request.env['HTTP_REFERER']}\n\n"
-    if request.env['HTTP_REFERER'] == admin_items_url
+    if request.referer =~ /items/
       redirect_to(admin_items_path)
     else
       redirect_to root_path
