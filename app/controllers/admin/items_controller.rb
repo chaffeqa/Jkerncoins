@@ -69,6 +69,7 @@ class Admin::ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
+    puts "******************** #{ (true && request.referer =~ /items/).to_s}"
     flash.notice = 'Item was successfully destroyed.'
     if request.referer =~ /items/
       redirect_to(admin_items_path)
