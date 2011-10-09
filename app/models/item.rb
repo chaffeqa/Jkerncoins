@@ -28,10 +28,8 @@ class Item < ActiveRecord::Base
 
   # Callbacks
   before_validation :update_nodes
-  after_save        :cat_update_item_count
-  after_destroy     :full_item_counts_update
-  after_save        :update_cache_chain
-  before_destroy    :update_cache_chain
+  before_destroy    :decrement_categories_item_counts, :update_cache_chain
+  after_save        :update_cache_chain, :update_category_item_count
 
   # Global method to trigger caching updates for all objects that rely on this object's information
   # This will be called in one of two cases:
@@ -103,14 +101,22 @@ class Item < ActiveRecord::Base
 
   private
 
-  # performs a quick update on this item's category item_counts, as well as their ancestors
-  def cat_update_item_count
+  def decrement_categories_item_counts
+    Rails.logger.debug "Decrementing categories item_count for categories: #{self.categories(:reload => true).collect {|c| c.title }.join(', ')}..."
     self.categories.each do |category|
+      category.decrement_item_count
+    end
+  end
+
+  # performs a quick update on this item's category item_counts, as well as their ancestors
+  def update_category_item_count
+    Rails.logger.debug "Item saved, updating categories#item_count..."
+    self.categories(:reload => true).each do |category|
       if (category.displayed_items.count - 1) == category.item_count
-        category.inc_item_count
+        category.increment_item_count
       end
       if (category.displayed_items.count + 1) == category.item_count
-        category.dec_item_count
+        category.decrement_item_count
       end
     end
   end

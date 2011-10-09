@@ -3,6 +3,7 @@ class Category < ActiveRecord::Base
   ####################################################################
   # Associations
   ###########
+
   has_many :items, :class_name => 'Item', :finder_sql =>
     'SELECT item.* FROM items AS item
     JOIN nodes AS item_node ON item_node.page_id = item.id AND item_node.page_type = \'Item\'
@@ -26,7 +27,7 @@ class Category < ActiveRecord::Base
 #    :url  => "/site_assets/categories/:id/image_:style.:extension",
 #    :path => ":rails_root/public/site_assets/categories/:id/image_:style.:extension",
 #    :styles => { :thumb => ['112x112#', :png] }
-    
+
   has_attached_file :image,
     :storage => :s3,
     :s3_credentials => S3_CREDENTIALS,
@@ -39,17 +40,17 @@ class Category < ActiveRecord::Base
   ####################################################################
   # Validations and Callbacks
   ###########
-  
+
   validates :title, :presence => true, :uniqueness => true
-  
+
   before_validation :update_node
   after_save  :update_cache_chain
   before_destroy :update_cache_chain
-  
+
   # Global method to trigger caching updates for all objects that rely on this object's information
   # This will be called in one of two cases:
   #   1) This object has changed, and effected cached objects need to recache
-  #   2) An object has notified this object that it needs to recache 
+  #   2) An object has notified this object that it needs to recache
   def update_cache_chain
     logger.debug "DB ********** Touching Category #{title} ********** "
     self.touch
@@ -70,35 +71,6 @@ class Category < ActiveRecord::Base
     end
     node.displayed = true
     node.parent ||= Node.inventory_node
-  end
-
-  # Decrements the item count and asks parent to do the same
-  def dec_item_count
-    self.item_count -= 1
-    self.save!
-    if node.parent && node.parent.page_type == "Category"
-      node.parent.category.dec_item_count
-    end
-  end
-
-  # Increments the item count and asks parent to do the same
-  def inc_item_count
-    self.item_count += 1
-    self.save!
-    if node.parent && node.parent.page_type == "Category"
-      node.parent.category.inc_item_count
-    end
-  end
-
-  # Sets the item_count of this category to the correct value.
-  #   Returns true if the item_count value did not change, False otherwise.
-  def set_item_count
-    temp_item_count = 0
-    prev_count = item_count
-    temp_item_count += displayed_items.count
-    node.children.categories.each {|node| temp_item_count += node.category.item_count}
-    self.item_count = temp_item_count
-    return (prev_count == temp_item_count)
   end
 
 
@@ -162,6 +134,50 @@ class Category < ActiveRecord::Base
   #############################
   # Recursively set item counts
   #############################
+
+  # Decrements the item count and asks parent to do the same
+  def dec_item_count
+    self.item_count -= 1
+    self.save!
+    if node.parent && node.parent.page_type == "Category"
+      node.parent.category.dec_item_count
+    end
+  end
+
+  # Increments the item count and asks parent to do the same
+  def inc_item_count
+    self.item_count += 1
+    self.save!
+    if node.parent && node.parent.page_type == "Category"
+      node.parent.category.inc_item_count
+    end
+  end
+
+  # Sets the item_count of this category to the correct value.
+  #   Returns true if the item_count value did not change, False otherwise.
+  def set_item_count
+    temp_item_count = 0
+    prev_count = item_count
+    temp_item_count += displayed_items.count
+    node.children.categories.each {|node| temp_item_count += node.category.item_count}
+    self.item_count = temp_item_count
+    return (prev_count == temp_item_count)
+  end
+
+  # Recursively backtracks to increment the item counts
+  def increment_item_count
+    Rails.logger.debug "Incrementing Item count for Category: #{title}"
+    self.update_attributes(:item_count => item_count + 1)
+    node.parent.category.increment_item_count if node.parent.category
+  end
+
+
+  # Recursively backtracks to decrement the item counts
+  def decrement_item_count
+    Rails.logger.debug "Decrementing Item count for Category: #{title}"
+    self.update_attributes(:item_count => item_count - 1)
+    node.parent.category.decrement_item_count if node.parent.category
+  end
 
   # Recursive setter of this category's item_count
   def set_item_counts

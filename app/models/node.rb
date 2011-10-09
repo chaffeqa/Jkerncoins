@@ -205,6 +205,127 @@ class Node < ActiveRecord::Base
 
 
 
+  ####################################################################
+  # HTML renderer
+  ###########
+
+  # Creates a string of the html for a breadcrumb for this node
+  def html_breadcrumb
+    (cached(:ancestors).reverse.map {|node| node.html_link } << html_link).join(" &gt; ").html_safe
+  end
+
+  # Creates a string of the html link for this node
+  def html_link(selected=false)
+    "<a#{selected ? ' class="selected"' : ''} href='#{url}'>#{menu_name}</a>"
+  end
+
+  # Creates a string of the html of this node's full tree (up to the root)
+  def html_ul_tree
+    Node.home.children_ul_row(cached(:ancestor_ids), cached(:ancestor_ids) + [id]).html_safe
+  end
+
+  # Creates a string of the html of this node's <li> element
+  def li_row(expanded_node_ids, selected_node_ids)
+    selected = selected_node_ids.include?(id)
+    expand = selected and not (cached_displayed_children.nil? or cached_displayed_children.empty?)
+    li_string = "<li id='#{shortcut}' class='#{page_type.to_s + (selected ? ' selected' : '')}'>"
+    li_string += html_link(selected)
+    li_string += children_ul_row(expanded_node_ids, selected_node_ids) if expand
+    li_string += "</li>"
+    li_string
+  end
+
+  # Creates a string of the html of this node's children inside a <ul>
+  def children_ul_row(expanded_node_ids, selected_node_ids)
+    row_string = "<ul>"
+    cached_displayed_children.each do |node|
+      row_string += node.li_row(expanded_node_ids, selected_node_ids)
+    end
+    row_string += "</ul>"
+    row_string
+  end
+
+
+
+
+
+
+
+  ####################################################################
+  # Cached Calls
+  ###########
+
+  # A sick move, basically it caches any chaining of methods (for triggering if a view calls it)
+  def view_cached(*methods)
+   return result = self.send(*methods) unless VIEW_FRAGMENT_CACHING
+   logger.debug "\n******************\n [Cache] Retreiving node(#{self.id})'s view_cached_#{methods.inspect} \n******************\n\n"
+   Rails.cache.fetch(self.cache_key + "::#{methods.join('.')}", :expires_in => 20.days) {
+     logger.debug "\n******************\n [Cache] (MISSED) Caching node(#{self.id})'s view_cached_#{methods.inspect} \n******************\n\n"
+     result = self.send(*methods) # Using result to make sure the method marshels, and memcache doesnt save a SQL query string
+   }
+  end
+
+  # A sick move, basically it caches any chaining of methods
+  def cached(*methods)
+   return result = self.send(*methods) unless MODEL_CACHING
+   logger.debug "\n******************\n [Cache] Retreiving node(#{self.id})'s cached_#{methods.inspect} \n******************\n\n"
+   Rails.cache.fetch(self.cache_key + "::#{methods.join('.')}", :expires_in => 20.days) {
+     logger.debug "\n******************\n [Cache] (MISSED) Caching node(#{self.id})'s cached_#{methods.inspect} \n******************\n\n"
+     result = self.send(*methods) # Using result to make sure the method marshels, and memcache doesnt save a SQL query string
+   }
+  end
+
+  # Returns a cached array of this node's displayed children
+  def cached_displayed_children
+   return self.children.displayed unless MODEL_CACHING
+   logger.debug "\n******************\n [Cache] Retreiving node(#{self.id})'s cached_displayed_children \n******************\n\n"
+    Rails.cache.fetch(self.cache_key + "::displayed_children", :expires_in => 20.days) {
+      logger.debug "\n******************\n [Cache] (MISSED) Caching node(#{self.id})'s cached_displayed_children \n******************\n\n"
+      self.children.displayed.collect {|n| n }
+    }
+  end
+
+  # Returns a cached array of this node's displayed category children
+  def cached_displayed_item_children
+   return self.children.displayed.items unless MODEL_CACHING
+   logger.debug "\n******************\n [Cache] Retreiving node(#{self.id})'s cached_displayed_item_children \n******************\n\n"
+    Rails.cache.fetch(self.cache_key + "::displayed_item_children", :expires_in => 20.days) {
+      logger.debug "\n******************\n [Cache] (MISSED) Caching node(#{self.id})'s cached_displayed_item_children \n******************\n\n"
+      self.children.displayed.items.collect {|n| n }
+    }
+  end
+
+  # Returns a cached array of this node's displayed item children
+  def cached_displayed_category_children
+   return self.children.displayed.categories unless MODEL_CACHING
+   logger.debug "\n******************\n [Cache] Retreiving node(#{self.id})'s cached_displayed_category_children \n******************\n\n"
+   Rails.cache.fetch(self.cache_key + "::displayed_category_children", :expires_in => 20.days) {
+      logger.debug "\n******************\n [Cache] (MISSED) Caching node(#{self.id})'s cached_displayed_category_children \n******************\n\n"
+      self.children.displayed.categories.collect {|n| n }
+    }
+  end
+
+
+
+
+
+
+  ####################################################################
+  # Ancestors
+  ###########
+
+   # Caches and returns this nodes ancestor objects
+   def ancestors
+     (parent.nil? ? [] : [parent] + parent.cached(:ancestors))
+   end
+
+   # Caches and returns this nodes ancestor ids
+   def ancestor_ids
+    cached(:ancestors).collect(&:id)
+   end
+
+
+
 
   private
 

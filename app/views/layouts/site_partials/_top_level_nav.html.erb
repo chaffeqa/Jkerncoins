@@ -1,0 +1,25 @@
+<% if VIEW_FRAGMENT_CACHING %>
+  <% cache("#{@home_node.cache_key}::top_level_nav") do %>
+  <ul>
+    <%= content_tag_for(:li, @home_node, :class => @home_node.page_type) do %>
+      <%= link_to @home_node.menu_name, @home_node.url %>
+    <% end %>
+    <% @home_node.children.displayed.each do |node| %>
+      <%= content_tag_for(:li, node, :class => node) do %>
+        <%= link_to node.menu_name, node.url %>
+      <% end %>
+    <% end %>
+  </ul>
+  <% end %>
+<% else %>
+    <ul>
+      <%= content_tag_for(:li, @home_node, :class => @home_node.page_type) do %>
+        <%= link_to @home_node.menu_name, @home_node.url %>
+      <% end %>
+      <% @home_node.children.displayed.each do |node| %>
+        <%= content_tag_for(:li, node, :class => node) do %>
+          <%= link_to node.menu_name, node.url %>
+        <% end %>
+      <% end %>
+    </ul>
+<% end %>

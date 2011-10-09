@@ -4,11 +4,11 @@ class ShortcutController < ApplicationController
 
   def route
     if @node.page_type == 'DynamicPage'
-      if params[:fresh].present? or admin?
+      if params[:fresh].present? or admin? or not PAGE_MEMCACHE_CACHING
         render("#{@node.page_type.tableize.pluralize}/show", :layout => "dynamic")
       else
-        render_with_cache('node-page::'+request.fullpath+'::'+@node.cache_key) { 
-          render("#{@node.page_type.tableize.pluralize}/show", :layout => "dynamic") 
+        render_with_cache('node-page::'+request.fullpath+'::'+@node.cache_key) {
+          render("#{@node.page_type.tableize.pluralize}/show", :layout => "dynamic")
         }
       end
     else
@@ -16,8 +16,8 @@ class ShortcutController < ApplicationController
         if params[:fresh].present? or admin?
           render("#{@node.page_type.tableize.pluralize}/show")
         else
-          render_with_cache('node-page::'+request.fullpath+'::'+@node.cache_key) { 
-            render("#{@node.page_type.tableize.pluralize}/show") 
+          render_with_cache('node-page::'+request.fullpath+'::'+@node.cache_key) {
+            render("#{@node.page_type.tableize.pluralize}/show")
           }
         end
       else
