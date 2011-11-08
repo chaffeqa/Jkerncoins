@@ -29,7 +29,7 @@ class Item < ActiveRecord::Base
   # Callbacks
   before_validation :update_nodes
   before_destroy    :decrement_categories_item_counts, :update_cache_chain
-  after_save        :update_cache_chain, :update_category_item_count
+  after_save        :update_cache_chain#, :update_category_item_count
 
   # Global method to trigger caching updates for all objects that rely on this object's information
   # This will be called in one of two cases:
@@ -124,7 +124,6 @@ class Item < ActiveRecord::Base
   def full_item_counts_update
     Category.full_item_counts_update
   end
-
 
 end
 
