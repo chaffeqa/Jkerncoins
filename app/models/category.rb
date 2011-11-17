@@ -135,49 +135,27 @@ class Category < ActiveRecord::Base
   # Recursively set item counts
   #############################
 
-  # Decrements the item count and asks parent to do the same
-  def dec_item_count
-    self.item_count -= 1
-    self.save!
-    if node.parent && node.parent.page_type == "Category"
-      node.parent.category.dec_item_count
-    end
-  end
 
   # Increments the item count and asks parent to do the same
-  def inc_item_count
-    self.item_count += 1
-    self.save!
-    if node.parent && node.parent.page_type == "Category"
-      node.parent.category.inc_item_count
-    end
-  end
-
-  # Sets the item_count of this category to the correct value.
-  #   Returns true if the item_count value did not change, False otherwise.
-  def set_item_count
-    temp_item_count = 0
-    prev_count = item_count
-    temp_item_count += displayed_items.count
-    node.children.categories.each {|node| temp_item_count += node.category.item_count}
-    self.item_count = temp_item_count
-    return (prev_count == temp_item_count)
-  end
-
-  # Recursively backtracks to increment the item counts
   def increment_item_count
     Rails.logger.debug "Incrementing Item count for Category: #{title}"
-    self.update_attributes(:item_count => item_count + 1)
-    node.parent.category.increment_item_count if node.parent.category
+    self.update_column(:item_count, item_count + 1)
+    parent_category.increment_item_count if parent_category
   end
 
-
-  # Recursively backtracks to decrement the item counts
+  # Decrements the item count and asks parent to do the same
   def decrement_item_count
     Rails.logger.debug "Decrementing Item count for Category: #{title}"
-    self.update_attributes(:item_count => item_count - 1)
-    node.parent.category.decrement_item_count if node.parent.category
+    self.update_column(:item_count, item_count - 1)
+    parent_category.decrement_item_count if parent_category
   end
+  
+  # Returns the parent category if it exists, nil otherwise
+  def parent_category
+    return node.parent.category if node.parent and node.parent.page_type == "Category"
+    nil
+  end
+
 
   # Recursive setter of this category's item_count
   def set_item_counts
