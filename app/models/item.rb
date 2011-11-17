@@ -117,6 +117,5 @@ class Item < ActiveRecord::Base
     Category.full_item_counts_update
   end
 
-
 end
 
