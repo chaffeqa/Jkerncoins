@@ -77,6 +77,11 @@ class Admin::ItemsController < ApplicationController
       redirect_to root_path
     end
   end
+  
+  def update_item_counts
+    Category.full_item_counts_update
+    redirect_to(admin_items_path, :notice => 'Item Counts successfully Updated.')
+  end
 
   # CRUD operation
   def reset_filters

@@ -182,11 +182,19 @@ class Category < ActiveRecord::Base
   # Recursive setter of this category's item_count
   def set_item_counts
     children_item_count = 0
-    node.children.categories.each  {|child_node| children_item_count += child_node.category.set_item_counts }
-#    puts "#{title} category: items: #{displayed_items.count}, child_categories' items: #{children_item_count}"
-    self.item_count = (displayed_items.count + children_item_count)
-    self.save!
-    return self.item_count
+    @@updated_category_ids ||= []
+    node.children.categories.each do |child_node|
+      if @@updated_category_ids.include?(child_node.id)
+        children_item_count += child_node.category.item_count
+      else
+        children_item_count += child_node.category.set_item_counts
+      end
+    end
+    Rails.logger.debug "\n*******************\n#{title} category: items: #{displayed_items.count}, child_categories' items: #{children_item_count}\n*******************\n"
+    new_count = (displayed_items.count + children_item_count)
+    self.update_column(:item_count, new_count) unless item_count == new_count
+    @@updated_category_ids << id
+    return item_count
   end
 
   # Performs recursive setting of all the categories' item_counts
@@ -197,6 +205,18 @@ class Category < ActiveRecord::Base
 
   #############################
   #############################
+  # From Rails 3.1
+  # Updates a single attribute of an object, without calling save
+  # Validation is skipped.
+  # Callbacks are skipped.
+  # updated_at/updated_on column is not updated if that column is available.
+  def update_column(name, value)
+    name = name.to_s
+    raise ActiveRecordError, "#{name} is marked as readonly" if self.class.readonly_attributes.include?(name)
+    raise ActiveRecordError, "can not update on a new record object" unless persisted?
+    write_attribute(name, value)
+    self.class.update_all({ name => value }, self.class.primary_key => id) == 1
+  end
 
 end
 

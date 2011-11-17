@@ -81,9 +81,12 @@ $(function() {
 
     $('a[data-disable-with]').live('click', function(e) {
       var disable_msg = $(this).attr('data-disable-with');
+      console.log("Disable clicked. disable msg: " + disable_msg);
       if ($(this).html() == disable_msg) {
+        console.log("Disabled");
         e.preventDefault();
       }else{
+        console.log("Not Disabled");
         $(this).html(disable_msg);
         return true;
       }

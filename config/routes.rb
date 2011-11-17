@@ -28,6 +28,7 @@ KernCoinProject::Application.routes.draw do
     resources :items do
       post :reset_filters, :on => :collection
       post :sort_alphanumerically, :on => :collection
+      post :update_item_counts, :on => :collection
     end
     resources :blogs, :except => [:show] do
       resources :posts, :except => [:index]
