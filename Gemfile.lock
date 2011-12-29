@@ -42,7 +42,7 @@ GEM
       mime-types (>= 1.16)
     columnize (0.3.2)
     configuration (1.2.0)
-    dalli (1.0.3)
+    dalli (1.1.4)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
