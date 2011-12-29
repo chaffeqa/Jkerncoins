@@ -40,7 +40,7 @@
 
     <div class="field">
       <%= f.label :cost, "Price" %>
-      <% val = (@item.cost > 0) ? @item.cost : "0.00"  %>
+      <% val = (@item.cost && @item.cost > 0) ? @item.cost : "0.00"  %>
       $ <%= f.text_field :cost, :style => "width: 70px;", :title => val, :value => val %>
     </div>
     <hr />
@@ -65,7 +65,7 @@
     <div class="field"><label></label><%= add_child_link "Add Product Image", :product_images %></div>
     <hr />
 
-    
+
     <%= render :partial => 'admin/submit', :locals => {:f => f, :type => 'Item'} %>
   </fieldset>
 <% end %>
