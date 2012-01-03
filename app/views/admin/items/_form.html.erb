@@ -40,8 +40,7 @@
 
     <div class="field">
       <%= f.label :cost, "Price" %>
-      <% val = (@item.cost && @item.cost > 0) ? @item.cost : "0.00"  %>
-      $ <%= f.text_field :cost, :style => "width: 70px;", :title => val, :value => val %>
+      $ <%= f.text_field :cost, :style => "width: 70px;" %>
     </div>
     <hr />
 
