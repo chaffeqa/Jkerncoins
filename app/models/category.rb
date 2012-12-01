@@ -179,6 +179,7 @@ class Category < ActiveRecord::Base
   def self.full_item_counts_update
     inventory_category = Category.get_inventory
     inventory_category.set_item_counts
+    Rails.cache.clear
   end
 
   #############################
