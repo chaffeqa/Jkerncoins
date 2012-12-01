@@ -27,7 +27,8 @@ gem 'dalli'
 group :development, :test do
   gem 'mysql'
   gem 'ruby-debug'
-  gem 'heroku'
+  gem 'pg'
+  gem 'awesome_print'
 end
 
 group :production do
