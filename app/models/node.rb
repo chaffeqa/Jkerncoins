@@ -141,6 +141,12 @@ class Node < ActiveRecord::Base
   def self.inventory_node
     self.where(:title => 'Inventory').first
   end
+  
+  def set_category_item_count
+    new_item_count = category.displayed_items.count + children.categories.collect {|node| node.set_category_item_count }.reduce(:+).to_i
+    category.update_column(:item_count, new_item_count) if new_item_count != category.item_count
+    new_item_count
+  end
 
   # Sets this node's shortcut to the desired shortcut or closest related shortcut that will be unique in the database.  If a conflict
   # occurs than a numeric increment will be appended as a prefix and the increment number will be returned.  If no conflict occured

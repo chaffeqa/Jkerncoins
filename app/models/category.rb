@@ -174,11 +174,15 @@ class Category < ActiveRecord::Base
     @@updated_category_ids << id
     return item_count
   end
+  
+  def set_recursive_item_count
+    new_count = displayed_items.count + node.children.categories.each { |e|  }
+  end
 
   # Performs recursive setting of all the categories' item_counts
   def self.full_item_counts_update
     inventory_category = Category.get_inventory
-    inventory_category.set_item_counts
+    inventory_category.node.set_category_item_count
     Rails.cache.clear
   end
 
