@@ -3,7 +3,13 @@ KernCoinProject::Application.configure do
 
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
-  config.cache_store = :dalli_store
+  config.cache_store = :dalli_store,
+                      (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                      {
+                        :username => ENV["MEMCACHIER_USERNAME"],
+                        :password => ENV["MEMCACHIER_PASSWORD"],
+                        :namespace => 'jkerncoins', :expires_in => 20.days, :compress => true
+                      }
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on

@@ -5,7 +5,13 @@ KernCoinProject::Application.configure do
   # every request.  This slows down response time but is perfect for development
   # since you don't have to restart the webserver when you make code changes.
   config.cache_classes = false
-  config.cache_store = :dalli_store, { :namespace => 'enpac', :expires_in => 20.days, :compress => true }
+  config.cache_store = :dalli_store,
+                      (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                      {
+                        :username => ENV["MEMCACHIER_USERNAME"],
+                        :password => ENV["MEMCACHIER_PASSWORD"],
+                        :namespace => 'jkerncoins', :expires_in => 20.days, :compress => true
+                      }
 
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true

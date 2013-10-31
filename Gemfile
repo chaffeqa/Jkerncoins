@@ -24,6 +24,8 @@ gem 'aws-s3'
 
 gem 'dalli'
 
+gem 'memcachier' # for memcache
+
 group :development, :test do
   gem 'mysql'
   gem 'ruby-debug'

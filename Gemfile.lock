@@ -58,6 +58,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     mime-types (1.16)
     mysql (2.8.1)
     paperclip (2.3.11)
@@ -112,6 +113,7 @@ DEPENDENCIES
   devise
   jquery-rails
   mail
+  memcachier
   mysql
   paperclip
   pg
