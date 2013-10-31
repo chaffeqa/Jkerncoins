@@ -1,5 +1,6 @@
 common: &common
   adapter: postgresql
+  host: localhost
   username: chaffeqa
   pool: 5
   encoding: unicode
