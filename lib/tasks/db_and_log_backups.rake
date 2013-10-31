@@ -43,7 +43,7 @@ namespace :backup do
      desc "rake backup:db:heroku"
      task :heroku => :environment do
        # First, capture the database and expire the oldest backup (can only store x2 backups)
-        system('heroku pgbackups:capture --expire')
+        system('heroku pgbackups:capture --expire --app jkerncoins')
         # Next, create the credentials for the file names to store the backups on this file system
         backup_path = File.join(Rails.root, "backup", "db", "#{Date.today.year}-#{Date.today.month}")
         FileUtils.mkdir_p(backup_path) unless File.exist?(backup_path)
@@ -51,9 +51,21 @@ namespace :backup do
         filename = File.join(backup_path, "heroku_db_#{Time.now.strftime('%Y%m%d%H%M%S')}.tar.gz")
         # Run a cURL command that dumps the NEWEST backup into this filesystem
         cmd = <<-CMD
-          curl -o #{tmp_filename} `heroku pgbackups:url`; tar -czvf #{filename} backup/db/heroku_tmp.dump
+          curl -o #{tmp_filename} `heroku pgbackups:url  --app jkerncoins`; tar -czvf #{filename} backup/db/heroku_tmp.dump
         CMD
-        system "#{cmd}"
+        puts cmd
+        system cmd
+        cmd = <<-CMD
+          bundle exec rake db:drop && bundle exec rake db:create
+        CMD
+        puts cmd
+        system cmd
+        db_options = YAML.load_file(File.join(Rails.root, "config", "database.yml"))[Rails.env].symbolize_keys
+        cmd = <<-CMD
+          pg_restore --verbose --clean --no-acl --no-owner -h localhost -U #{db_options[:username]} -d #{db_options[:database]} backup/db/heroku_tmp.dump
+        CMD
+        puts cmd
+        system cmd
      end
   end
 end
