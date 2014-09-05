@@ -1,7 +1,7 @@
 <h1><%= @node.title %></h1>
 <%#=raw @node.page.banner %>
 <ul class="blogList">
-  <% @node.page.posts.each do |post| %>
+  <% @node.page.posts.order(:post_date).each do |post| %>
     <li>
       <% if admin? %>
         <span class="blogControls">
