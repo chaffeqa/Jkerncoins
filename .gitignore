@@ -10,3 +10,4 @@ tmp/**
 tmp/**/*
 schema.rb
 latest.dump
+/.env

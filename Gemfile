@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby "1.8.7"
+
 gem 'rails'#, :git => "git://github.com/rails/rails.git"
 
 gem 'ckeditor', '3.4.3.pre'
@@ -26,14 +28,10 @@ gem 'dalli'
 
 gem 'memcachier' # for memcache
 
-group :development, :test do
-  gem 'mysql'
-  gem 'ruby-debug'
-  gem 'pg'
-  gem 'awesome_print'
-end
+gem 'thin'
+gem 'pg'
 
-group :production do
-  #gem 'pg'
+group :development, :test do
+  gem 'awesome_print'
 end
 
