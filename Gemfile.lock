@@ -60,6 +60,7 @@ GEM
       treetop (~> 1.4.8)
     memcachier (0.0.2)
     mime-types (1.16)
+    newrelic_rpm (3.12.0.288)
     paperclip (2.3.11)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
@@ -112,6 +113,7 @@ DEPENDENCIES
   jquery-rails
   mail
   memcachier
+  newrelic_rpm
   paperclip
   pg
   rails

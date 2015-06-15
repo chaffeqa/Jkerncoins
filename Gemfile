@@ -30,6 +30,7 @@ gem 'memcachier' # for memcache
 
 gem 'thin'
 gem 'pg'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'awesome_print'
